@@ -21,6 +21,15 @@
                         "checkbox": true,
                         "command": "toggle_language",
                         "mnemonic": "T"
+                    },
+                    {
+                        "args": {
+                            "language": "EN"
+                        },
+                        "caption": "English",
+                        "checkbox": true,
+                        "command": "toggle_language",
+                        "mnemonic": "E"
                     }
                 ],
                 "id": "locale",

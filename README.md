@@ -25,6 +25,12 @@ Or just download this repo as zip and unzip it to `Packages/Default`
 
 ![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/sublime_trans_linux.png)
 
+### Usage
+
+- [x] Help/Language/Simplified Chinese 简体中文
+- [x] Help/Language/Traditional Chinese 正體中文
+- [x] Help/Language/English
+
 
 ### problems
 Because almost every package has a `Main.sublime-menu`, So some package name maybe override the Default one.
