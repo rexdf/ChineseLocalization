@@ -39,7 +39,7 @@ def set_language(lang):
     SYN_PATH = os.path.join(DEFAULT_PATH, "Syntax.sublime-menu")
 
     BASE_PATH = os.path.abspath(os.path.dirname(__file__))
-    LOCALZIP_PATH = os.path.join(BASE_PATH, "ZH_CN.zip")
+    LOCALZIP_PATH = os.path.join(BASE_PATH, LANGS[lang]['zipfile'])
     if os.path.isfile(SYN_PATH):
         with open(SYN_PATH, "rb") as f:
             syntax = f.read()
