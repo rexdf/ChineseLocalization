@@ -64,7 +64,7 @@ def set_language(lang):
         f.extractall(DEFAULT_PATH)
 
 
-class ToggleLanguageCommand(sublime_plugin.WindowCommand):
+class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
 
     def run(self, language):
         set_language(language)
