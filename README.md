@@ -18,7 +18,7 @@ Linux:
 
 Or just download this repo as zip and unzip it to `Packages/Default`
 
-![cat](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/SublimeChineseTranslation.gif.jpg)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/SublimeChineseTranslation.gif.jpg)
 
 
 ### problems
