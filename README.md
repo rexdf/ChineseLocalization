@@ -15,3 +15,5 @@ Windows:
 Linux:
 
     git clone https://github.com/rexdf/Chinese-Localization.git ~/.config/sublime-text-3/Packages/Default
+
+Or just download this repo as zip and unzip it to `Packages/Default`
