@@ -874,7 +874,7 @@
         [
             { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "文档" },
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
-            { "command": "open_url", "args": {"url": "http://blog.rexdf.org"}, "caption": "汉化 by Rexdf" },
+            { "command": "open_url", "args": {"url": "http://i.rexdf.org"}, "caption": "汉化 by Rexdf" },
             { "caption": "-" },
             { "command": "purchase_license"},
             { "command": "show_license_window", "caption": "输入注册码" },
