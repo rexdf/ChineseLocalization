@@ -21,6 +21,9 @@ Or just download this repo as zip and unzip it to `Packages/Default`
 ![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/SublimeChineseTranslation.gif)
 
 
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/sublime_translation.png)
+
+
 ### problems
 Because almost every package has a `Main.sublime-menu`, So some package name maybe override the Default one.
 
