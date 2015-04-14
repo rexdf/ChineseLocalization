@@ -1,19 +1,32 @@
-[{
-  "id": "help",
-  "children":
-  [{
-        "caption": "Language",
-        "mnemonic": "L",
-        "id": "language",
-        "children": [{
-            "command": "toggle_lanuage",
-            "args": {"language": "ZH_CN"},
-            "caption": "Simplified Chinese 中文",
-            "mnemonic": "C",
-            "id": "zh_cn",
-            "checkbox": true
-        }
-        ]
+[
+    {
+        "children": [
+            {
+                "caption": "Language",
+                "children": [
+                    {
+                        "args": {
+                            "language": "ZH_CN"
+                        },
+                        "caption": "Simplified Chinese 简体中文",
+                        "checkbox": true,
+                        "command": "toggle_language",
+                        "mnemonic": "S"
+                    },
+                    {
+                        "args": {
+                            "language": "ZH_TW"
+                        },
+                        "caption": "Traditional Chinese 正体中文",
+                        "checkbox": true,
+                        "command": "toggle_language",
+                        "mnemonic": "T"
+                    }
+                ],
+                "id": "locale",
+                "mnemonic": "L"
+            }
+        ],
+        "id": "help",
     }
-  ]
-}]
+]

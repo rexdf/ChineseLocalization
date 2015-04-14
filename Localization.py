@@ -34,6 +34,8 @@ def init():
 
 
 def set_language(lang):
+    if not lang:
+        return
     PACKAGES_PATH = sublime.packages_path()
     DEFAULT_PATH = os.path.join(PACKAGES_PATH, "Default")
     SYN_PATH = os.path.join(DEFAULT_PATH, "Syntax.sublime-menu")
@@ -45,7 +47,7 @@ def set_language(lang):
             syntax = f.read()
         m = md5()
         m.update(syntax)
-        if lang and m.hexdigest() == LANGS[lang]['syntax_md5sum']:
+        if m.hexdigest() == LANGS[lang]['syntax_md5sum']:
             sublime.status_message("%s has loaded." % lang)
             return
     if not os.path.isdir(DEFAULT_PATH):
