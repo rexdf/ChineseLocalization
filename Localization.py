@@ -10,6 +10,10 @@ LANGS = {
     "ZH_CN": {
         'zipfile': 'ZH_CN.zip',
         'syntax_md5sum': '44cd99cdd8ef6c2c60c0a89d53a40b95'
+    },
+    "ZH_TW": {
+        "zipfile": "ZH_TW.zip",
+        'syntax_md5sum': "fe7457cfd227b7db74e785321f672c4a"
     }
 }
 
