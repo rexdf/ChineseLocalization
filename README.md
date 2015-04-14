@@ -6,15 +6,15 @@ Clone this repository into `Sublime Text 3/Packages` using OS-appropriate locati
 
 OSX:
 
-    git clone https://github.com/rexdf/Chinese-Localization.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Default
+    git clone https://github.com/rexdf/Chinese-Localization.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Chinese-Localization
 
 Windows:
 
-    git clone https://github.com/rexdf/Chinese-Localization.git "%APPDATA%\Sublime Text 3\Packages\Default"
+    git clone https://github.com/rexdf/Chinese-Localization.git "%APPDATA%\Sublime Text 3\Packages\Chinese-Localization"
 
 Linux:
 
-    git clone https://github.com/rexdf/Chinese-Localization.git ~/.config/sublime-text-3/Packages/Default
+    git clone https://github.com/rexdf/Chinese-Localization.git ~/.config/sublime-text-3/Packages/Chinese-Localization
 
 Or just download this repo as zip and unzip it to `Packages/Default`
 
