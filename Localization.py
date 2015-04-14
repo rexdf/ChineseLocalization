@@ -14,6 +14,10 @@ LANGS = {
     "ZH_TW": {
         "zipfile": "ZH_TW.zip",
         'syntax_md5sum': "fe7457cfd227b7db74e785321f672c4a"
+    },
+    "EN": {
+        "zipfile": "EN.zip",
+        'syntax_md5sum': "2667c3fe5c1102274051920b1f581adb"
     }
 }
 
