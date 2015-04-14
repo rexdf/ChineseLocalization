@@ -17,7 +17,7 @@
                         "args": {
                             "language": "ZH_TW"
                         },
-                        "caption": "Traditional Chinese 正体中文",
+                        "caption": "Traditional Chinese 正體中文",
                         "checkbox": true,
                         "command": "toggle_language",
                         "mnemonic": "T"
