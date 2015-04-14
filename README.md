@@ -17,3 +17,18 @@ Linux:
     git clone https://github.com/rexdf/Chinese-Localization.git ~/.config/sublime-text-3/Packages/Default
 
 Or just download this repo as zip and unzip it to `Packages/Default`
+
+### problems
+Because almost every package has a `Main.sublime-menu`, So some package name maybe override the Default one.
+
+AFAIK,
+
++ **SublimeREPL** delete caption
+
++ **Minify** Overwrite, but delete
+
++ **Tag** delete mnemonic caption
+
++ **Indent XML** delete caption Selection
+
++ **GraphvizPreview** delete caption Edit
