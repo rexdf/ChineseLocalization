@@ -1,0 +1,7 @@
+[
+    { "command": "copy", "caption": "复制" },
+    { "command": "cut", "caption": "剪切" },
+    { "command": "paste", "caption": "粘贴" },
+    { "caption": "-" },
+    { "command": "select_all", "caption": "全选" }
+]
