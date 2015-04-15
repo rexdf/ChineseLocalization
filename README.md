@@ -18,12 +18,12 @@ Linux:
 
 Or just download this repo as zip and unzip it to `Packages/Default`
 
-![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/SublimeChineseTranslation2.gif)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/SublimeChineseTranslation2.gif)
 
 
-![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/sublime_translation.png)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/sublime_translation.png)
 
-![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/master/screenshot/sublime_trans_linux.png)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/sublime_trans_linux.png)
 
 ### Usage
 
