@@ -60,7 +60,7 @@ def set_language(lang):
         os.mkdir(DEFAULT_PATH)
     # Load binary resource
     PACKAGE_NAME = os.path.basename(os.path.dirname(__file__))
-    LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME, 
+    LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME,
                                            LANGS[lang]['zipfile'])
     lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
     # write to tempfile and unzip it.
