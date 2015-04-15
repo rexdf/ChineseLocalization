@@ -65,8 +65,9 @@ def set_language(lang):
     try:
         lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
     except Exception:
-        LOCALZIP_RES = os.path.join(os.path.dirname(__file__),
-                                    LANGS[lang]['zipfile'])
+        # Sublime Text 2
+        LOCALZIP_RES = os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                       LANGS[lang]['zipfile']))
         with open(LOCALZIP_RES, "rb") as f:
             lang_bytes = f.read()
     # write to tempfile and unzip it.
