@@ -62,7 +62,13 @@ def set_language(lang):
     PACKAGE_NAME = os.path.basename(os.path.dirname(__file__)).split('.')[0]
     LOCALZIP_RES = "Packages/{0}/{1}".format(PACKAGE_NAME,
                                              LANGS[lang]['zipfile'])
-    lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
+    try:
+        lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
+    except Exception:
+        LOCALZIP_RES = os.path.join(os.path.dirname(__file__),
+                                    LANGS[lang]['zipfile'])
+        with open(LOCALZIP_RES, "rb") as f:
+            lang_bytes = f.read()
     # write to tempfile and unzip it.
     import zipfile
     from tempfile import NamedTemporaryFile
