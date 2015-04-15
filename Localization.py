@@ -1,6 +1,7 @@
 import sublime
 import sublime_plugin
 import os
+import sys
 from hashlib import md5
 
 CONFIG_NAME = "Localization.sublime-settings"
@@ -19,6 +20,8 @@ LANGS = {
         'syntax_md5sum': "2667c3fe5c1102274051920b1f581adb"
     }
 }
+
+is_python3 = sys.version_info[0] > 2
 
 
 def get_language_setting():
@@ -67,7 +70,7 @@ def set_language(lang):
     except Exception:
         # Sublime Text 2
         LOCALZIP_RES = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                       LANGS[lang]['zipfile']))
+                                                    LANGS[lang]['zipfile']))
         with open(LOCALZIP_RES, "rb") as f:
             lang_bytes = f.read()
     # write to tempfile and unzip it.
@@ -76,8 +79,13 @@ def set_language(lang):
     tmp_file = NamedTemporaryFile(delete=False)
     tmp_file.write(lang_bytes)
     tmp_file.close()
-    with zipfile.ZipFile(tmp_file.name, "r") as f:
-        f.extractall(DEFAULT_PATH)
+    if is_python3:
+        with zipfile.ZipFile(tmp_file.name, "r") as f:
+            f.extractall(DEFAULT_PATH)
+    else:
+        import contextlib
+        with contextlib.closing(zipfile.ZipFile(tmp_file.name, "r")) as f:
+            f.extractall(DEFAULT_PATH)
     tmp_file.close()
     os.unlink(tmp_file.name)
 
@@ -95,3 +103,6 @@ class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
 def plugin_loaded():
     """Load and unzip the files."""
     sublime.set_timeout(init, 200)
+
+if not is_python3:
+    init()
