@@ -1,6 +1,5 @@
 import sublime
 import sublime_plugin
-import zipfile
 import os
 from hashlib import md5
 
@@ -48,8 +47,6 @@ def set_language(lang):
     DEFAULT_PATH = os.path.join(PACKAGES_PATH, "Default")
     SYN_PATH = os.path.join(DEFAULT_PATH, "Syntax.sublime-menu")
 
-    BASE_PATH = os.path.abspath(os.path.dirname(__file__))
-    LOCALZIP_PATH = os.path.join(BASE_PATH, LANGS[lang]['zipfile'])
     if os.path.isfile(SYN_PATH):
         with open(SYN_PATH, "rb") as f:
             syntax = f.read()
@@ -58,10 +55,24 @@ def set_language(lang):
         if m.hexdigest() == LANGS[lang]['syntax_md5sum']:
             sublime.status_message("%s has loaded." % lang)
             return
+    # mkdir if Default not exist
     if not os.path.isdir(DEFAULT_PATH):
         os.mkdir(DEFAULT_PATH)
-    with zipfile.ZipFile(LOCALZIP_PATH, "r") as f:
+    # Load binary resource
+    PACKAGE_NAME = os.path.basename(os.path.dirname(__file__))
+    LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME, 
+                                           LANGS[lang]['zipfile'])
+    lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
+    # write to tempfile and unzip it.
+    import zipfile
+    from tempfile import NamedTemporaryFile
+    tmp_file = NamedTemporaryFile(delete=False)
+    tmp_file.write(lang_bytes)
+    tmp_file.close()
+    with zipfile.ZipFile(tmp_file.name, "r") as f:
         f.extractall(DEFAULT_PATH)
+    tmp_file.close()
+    os.unlink(tmp_file.name)
 
 
 class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
