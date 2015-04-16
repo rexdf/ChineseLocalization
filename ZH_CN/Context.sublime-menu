@@ -1,0 +1,16 @@
+[
+    { "command": "open_context_url", "caption": "打开网址" },
+    { "command": "context_goto_definition", "caption": "转到定义" },
+    { "caption": "-", "id": "clipboard" },
+    { "command": "copy", "caption": "复制" },
+    { "command": "cut", "caption": "剪切" },
+    { "command": "paste", "caption": "粘贴" },
+    { "caption": "-", "id": "selection" },
+    { "command": "select_all", "caption": "全选" },
+    { "caption": "-", "id": "file" },
+    { "command": "open_in_browser", "caption": "在浏览器中打开" },
+    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "打开所在文件夹…" },
+    { "command": "copy_path", "caption": "复制文件路径" },
+    { "command": "reveal_in_side_bar", "caption": "在侧边栏显示" },
+    { "caption": "-", "id": "end" }
+]
