@@ -35,7 +35,7 @@ Or just download this repo as zip and unzip it to `Packages/Default`
 ### problems
 Because almost every package has a `Main.sublime-menu`, So some package name maybe override the Default one.
 
-AFAIK,
+AFAIK, minimal manual delete including:
 
 + **SublimeREPL** delete caption
 
@@ -44,5 +44,7 @@ AFAIK,
 + **Tag** delete mnemonic caption
 
 + **Indent XML** delete caption Selection
+
++ **HTMLBeautify** delete caption Edit
 
 + **GraphvizPreview** delete caption Edit
