@@ -3,6 +3,8 @@ import sublime_plugin
 import os
 from hashlib import md5
 
+__version__ = "1.4.5"
+
 CONFIG_NAME = "Localization.sublime-settings"
 
 LANGS = {
@@ -21,33 +23,38 @@ LANGS = {
 }
 
 
-def get_language_setting():
+def get_setting(name):
     config = sublime.load_settings(CONFIG_NAME)
-    lang = config.get('language', None)
-    if lang not in LANGS:
-        lang = None
-    return lang
+    setting = config.get(name, None)
+    return setting
 
 
-def restore_language_setting(lang):
+def restore_setting(name, value):
     config = sublime.load_settings(CONFIG_NAME)
-    config.set("language", lang)
+    config.set(name, value)
     sublime.save_settings(CONFIG_NAME)
 
 
 def init():
-    lang = get_language_setting()
-    set_language(lang)
+    lang = get_setting('language')
+    config_version = get_setting('version')
+    # if upgrade to new version force update translation
+    if config_version != __version__:
+        set_language(lang, force=True)
+        restore_setting("version", __version__)
+    else:
+        set_language(lang)
 
 
-def set_language(lang):
-    if not lang:
+def set_language(lang, force=False):
+    if lang not in LANGS:
         return
     PACKAGES_PATH = sublime.packages_path()
     DEFAULT_PATH = os.path.join(PACKAGES_PATH, "Default")
     SYN_PATH = os.path.join(DEFAULT_PATH, "Syntax.sublime-menu")
 
-    if os.path.isfile(SYN_PATH):
+    # not force update then check current lang
+    if not force and os.path.isfile(SYN_PATH):
         with open(SYN_PATH, "rb") as f:
             syntax = f.read()
         m = md5()
@@ -59,30 +66,26 @@ def set_language(lang):
     if not os.path.isdir(DEFAULT_PATH):
         os.mkdir(DEFAULT_PATH)
     # Load binary resource
-    PACKAGE_NAME = os.path.basename(os.path.dirname(__file__)).split('.')[0]
+    PACKAGE_NAME = __name__.split('.')[0]
     LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME,
                                            LANGS[lang]['zipfile'])
     lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
-    # write to tempfile and unzip it.
+    # Use BytesIO and zipfile to unzip it.
+    from io import BytesIO
     import zipfile
-    from tempfile import NamedTemporaryFile
-    tmp_file = NamedTemporaryFile(delete=False)
-    tmp_file.write(lang_bytes)
-    tmp_file.close()
-    with zipfile.ZipFile(tmp_file.name, "r") as f:
+    file_buf = BytesIO(lang_bytes)
+    with zipfile.ZipFile(file_buf, "r") as f:
         f.extractall(DEFAULT_PATH)
-    tmp_file.close()
-    os.unlink(tmp_file.name)
 
 
 class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
 
     def run(self, language):
         set_language(language)
-        restore_language_setting(language)
+        restore_setting("language", language)
 
     def is_checked(self, language):
-        return get_language_setting() == language
+        return get_setting('language') == language
 
 
 def plugin_loaded():
