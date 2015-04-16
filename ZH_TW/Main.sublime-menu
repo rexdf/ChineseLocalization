@@ -711,7 +711,7 @@
             { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "代碼段…" },
             { "caption": "-", "id": "build" },
             {
-                "caption": "編譯系統(U)",
+                "caption": "編譯繫統(U)",
                 "mnemonic": "U",
                 "children":
                 [
@@ -732,7 +732,7 @@
                     { "caption": "-" },
                     { "command": "$build_systems" },
                     { "caption": "-" },
-                    { "command": "new_build_system", "caption": "新編譯系統…" }
+                    { "command": "new_build_system", "caption": "新編譯繫統…" }
                 ]
             },
             { "command": "build", "caption": "編譯(B)", "mnemonic": "B" },
