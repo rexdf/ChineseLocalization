@@ -48,3 +48,7 @@ AFAIK, minimal manual delete including:
 + **HTMLBeautify** delete caption Edit
 
 + **GraphvizPreview** delete caption Edit
+
+### Author & Contributors
+- [Rexdf](https://github.com/rexdf)
+- [FichteFoll](https://github.com/FichteFoll)
