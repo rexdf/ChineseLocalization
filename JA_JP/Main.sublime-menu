@@ -1,6 +1,6 @@
 [
     {
-        "caption": "File",
+        "caption": "ファイル(F)",
         "mnemonic": "F",
         "id": "file",
         "children":
@@ -138,7 +138,7 @@
         ]
     },
     {
-        "caption": "Edit",
+        "caption": "編集(E)",
         "mnemonic": "E",
         "id": "edit",
         "children":
@@ -300,7 +300,7 @@
         ]
     },
     {
-        "caption": "Selection",
+        "caption": "選択(S)",
         "mnemonic": "S",
         "id": "selection",
         "children":
@@ -322,8 +322,8 @@
         ]
     },
     {
-        "caption": "Find",
-        "mnemonic": "i",
+        "caption": "検索(I)",
+        "mnemonic": "I",
         "id": "find",
         "children":
         [
@@ -357,7 +357,7 @@
         ]
     },
     {
-        "caption": "View",
+        "caption": "ビュー(V)",
         "mnemonic": "V",
         "id": "view",
         "children":
@@ -614,7 +614,7 @@
         ]
     },
     {
-        "caption": "Goto",
+        "caption": "移動(G)",
         "mnemonic": "G",
         "id": "goto",
         "children":
@@ -703,7 +703,7 @@
         ]
     },
     {
-        "caption": "Tools",
+        "caption": "ツール(T)",
         "mnemonic": "T",
         "id": "tools",
         "children":
@@ -767,7 +767,7 @@
         ]
     },
     {
-        "caption": "Project",
+        "caption": "プロジェクト(P)",
         "id": "project",
         "mnemonic": "P",
         "children":
@@ -805,8 +805,8 @@
         ]
     },
     {
-        "caption": "Preferences",
-        "mnemonic": "n",
+        "caption": "基本設定(N)",
+        "mnemonic": "N",
         "id": "preferences",
         "children":
         [
@@ -870,12 +870,12 @@
         ]
     },
     {
-        "caption": "Help",
+        "caption": "ヘルプ(H)",
         "mnemonic": "H",
         "id": "help",
         "children":
         [
-            { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/2/"}, "caption": "ドキュメント" },
+            { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "ドキュメント" },
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
             { "command": "open_url", "args": {"url": "http://i.rexdf.org"}, "caption": "Rexdf" },
             { "caption": "-" },
