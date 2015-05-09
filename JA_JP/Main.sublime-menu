@@ -357,7 +357,7 @@
         ]
     },
     {
-        "caption": "ビュー(V)",
+        "caption": "表示(V)",
         "mnemonic": "V",
         "id": "view",
         "children":

@@ -1,8 +1,8 @@
 [
-	{ "command": "close_by_index", "args": { "group": -1, "index": -1 }, "caption": "Close" },
-	{ "command": "close_others_by_index", "args": { "group": -1, "index": -1 }, "caption": "Close Other Tabs" },
-	{ "command": "close_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "Close Tabs to the Right" },
-	{ "caption": "-" },
-	{ "command": "new_file", "caption": "New File" },
-	{ "command": "prompt_open_file", "caption": "Open File" }
+    { "command": "close_by_index", "args": { "group": -1, "index": -1 }, "caption": "閉じる" },
+    { "command": "close_others_by_index", "args": { "group": -1, "index": -1 }, "caption": "他を閉じる" },
+    { "command": "close_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "右側をすべて閉じる" },
+    { "caption": "-" },
+    { "command": "new_file", "caption": "新規作成" },
+    { "command": "prompt_open_file", "caption": "ファイルを開く" }
 ]
