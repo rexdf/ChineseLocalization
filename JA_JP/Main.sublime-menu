@@ -5,13 +5,13 @@
         "id": "file",
         "children":
         [
-            { "command": "new_file", "caption": "新規作成", "mnemonic": "N" },
+            { "command": "new_file", "caption": "新規作成(N)", "mnemonic": "N" },
 
-            { "command": "prompt_open_file", "caption": "ファイルを開く…", "mnemonic": "O", "platform": "!OSX" },
+            { "command": "prompt_open_file", "caption": "ファイルを開く(O)…", "mnemonic": "O", "platform": "!OSX" },
             { "command": "prompt_open_folder", "caption": "フォルダを開く…", "platform": "!OSX" },
             { "command": "prompt_open", "caption": "開く…", "platform": "OSX" },
             {
-                "caption": "最近使ったファイルを開く…",
+                "caption": "最近使ったファイルを開く(R)…",
                 "mnemonic": "R",
                 "children":
                 [
@@ -78,8 +78,8 @@
                     { "caption": "Hexadecimal", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
                 ]
             },
-            { "command": "clone_file", "caption": "タブを複製", "mnemonic": "e" },
-            { "command": "save", "caption": "上書き保存", "mnemonic": "S" },
+            { "command": "clone_file", "caption": "タブを複製(E)", "mnemonic": "E" },
+            { "command": "save", "caption": "上書き保存(S)", "mnemonic": "S" },
             {
                 "caption": "エンコードを指定して上書き保存",
                 "children":
@@ -123,18 +123,18 @@
                     { "caption": "Hexadecimal", "command": "save", "args": {"encoding": "Hexadecimal" } }
                 ]
             },
-            { "command": "prompt_save_as", "caption": "名前を付けて保存…", "mnemonic": "A" },
-            { "command": "save_all", "caption": "すべて保存", "mnemonic": "l" },
+            { "command": "prompt_save_as", "caption": "名前を付けて保存(A)…", "mnemonic": "A" },
+            { "command": "save_all", "caption": "すべて保存(L)", "mnemonic": "L" },
             { "caption": "-", "id": "window" },
-            { "command": "new_window", "caption": "新規ウインドウ", "mnemonic": "W" },
+            { "command": "new_window", "caption": "新規ウインドウ(W)", "mnemonic": "W" },
             { "command": "close_window", "caption": "ウインドウを閉じる" },
             { "caption": "-", "id": "close" },
-            { "command": "close", "caption": "ファイルを閉じる", "mnemonic": "C" },
-            { "command": "revert", "caption": "前回保存状態に戻す", "mnemonic": "v" },
+            { "command": "close", "caption": "ファイルを閉じる(C)", "mnemonic": "C" },
+            { "command": "revert", "caption": "前回保存状態に戻す(V)", "mnemonic": "V" },
             { "command": "close_all", "caption": "すべてのファイルを閉じる" },
             { "caption": "-", "id": "exit" },
-            { "command": "exit", "caption": "終了", "mnemonic": "X", "platform": "Windows" },
-            { "command": "exit", "caption": "終了", "mnemonic": "Q", "platform": "Linux" }
+            { "command": "exit", "caption": "終了(X)", "mnemonic": "X", "platform": "Windows" },
+            { "command": "exit", "caption": "終了(Q)", "mnemonic": "Q", "platform": "Linux" }
         ]
     },
     {
@@ -143,8 +143,8 @@
         "id": "edit",
         "children":
         [
-            { "command": "undo", "mnemonic": "U", "caption": "アンドゥ" },
-            { "command": "redo_or_repeat", "mnemonic": "R", "caption": "リドゥ"  },
+            { "command": "undo", "mnemonic": "U", "caption": "アンドゥ(U)" },
+            { "command": "redo_or_repeat", "mnemonic": "R", "caption": "リドゥ(R)"  },
             {
                 "caption": "選択操作のアンドゥ",
                 "children":
@@ -154,14 +154,14 @@
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "caption": "コピー", "mnemonic": "C" },
-            { "command": "cut", "caption": "切り取り", "mnemonic": "T" },
-            { "command": "paste", "caption": "貼り付け", "mnemonic": "P" },
-            { "command": "paste_and_indent", "caption": "貼り付けとインデント", "mnemonic": "I" },
+            { "command": "copy", "caption": "コピー(C)", "mnemonic": "C" },
+            { "command": "cut", "caption": "切り取り(T)", "mnemonic": "T" },
+            { "command": "paste", "caption": "貼り付け(P)", "mnemonic": "P" },
+            { "command": "paste_and_indent", "caption": "貼り付けとインデント(I)", "mnemonic": "I" },
             { "command": "paste_from_history", "caption": "Paste from History" },
             { "caption": "-" },
             {
-                "caption": "Line", "caption": "行の操作", "mnemonic": "L",
+                "caption": "Line", "caption": "行の操作(L)", "mnemonic": "L",
                 "id": "line",
                 "children":
                 [
@@ -176,7 +176,7 @@
                 ]
             },
             {
-                "caption": "コメント", "mnemonic": "m",
+                "caption": "コメント(M)", "mnemonic": "M",
                 "id": "comment",
                 "children":
                 [
@@ -185,7 +185,7 @@
                 ]
             },
             {
-                "caption": "テキスト", "mnemonic": "T",
+                "caption": "テキスト(T)", "mnemonic": "T",
                 "id": "text",
                 "children":
                 [
@@ -248,7 +248,7 @@
                 ]
             },
             {
-                "caption": "大文字/小文字変換", "mnemonic": "a",
+                "caption": "大文字/小文字変換(A)", "mnemonic": "A",
                 "id": "convert_case",
                 "children":
                 [
@@ -345,7 +345,7 @@
             { "caption": "-" },
             { "command": "show_panel", "args": {"panel": "find_in_files"}, "caption": "ファイル内検索…" },
             {
-                "caption": "検索結果",
+                "caption": "検索結果(R)",
                 "mnemonic": "R",
                 "children":
                 [
@@ -382,7 +382,7 @@
             { "command": "toggle_distraction_free", "caption": "集中モード" },
             { "caption": "-", "id": "groups" },
             {
-                "caption": "画面分割",
+                "caption": "画面分割(L)",
                 "mnemonic": "L",
                 "id": "layout",
                 "children":
@@ -506,7 +506,7 @@
                 ]
             },
             {
-                "caption": "分割画面選択",
+                "caption": "分割画面選択(F)",
                 "mnemonic": "F",
                 "children":
                 [
@@ -521,7 +521,7 @@
                 ]
             },
             {
-                "caption": "分割画面にファイル移動",
+                "caption": "分割画面にファイル移動(M)",
                 "mnemonic": "M",
                 "children":
                 [
@@ -536,13 +536,13 @@
             },
             { "caption": "-" },
             {
-                "caption": "シンタックス",
+                "caption": "シンタックス(S)",
                 "mnemonic": "S",
                 "id": "syntax",
                 "children": [ { "command": "$file_types" } ]
             },
             {
-                "caption": "インデント設定",
+                "caption": "インデント設定(I)",
                 "mnemonic": "I",
                 "id": "indentation",
                 "children":
@@ -565,8 +565,8 @@
                 ]
             },
             {
-                "caption": "改行コード",
-                "mnemonic": "n",
+                "caption": "改行コード(N)",
+                "mnemonic": "N",
                 "id": "line_endings",
                 "children":
                 [
@@ -576,7 +576,7 @@
                 ]
             },
             { "caption": "-", "id": "settings" },
-            { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "折り返し", "mnemonic": "w", "checkbox": true },
+            { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "折り返し(W)", "mnemonic": "W", "checkbox": true },
             {
                 "caption": "折り返し幅",
                 "children":
@@ -619,7 +619,7 @@
         "id": "goto",
         "children":
         [
-            { "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "移動[汎用…", "mnemonic": "A" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "移動[汎用(A)…", "mnemonic": "A" },
             { "caption": "-" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "移動[シンボル]…" },
             { "command": "goto_symbol_in_project", "caption": "Goto Symbol in Project…" },
@@ -631,8 +631,8 @@
             { "command": "jump_forward", "caption": "Jump Forward" },
             { "caption": "-" },
             {
-                "caption": "ファイル移動",
-                "mnemonic": "t",
+                "caption": "ファイル移動(T)",
+                "mnemonic": "T",
                 "id": "switch_file",
                 "children":
                 [
@@ -642,7 +642,7 @@
                     { "command": "next_view_in_stack", "caption": "スタックの次のファイル" },
                     { "command": "prev_view_in_stack", "caption": "スタックの前のファイル" },
                     { "caption": "-" },
-                    { "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "h", "ipp", "inl", "m", "mm"]}, "caption": "ヘッダ/実装ファイル", "mnemonic": "H" },
+                    { "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "h", "ipp", "inl", "m", "mm"]}, "caption": "ヘッダ/実装ファイル(H)", "mnemonic": "H" },
                     { "caption": "-" },
                     { "command": "select_by_index", "args": { "index": 0 }}, //, "caption": "タブ1" 
                     { "command": "select_by_index", "args": { "index": 1 }}, //, "caption": "タブ2" 
@@ -658,7 +658,7 @@
             },
             { "caption": "-" },
             {
-                "caption": "スクロール",
+                "caption": "スクロール(S)",
                 "mnemonic": "S",
                 "id": "scroll",
                 "children":
@@ -669,8 +669,8 @@
                 ]
             },
             {
-                "caption": "ブックマーク",
-                "mnemonic": "b",
+                "caption": "ブックマーク(B)",
+                "mnemonic": "B",
                 "id": "bookmarks",
                 "children":
                 [
@@ -712,8 +712,8 @@
             { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "スニペット…" },
             { "caption": "-", "id": "build" },
             {
-                "caption": "ビルドシステム",
-                "mnemonic": "u",
+                "caption": "ビルドシステム(U)",
+                "mnemonic": "U",
                 "children":
                 [
                     { "command": "set_build_system", "args": { "file": "" }, "caption": "自動", "checkbox": true },
@@ -736,24 +736,24 @@
                     { "command": "new_build_system", "caption": "ビルドシステム追加…" }
                 ]
             },
-            { "command": "build", "mnemonic": "B", "caption": "ビルド" },
+            { "command": "build", "mnemonic": "B", "caption": "ビルド(B)" },
             { "command": "build", "args": {"select": true}, "caption": "ビルドして実行" },
-            { "command": "exec", "args": {"kill": true}, "caption": "ビルドキャンセル", "mnemonic": "C" },
+            { "command": "exec", "args": {"kill": true}, "caption": "ビルドキャンセル(C)", "mnemonic": "C" },
             {
-                "caption": "ビルド結果",
+                "caption": "ビルド結果(R)",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "パネル表示", "mnemonic": "S" },
-                    { "command": "next_result", "caption": "次の結果", "mnemonic": "N" },
-                    { "command": "prev_result", "caption": "前の結果", "mnemonic": "P" }
+                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "パネル表示(S)", "mnemonic": "S" },
+                    { "command": "next_result", "caption": "次の結果(N)", "mnemonic": "N" },
+                    { "command": "prev_result", "caption": "前の結果(P)", "mnemonic": "P" }
                 ]
             },
-            { "command": "toggle_save_all_on_build", "caption": "すべて保存してビルド", "mnemonic": "A", "checkbox": true },
+            { "command": "toggle_save_all_on_build", "caption": "すべて保存してビルド(A)", "mnemonic": "A", "checkbox": true },
             { "caption": "-", "id": "macros" },
-            { "command": "toggle_record_macro", "caption": "マクロ記録開始/停止", "mnemonic": "M" },
-            { "command": "run_macro", "caption": "マクロ再生", "mnemonic": "P" },
-            { "command": "save_macro", "caption": "マクロ保存…", "mnemonic": "v" },
+            { "command": "toggle_record_macro", "caption": "マクロ記録開始/停止(M)", "mnemonic": "M" },
+            { "command": "run_macro", "caption": "マクロ再生(P)", "mnemonic": "P" },
+            { "command": "save_macro", "caption": "マクロ保存(V)…", "mnemonic": "V" },
             {
                 "caption": "マクロ",
                 "children": [ { "command": "$macros" } ]
@@ -772,9 +772,9 @@
         "mnemonic": "P",
         "children":
         [
-            { "command": "prompt_open_project_or_workspace", "caption": "プロジェクトを開く…", "mnemonic": "O" },
+            { "command": "prompt_open_project_or_workspace", "caption": "プロジェクトを開く(O)…", "mnemonic": "O" },
             { "command": "prompt_switch_project_or_workspace", "caption": "Switch Project…" },
-            { "command": "prompt_select_workspace", "caption": "プロジェクト移動…", "mnemonic": "S" },
+            { "command": "prompt_select_workspace", "caption": "プロジェクト移動(S)…", "mnemonic": "S" },
             {
                 "caption": "最近開いたプロジェクト",
                 "children":
@@ -792,16 +792,16 @@
                 ]
             },
             { "caption": "-" },
-            { "command": "save_project_and_workspace_as", "caption": "名前を付けてプロジェクトを保存…", "mnemonic": "A" },
-            { "command": "close_workspace", "mnemonic": "C", "caption": "プロジェクトを閉じる" },
+            { "command": "save_project_and_workspace_as", "caption": "名前を付けてプロジェクトを保存(A)…", "mnemonic": "A" },
+            { "command": "close_workspace", "mnemonic": "C", "caption": "プロジェクトを閉じる(C)" },
             { "command": "open_file", "args": {"file": "${project}"}, "caption": "プロジェクト設定" },
             { "caption": "-" },
             { "command": "new_window_for_project", "caption": "New Workspace for Project" },
             { "command": "save_workspace_as", "caption": "Save Workspace As…", "mnemonic": "A" },
             { "caption": "-" },
-            { "command": "prompt_add_folder", "caption": "プロジェクトにフォルダを追加…", "mnemonic": "d" },
-            { "command": "close_folder_list", "caption": "プロジェクトの全フォルダを削除", "mnemonic": "m" },
-            { "command": "refresh_folder_list", "caption": "フォルダを再読み込み", "mnemonic": "e" },
+            { "command": "prompt_add_folder", "caption": "プロジェクトにフォルダを追加(D)…", "mnemonic": "D" },
+            { "command": "close_folder_list", "caption": "プロジェクトの全フォルダを削除(M)", "mnemonic": "M" },
+            { "command": "refresh_folder_list", "caption": "フォルダを再読み込み(E)", "mnemonic": "E" },
         ]
     },
     {
@@ -810,7 +810,7 @@
         "id": "preferences",
         "children":
         [
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Packagesフォルダ…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Packagesフォルダ(B)…", "mnemonic": "B" },
             { "caption": "-" },
             { "command": "open_file", "args": {"file": "${packages}/Default/Preferences.sublime-settings"}, "caption": "基本設定 – 標準" },
             {
@@ -885,7 +885,7 @@
             { "caption": "-" },
             { "command": "update_check", "caption": "Check for Updates…", "platform": "!Linux" },
             { "command": "show_changelog", "caption": "Changelog…" },
-            { "command": "show_about_window", "caption": "Sublime Text 3について", "mnemonic": "A" }
+            { "command": "show_about_window", "caption": "Sublime Text 3について(A)", "mnemonic": "A" }
         ]
     }
 ]
