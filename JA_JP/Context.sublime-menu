@@ -1,0 +1,16 @@
+[
+    { "command": "open_context_url" },
+    { "command": "context_goto_definition", "caption": "Goto Definition" },
+    { "caption": "-", "id": "clipboard" },
+    { "command": "copy", "caption": "コピー" },
+    { "command": "cut", "caption": "切り取り" },
+    { "command": "paste", "caption": "貼り付け" },
+    { "caption": "-", "id": "selection" },
+    { "command": "select_all", "caption": "すべて選択" },
+    { "caption": "-", "id": "file" },
+    { "command": "open_in_browser", "caption": "ブラウザで開く" },
+    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "ファイラで開く" },
+    { "command": "copy_path", "caption": "フルパスをコピー" },
+    { "command": "reveal_in_side_bar", "caption": "サイドバーと同期" },
+    { "caption": "-", "id": "end" }
+]

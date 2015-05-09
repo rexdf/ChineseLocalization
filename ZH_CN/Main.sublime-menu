@@ -133,7 +133,8 @@
             { "command": "revert", "caption": "恢复文件(V)", "mnemonic": "V" },
             { "command": "close_all", "caption": "关闭所有文件" },
             { "caption": "-", "id": "exit" },
-            { "command": "exit", "caption": "退出(X)", "mnemonic": "X" }
+            { "command": "exit", "caption": "退出(X)", "mnemonic": "X", "platform": "Windows" },
+            { "command": "exit", "caption": "退出(Q)", "mnemonic": "Q", "platform": "Linux" }
         ]
     },
     {
@@ -154,7 +155,7 @@
             },
             { "caption": "-", "id": "clipboard" },
             { "command": "copy", "caption": "复制(C)", "mnemonic": "C" },
-            { "command": "cut", "caption": "剪切(N)", "mnemonic": "N" },
+            { "command": "cut", "caption": "剪切(T)", "mnemonic": "T" },
             { "command": "paste", "caption": "粘贴(P)", "mnemonic": "P" },
             { "command": "paste_and_indent", "caption": "粘贴并缩进(I)", "mnemonic": "I" },
             { "command": "paste_from_history", "caption": "从剪切板粘贴" },
@@ -356,7 +357,7 @@
         ]
     },
     {
-        "caption": "查看(V)",
+        "caption": "视图(V)",
         "mnemonic": "V",
         "id": "view",
         "children":
@@ -760,6 +761,8 @@
             { "caption": "-" },
             { "command": "new_plugin", "caption": "新插件…" },
             { "command": "new_snippet", "caption": "新代码段…" },
+            { "command": "new_syntax", "caption": "新语法定义…" },
+            { "command": "convert_syntax" },
             { "caption": "-", "id": "end" }
         ]
     },
