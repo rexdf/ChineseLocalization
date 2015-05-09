@@ -24,6 +24,15 @@
                     },
                     {
                         "args": {
+                            "language": "JA_JP"
+                        },
+                        "caption": "Japanese 日本語",
+                        "checkbox": true,
+                        "command": "toggle_language",
+                        "mnemonic": "J"
+                    },
+                    {
+                        "args": {
                             "language": "EN"
                         },
                         "caption": "English",

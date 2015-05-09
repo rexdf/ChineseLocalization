@@ -1,5 +1,7 @@
 # Chinese-Localization
-Simplified Chinese and Traditional Chinese Translation for Sublime Text 3. Support MainMenu TabMenu ContextMenu,etc
+Simplified Chinese and Traditional Chinese Translation for Sublime Text 3. Support MainMenu TabMenu ContextMenu,etc.
+
+I try to support more languages. Now Japanese is partially supported.
 
 ### Manual Install
 Clone this repository into `Sublime Text 3/Packages` using OS-appropriate location:
@@ -29,6 +31,7 @@ Or just download this repo as zip and unzip it to `Packages/Default`
 
 - [x] Help/Language/Simplified Chinese 简体中文
 - [x] Help/Language/Traditional Chinese 正體中文
+- [ ] Help/Language/Japanese 日本語
 - [x] Help/Language/English
 
 
