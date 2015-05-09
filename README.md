@@ -20,7 +20,7 @@ Linux:
 
 Or just download this repo as zip and unzip it to `Packages/Default`
 
-![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/SublimeChineseTranslation2.gif)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/SublimeChineseTranslation3.gif)
 
 
 ![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/sublime_translation.png)
