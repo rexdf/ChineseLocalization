@@ -91,7 +91,8 @@ def set_language(lang, force=False):
     platform = sublime.platform()
     if platform == "osx":
         import re
-        pattern = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
+        pattern      = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
+        pattern_help = re.compile(r"(ヘルプ|帮助|幫助)")
         MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
 
         fh = open(MAIN_MENU, "rb")
@@ -99,6 +100,7 @@ def set_language(lang, force=False):
         fh.close()
 
         content = re.sub(pattern, "", content)
+        content = re.sub(pattern_help, "Help", content)
 
         fh = open(MAIN_MENU, "wb")
         fh.write(content.encode("utf-8"))
