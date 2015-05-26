@@ -44,6 +44,12 @@ def init():
     config_version = get_setting('version')
     # if upgrade to new version force update translation
     if config_version != __version__:
+        from locale import getdefaultlocale
+        locale_lang = getdefaultlocale()
+        # if detect locale is japanese override the default
+        if locale_lang[0] == "ja_JP":
+            lang = "JA_JP"
+
         set_language(lang, force=True)
         restore_setting("version", __version__)
     else:
