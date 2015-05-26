@@ -120,7 +120,7 @@ def set_language(lang, force=False):
     ZZZZ_LOCALE = os.path.join(DEFAULT_PATH, "ZZZZZZZZ-Localization")
     ZZZZ_SBMENU = os.path.join(ZZZZ_LOCALE, "Main.sublime-menu")
     if not os.path.isdir(ZZZZ_LOCALE):
-        os.mkdir(DEFAULT_PATH)
+        os.mkdir(ZZZZ_LOCALE)
     fh = open(ZZZZ_SBMENU, "wb")
     fh.write(js.encode("utf-8"))
     fh.close()
