@@ -49,6 +49,8 @@ def init():
         # if detect locale is japanese override the default
         if locale_lang[0] == "ja_JP":
             lang = "JA_JP"
+        elif locale_lang[0] == "zh_TW" or locale_lang[0] == "zh_HK":
+            lang = "ZH_TW"
 
         set_language(lang, force=True)
         restore_setting("version", __version__)
