@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.5.5"
+__version__ = "1.5.7"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -18,7 +18,7 @@ LANGS = {
     },
     "JA_JP": {
         "zipfile": "JA_JP.zip",
-        'syntax_md5sum': "71ddadbb12ff52c8640fbe52af4af3b9"
+        'syntax_md5sum': "037128b8f8d2616c7239d8e9a7183b4c"
     },
     "EN": {
         "zipfile": "EN.zip",
