@@ -44,14 +44,6 @@ def init():
     config_version = get_setting('version')
     # if upgrade to new version force update translation
     if config_version != __version__:
-        from locale import getdefaultlocale
-        locale_lang = getdefaultlocale()
-        # if detect locale is japanese override the default
-        if locale_lang[0] == "ja_JP":
-            lang = "JA_JP"
-        elif locale_lang[0] == "zh_TW" or locale_lang[0] == "zh_HK":
-            lang = "ZH_TW"
-
         set_language(lang, force=True)
         restore_setting("version", __version__)
     else:
@@ -77,6 +69,13 @@ def set_language(lang, force=False):
     # mkdir if Default not exist
     if not os.path.isdir(DEFAULT_PATH):
         os.mkdir(DEFAULT_PATH)
+        # if detect locale override the default only when the first time
+        from locale import getdefaultlocale
+        locale_lang = getdefaultlocale()
+        if locale_lang[0] == "ja_JP":
+            lang = "JA_JP"
+        elif locale_lang[0] == "zh_TW" or locale_lang[0] == "zh_HK":
+            lang = "ZH_TW"
     # Load binary resource
     PACKAGE_NAME = __name__.split('.')[0]
     LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME,
