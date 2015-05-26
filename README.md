@@ -36,9 +36,12 @@ Or just download this repo as zip and unzip it to `Packages/Default`
 
 
 ### problems
-Because almost every package has a `Main.sublime-menu`, So some package name maybe override the Default one.
 
-AFAIK, minimal manual delete including:
+Now this problem has been solved at st3-1.6.0.
+
+~~Because almost every package has a `Main.sublime-menu`, So some package name maybe override the Default one.~~
+
+~~AFAIK, minimal manual delete including~~:
 
 + **SublimeREPL** delete caption
 
