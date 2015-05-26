@@ -22,7 +22,7 @@ LANGS = {
     },
     "EN": {
         "zipfile": "EN.zip",
-        'syntax_md5sum': "3ab0eb9af069dbc0bd82251833009a86"
+        'syntax_md5sum': "2667c3fe5c1102274051920b1f581adb"
     }
 }
 
