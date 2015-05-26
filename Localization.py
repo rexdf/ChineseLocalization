@@ -95,9 +95,9 @@ def set_language(lang, force=False):
     fh.close()
 
     # Remove mnemonic for OSX
+    import re
     platform = sublime.platform()
     if platform == "osx":
-        import re
         pattern      = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
         pattern_help = re.compile(r"(ヘルプ|帮助|幫助)")
 
@@ -110,10 +110,12 @@ def set_language(lang, force=False):
 
     # Hack sublime menu
     import json
-    js = json.loads(content)
-    for i in len(json):
+    content = re.sub(re.compile(r",(?=[\s\r\n]*(}|\]))"), "", content)
+    content = re.sub(re.compile(r"^\s*//.*?\n", re.S | re.M), "", content)
+    js = json.loads(content, "utf-8")
+    for i in range(len(js)):
         del js[i]["children"]
-    js = json.dumps(js)
+    js = json.dumps(js, ensure_ascii=False, indent=4)
 
     ZZZZ_LOCALE = os.path.join(DEFAULT_PATH, "ZZZZZZZZ-Localization")
     ZZZZ_SBMENU = os.path.join(ZZZZ_LOCALE, "Main.sublime-menu")
