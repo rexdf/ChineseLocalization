@@ -274,7 +274,7 @@
             { "command": "auto_complete", "caption": "単語候補の表示" },
             { "caption": "-", "id": "permute" },
 
-            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "行ソート", "mnemonic": "S" },
+            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "行ソート(S)", "mnemonic": "S" },
             { "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "行ソート[大文字/小文字を区別]" },
             {
                 "caption": "行ソート[その他]",
