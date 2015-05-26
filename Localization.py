@@ -88,17 +88,18 @@ def set_language(lang, force=False):
     with zipfile.ZipFile(file_buf, "r") as f:
         f.extractall(DEFAULT_PATH)
 
+    MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
+
+    fh = open(MAIN_MENU, "rb")
+    content = fh.read().decode("utf-8")
+    fh.close()
+
     # Remove mnemonic for OSX
     platform = sublime.platform()
     if platform == "osx":
         import re
         pattern      = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
         pattern_help = re.compile(r"(ヘルプ|帮助|幫助)")
-        MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
-
-        fh = open(MAIN_MENU, "rb")
-        content = fh.read().decode("utf-8")
-        fh.close()
 
         content = re.sub(pattern, "", content)
         content = re.sub(pattern_help, "Help", content)
@@ -106,6 +107,21 @@ def set_language(lang, force=False):
         fh = open(MAIN_MENU, "wb")
         fh.write(content.encode("utf-8"))
         fh.close()
+
+    # Hack sublime menu
+    import json
+    js = json.loads(content)
+    for i in len(json):
+        del js[i]["children"]
+    js = json.dumps(js)
+
+    ZZZZ_LOCALE = os.path.join(DEFAULT_PATH, "ZZZZZZZZ-Localization")
+    ZZZZ_SBMENU = os.path.join(ZZZZ_LOCALE, "Main.sublime-menu")
+    if not os.path.isdir(ZZZZ_LOCALE):
+        os.mkdir(DEFAULT_PATH)
+    fh = open(ZZZZ_SBMENU, "wb")
+    fh.write(js.encode("utf-8"))
+    fh.close()
 
 
 class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
