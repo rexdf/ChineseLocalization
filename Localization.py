@@ -117,7 +117,7 @@ def set_language(lang, force=False):
         del js[i]["children"]
     js = json.dumps(js, ensure_ascii=False, indent=4)
 
-    ZZZZ_LOCALE = os.path.join(DEFAULT_PATH, "ZZZZZZZZ-Localization")
+    ZZZZ_LOCALE = os.path.join(PACKAGES_PATH, "ZZZZZZZZ-Localization")
     ZZZZ_SBMENU = os.path.join(ZZZZ_LOCALE, "Main.sublime-menu")
     if not os.path.isdir(ZZZZ_LOCALE):
         os.mkdir(ZZZZ_LOCALE)
