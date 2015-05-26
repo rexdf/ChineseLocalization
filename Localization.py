@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.5.3"
+__version__ = "1.5.5"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -80,6 +80,23 @@ def set_language(lang, force=False):
     file_buf = BytesIO(lang_bytes)
     with zipfile.ZipFile(file_buf, "r") as f:
         f.extractall(DEFAULT_PATH)
+
+    # Remove mnemonic for OSX
+    platform = sublime.platform()
+    if platform == "osx":
+        import re
+        pattern = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
+        MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
+
+        fh = open(MAIN_MENU, "rb")
+        content = fh.read().decode("utf-8")
+        fh.close()
+
+        content = re.sub(pattern, "", content)
+
+        fh = open(MAIN_MENU, "wb")
+        fh.write(content.encode("utf-8"))
+        fh.close()
 
 
 class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
