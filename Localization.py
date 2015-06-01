@@ -90,28 +90,29 @@ def set_language(lang, force=False):
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
 
-    fh = open(MAIN_MENU, "rb")
-    content = fh.read().decode("utf-8")
-    fh.close()
+    with open(MAIN_MENU, "rb") as f:
+        content = f.read().decode("utf-8")
 
     # Remove mnemonic for OSX
     import re
     platform = sublime.platform()
     if platform == "osx":
-        pattern      = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
+        pattern = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
         pattern_help = re.compile(r"(ヘルプ|帮助|幫助)")
 
         content = re.sub(pattern, "", content)
         content = re.sub(pattern_help, "Help", content)
 
-        fh = open(MAIN_MENU, "wb")
-        fh.write(content.encode("utf-8"))
-        fh.close()
+        with open(MAIN_MENU, "wb") as f:
+            f.write(content.encode("utf-8"))
 
     # Hack sublime menu
     import json
     content = re.sub(re.compile(r",(?=[\s\r\n]*(}|\]))"), "", content)
     content = re.sub(re.compile(r"^\s*//.*?\n", re.S | re.M), "", content)
+    # Hack JA_JP/Main.sublime-menu line 646
+    content = re.sub(re.compile(r"(?<=}[, ]) //, \"caption\":.*(?=\n)"),
+                     "", content)
     js = json.loads(content, "utf-8")
     for i in range(len(js)):
         del js[i]["children"]
@@ -121,9 +122,8 @@ def set_language(lang, force=False):
     ZZZZ_SBMENU = os.path.join(ZZZZ_LOCALE, "Main.sublime-menu")
     if not os.path.isdir(ZZZZ_LOCALE):
         os.mkdir(ZZZZ_LOCALE)
-    fh = open(ZZZZ_SBMENU, "wb")
-    fh.write(js.encode("utf-8"))
-    fh.close()
+    with open(ZZZZ_SBMENU, "wb") as f:
+        f.write(js.encode("utf-8"))
 
 
 class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
