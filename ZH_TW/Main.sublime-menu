@@ -379,7 +379,7 @@
             { "command": "show_panel", "args": {"panel": "console", "toggle": true}, "caption": "顯示/隱藏控制臺" },
             { "caption": "-", "id": "full_screen" },
             { "command": "toggle_full_screen", "caption": "進入/退出全屏" },
-            { "command": "toggle_distraction_free", "caption": "進入/退出無幹擾模式" },
+            { "command": "toggle_distraction_free", "caption": "進入/退出無干擾模式" },
             { "caption": "-", "id": "groups" },
             {
                 "caption": "布局(L)",
@@ -832,7 +832,7 @@
                             "file": "${packages}/User/Distraction Free.sublime-settings",
                             "contents": "{\n\t$0\n}\n"
                         },
-                        "caption": "無幹擾模式 – 用戶"
+                        "caption": "無干擾模式 – 用戶"
                     }
                 ]
             },
