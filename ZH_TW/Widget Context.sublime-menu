@@ -1,5 +1,5 @@
 [
-    { "command": "copy", "caption": "復制" },
+    { "command": "copy", "caption": "複製" },
     { "command": "cut", "caption": "剪切" },
     { "command": "paste", "caption": "粘貼" },
     { "caption": "-" },
