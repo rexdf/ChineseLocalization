@@ -58,3 +58,4 @@ Now this problem has been solved at st3-1.6.0.
 ### Author & Contributors
 - [Rexdf](https://github.com/rexdf)
 - [FichteFoll](https://github.com/FichteFoll)
+- [Patrick T.](https://github.com/Patricivs)
