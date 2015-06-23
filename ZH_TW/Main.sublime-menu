@@ -153,7 +153,7 @@
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "caption": "復制(C)", "mnemonic": "C" },
+            { "command": "copy", "caption": "複製(C)", "mnemonic": "C" },
             { "command": "cut", "caption": "剪切(N)", "mnemonic": "N" },
             { "command": "paste", "caption": "粘貼(P)", "mnemonic": "P" },
             { "command": "paste_and_indent", "caption": "粘貼並縮進(I)", "mnemonic": "I" },
@@ -171,7 +171,7 @@
                     { "command": "swap_line_down", "caption": "向下切換行"},
                     { "command": "duplicate_line", "caption": "重復行" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "刪除行" },
-                    { "command": "join_lines", "caption": "合並行" }
+                    { "command": "join_lines", "caption": "合併行" }
                 ]
             },
             {
@@ -201,13 +201,13 @@
                 ]
             },
             {
-                "caption": "標簽",
+                "caption": "標籤",
                 "id": "tag",
                 "children":
                 [
-                    { "command": "close_tag", "caption": "關閉標簽" },
-                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "展開選擇到標簽" },
-                    { "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" }, "caption": "用標簽自動換行選擇" }
+                    { "command": "close_tag", "caption": "關閉標籤" },
+                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "展開選擇到標籤" },
+                    { "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" }, "caption": "用標籤自動換行選擇" }
                 ]
             },
             {
@@ -225,25 +225,25 @@
                 ]
             },
             {
-                "caption": "代碼折疊",
+                "caption": "代碼摺疊",
                 "id": "fold",
                 "children":
                 [
-                    { "command": "fold", "caption": "折疊" },
+                    { "command": "fold", "caption": "摺疊" },
                     { "command": "unfold", "caption": "展開" },
                     { "command": "unfold_all", "caption": "展開全部" },
                     { "caption": "-" },
-                    { "caption": "折疊全部", "command": "fold_by_level", "args": {"level": 1} },
-                    { "caption": "折疊 2 層", "command": "fold_by_level", "args": {"level": 2} },
-                    { "caption": "折疊 3 層", "command": "fold_by_level", "args": {"level": 3} },
-                    { "caption": "折疊 4 層", "command": "fold_by_level", "args": {"level": 4} },
-                    { "caption": "折疊 5 層", "command": "fold_by_level", "args": {"level": 5} },
-                    { "caption": "折疊 6 層", "command": "fold_by_level", "args": {"level": 6} },
-                    { "caption": "折疊 7 層", "command": "fold_by_level", "args": {"level": 7} },
-                    { "caption": "折疊 8 層", "command": "fold_by_level", "args": {"level": 8} },
-                    { "caption": "折疊 9 層", "command": "fold_by_level", "args": {"level": 9} },
+                    { "caption": "摺疊全部", "command": "fold_by_level", "args": {"level": 1} },
+                    { "caption": "摺疊 2 層", "command": "fold_by_level", "args": {"level": 2} },
+                    { "caption": "摺疊 3 層", "command": "fold_by_level", "args": {"level": 3} },
+                    { "caption": "摺疊 4 層", "command": "fold_by_level", "args": {"level": 4} },
+                    { "caption": "摺疊 5 層", "command": "fold_by_level", "args": {"level": 5} },
+                    { "caption": "摺疊 6 層", "command": "fold_by_level", "args": {"level": 6} },
+                    { "caption": "摺疊 7 層", "command": "fold_by_level", "args": {"level": 7} },
+                    { "caption": "摺疊 8 層", "command": "fold_by_level", "args": {"level": 8} },
+                    { "caption": "摺疊 9 層", "command": "fold_by_level", "args": {"level": 9} },
                     { "caption": "-" },
-                    { "command": "fold_tag_attributes", "caption": "折疊標簽屬性" }
+                    { "command": "fold_tag_attributes", "caption": "摺疊標簽屬性" }
                 ]
             },
             {
@@ -317,7 +317,7 @@
             { "command": "expand_selection", "args": {"to": "scope"}, "caption": "展開選定範圍" },
             { "command": "expand_selection", "args": {"to": "brackets"}, "caption": "展開選定括號" },
             { "command": "expand_selection", "args": {"to": "indentation"}, "caption": "展開選定縮進" },
-            { "command": "expand_selection", "args": {"to": "tag"}, "caption": "展開選定標簽" }
+            { "command": "expand_selection", "args": {"to": "tag"}, "caption": "展開選定標籤" }
         ]
     },
     {
@@ -372,7 +372,7 @@
                 ]
             },
             { "command": "toggle_minimap", "caption": "顯示/隱藏迷你地圖" },
-            { "command": "toggle_tabs", "caption": "顯示/隱藏標簽頁" },
+            { "command": "toggle_tabs", "caption": "顯示/隱藏標籤頁" },
             { "command": "toggle_status_bar", "caption": "顯示/隱藏狀態欄" },
             { "command": "toggle_menu", "caption": "顯示/隱藏菜單" },
             { "command": "show_panel", "args": {"panel": "console", "toggle": true}, "caption": "顯示/隱藏控制臺" },
@@ -668,16 +668,16 @@
                 ]
             },
             {
-                "caption": "書簽(B)",
+                "caption": "書籤(B)",
                 "mnemonic": "B",
                 "id": "bookmarks",
                 "children":
                 [
-                    { "command": "toggle_bookmark", "caption": "開啟/關閉書簽" },
-                    { "command": "next_bookmark", "caption": "下一書簽" },
-                    { "command": "prev_bookmark", "caption": "前一書簽" },
-                    { "command": "clear_bookmarks", "caption": "清除書簽" },
-                    { "command": "select_all_bookmarks", "caption": "選擇所有書簽" },
+                    { "command": "toggle_bookmark", "caption": "開啟/關閉書籤" },
+                    { "command": "next_bookmark", "caption": "下一書籤" },
+                    { "command": "prev_bookmark", "caption": "前一書籤" },
+                    { "command": "clear_bookmarks", "caption": "清除書籤" },
+                    { "command": "select_all_bookmarks", "caption": "選擇所有書籤" },
                     { "caption": "-" },
                     { "command": "select_bookmark", "args": {"index": 0} },
                     { "command": "select_bookmark", "args": {"index": 1} },
@@ -839,7 +839,7 @@
                 {
                     "file": "${packages}/Default/Default ($platform).sublime-keymap"
                 },
-                "caption": "按鍵綁定 – 默認"
+                "caption": "按鍵組合 – 默認"
             },
             {
                 "command": "open_file", "args":
@@ -847,15 +847,15 @@
                     "file": "${packages}/User/Default ($platform).sublime-keymap",
                     "contents": "[\n\t$0\n]\n"
                 },
-                "caption": "按鍵綁定 – 用戶"
+                "caption": "按鍵組合 – 用戶"
             },
             { "caption": "-" },
             {
                 "caption": "字體",
                 "children":
                 [
-                    { "command": "increase_font_size", "caption": "較大" },
-                    { "command": "decrease_font_size", "caption": "較小" },
+                    { "command": "increase_font_size", "caption": "增大" },
+                    { "command": "decrease_font_size", "caption": "減小" },
                     { "caption": "-" },
                     { "command": "reset_font_size", "caption": "重置" }
                 ]
@@ -881,7 +881,7 @@
             { "command": "remove_license", "caption": "刪除註冊信息"},
             { "caption": "-" },
             { "command": "update_check", "caption": "檢查更新…", "platform": "!Linux" },
-            { "command": "show_changelog", "caption": "升級日誌…" },
+            { "command": "show_changelog", "caption": "陞級日誌…" },
             { "command": "show_about_window", "caption": "關於 Sublime Text(A)", "mnemonic": "A" }
         ]
     }
