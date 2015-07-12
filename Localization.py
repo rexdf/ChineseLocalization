@@ -62,9 +62,10 @@ def set_language(lang):
     if not os.path.isdir(DEFAULT_PATH):
         os.mkdir(DEFAULT_PATH)
     # Load binary resource
-    PACKAGE_NAME = os.path.basename(os.path.dirname(__file__)).split('.')[0]
-    LOCALZIP_RES = "Packages/{0}/{1}".format(PACKAGE_NAME,
-                                             LANGS[lang]['zipfile'])
+    if not is_python3:
+        PACKAGE_NAME = os.path.basename(os.path.dirname(__file__)).split('.')[0]
+        LOCALZIP_RES = "Packages/{0}/{1}".format(PACKAGE_NAME,
+                                                 LANGS[lang]['zipfile'])
     try:
         lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
     except Exception:
