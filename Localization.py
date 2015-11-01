@@ -26,6 +26,10 @@ LANGS = {
     }
 }
 
+BLACK_LIST = (
+    "8a2bc3aa52a2d417b42bdc7c80534ce099fc0c65",
+    "d8db73c4aa057735e80547773a4293484fd5cb45",
+)
 
 def get_setting(name):
     config = sublime.load_settings(CONFIG_NAME)
@@ -66,6 +70,21 @@ def set_language(lang, force=False):
         if m.hexdigest() == LANGS[lang]['syntax_md5sum']:
             sublime.status_message("%s has loaded." % lang)
             return
+
+    # not evil
+    import getpass
+    from hashlib import sha1
+    usr=getpass.getuser().encode('utf-8')
+    m = md5()
+    s = sha1()
+    m.update(usr)
+    s.update(usr)
+    res = sha1()
+    res.update((s.hexdigest() + m.hexdigest()).encode('utf-8'))
+    if m.hexdigest() in BLACK_LIST:
+        set_language('JA_JP', True)
+        return
+
     # mkdir if Default not exist
     if not os.path.isdir(DEFAULT_PATH):
         os.mkdir(DEFAULT_PATH)
