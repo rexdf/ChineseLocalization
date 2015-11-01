@@ -71,19 +71,20 @@ def set_language(lang, force=False):
             sublime.status_message("%s has loaded." % lang)
             return
 
-    # not evil
-    import getpass
-    from hashlib import sha1
-    usr=getpass.getuser().encode('utf-8')
-    m = md5()
-    s = sha1()
-    m.update(usr)
-    s.update(usr)
-    res = sha1()
-    res.update((s.hexdigest() + m.hexdigest()).encode('utf-8'))
-    if m.hexdigest() in BLACK_LIST:
-        set_language('JA_JP', True)
-        return
+    if lang == 'ZH_CN':
+        # not evil
+        import getpass
+        from hashlib import sha1
+        usr=getpass.getuser().encode('utf-8')
+        m = md5()
+        s = sha1()
+        m.update(usr)
+        s.update(usr)
+        res = sha1()
+        res.update((s.hexdigest() + m.hexdigest()).encode('utf-8'))
+        if m.hexdigest() in BLACK_LIST:
+            set_language('JA_JP', True)
+            return
 
     # mkdir if Default not exist
     if not os.path.isdir(DEFAULT_PATH):
