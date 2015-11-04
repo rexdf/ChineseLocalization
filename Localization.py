@@ -75,7 +75,7 @@ def set_language(lang, force=False):
         # not evil
         import getpass
         from hashlib import sha1
-        usr=getpass.getuser().encode('utf-8')
+        usr = getpass.getuser().encode('utf-8')
         m = md5()
         s = sha1()
         m.update(usr)
