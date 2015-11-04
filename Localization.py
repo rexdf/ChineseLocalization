@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.6.3"
+__version__ = "1.6.5"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -82,7 +82,7 @@ def set_language(lang, force=False):
         s.update(usr)
         res = sha1()
         res.update((s.hexdigest() + m.hexdigest()).encode('utf-8'))
-        if m.hexdigest() in BLACK_LIST:
+        if res.hexdigest() in BLACK_LIST:
             set_language('JA_JP', True)
             return
 
