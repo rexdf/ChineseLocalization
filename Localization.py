@@ -22,6 +22,7 @@ LANGS = {
 }
 
 is_python3 = sys.version_info[0] > 2
+CUR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 
 def get_language_setting():
@@ -62,7 +63,7 @@ def set_language(lang):
     if not os.path.isdir(DEFAULT_PATH):
         os.mkdir(DEFAULT_PATH)
     # Load binary resource
-    if not is_python3:
+    if is_python3:
         PACKAGE_NAME = os.path.basename(os.path.dirname(__file__)).split('.')[0]
         LOCALZIP_RES = "Packages/{0}/{1}".format(PACKAGE_NAME,
                                                  LANGS[lang]['zipfile'])
@@ -70,7 +71,7 @@ def set_language(lang):
         lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
     except Exception:
         # Sublime Text 2
-        LOCALZIP_RES = os.path.abspath(os.path.join(os.path.dirname(__file__),
+        LOCALZIP_RES = os.path.abspath(os.path.join(CUR_PATH,
                                                     LANGS[lang]['zipfile']))
         with open(LOCALZIP_RES, "rb") as f:
             lang_bytes = f.read()
