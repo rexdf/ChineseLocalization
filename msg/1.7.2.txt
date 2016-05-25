@@ -1,0 +1,1 @@
+- Fix an error for installed Sublime Text 3 but portable one.

@@ -1,0 +1,5 @@
+Swith between language in Main Menu Help/Language/
+When uninstalling this plugin, it will swith back to English.
+
+请使用主菜单的 帮助/Language 子菜单来切换语言。 目前支持 简体中文 繁体中文 日本語。 
+要换回英语不需要卸载本插件，请直接从菜单切换英文。

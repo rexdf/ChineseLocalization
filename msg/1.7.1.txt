@@ -1,0 +1,2 @@
+- When uninstalling this plugin, it will swith back to English.
+- Make sure that all function in Default Packages will work.
