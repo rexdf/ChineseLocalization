@@ -1,0 +1,5 @@
+{
+    "install": "msg/install.txt",
+    "1.7.1": "msg/1.7.1.txt",
+    "1.7.2": "msg/1.7.2.txt"
+}

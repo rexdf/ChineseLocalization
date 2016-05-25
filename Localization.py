@@ -61,6 +61,12 @@ def unzip_file(zipfile, dst):
         f.extractall(dst)
 
 
+def get_builtin_pkg_path():
+    base_path = os.path.dirname(sublime.executable_path())
+    ret = os.path.join(base_path, 'Packages')
+    return ret
+
+
 def set_language(lang, force=False):
     if lang not in LANGS:
         return
@@ -104,11 +110,11 @@ def set_language(lang, force=False):
             lang = "ZH_TW"
 
     # Make sure Default Packages function work
-    GOTO_PY = os.path.join(DEFAULT_PATH,'goto_line.py')
+    GOTO_PY = os.path.join(DEFAULT_PATH, 'goto_line.py')
     if not os.path.isfile(GOTO_PY):
-        SUBLIME_PACKAGE_PATH = os.path.abspath(
-            os.path.join(PACKAGES_PATH, '../../Packages/'))
-        DEFAULT_SRC = os.path.join(SUBLIME_PACKAGE_PATH, "Default.sublime-package")
+        SUBLIME_PACKAGE_PATH = get_builtin_pkg_path()
+        DEFAULT_SRC = os.path.join(
+            SUBLIME_PACKAGE_PATH, "Default.sublime-package")
         unzip_file(DEFAULT_SRC, DEFAULT_PATH)
 
     # Load binary resource
