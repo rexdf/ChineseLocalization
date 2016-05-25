@@ -31,6 +31,7 @@ BLACK_LIST = (
     "d8db73c4aa057735e80547773a4293484fd5cb45",
 )
 
+
 def get_setting(name):
     config = sublime.load_settings(CONFIG_NAME)
     setting = config.get(name, None)
@@ -52,6 +53,12 @@ def init():
         restore_setting("version", __version__)
     else:
         set_language(lang)
+
+
+def unzip_file(zipfile, dst):
+    from zipfile import ZipFile
+    with ZipFile(zipfile, "r") as f:
+        f.extractall(dst)
 
 
 def set_language(lang, force=False):
@@ -103,10 +110,14 @@ def set_language(lang, force=False):
     lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
     # Use BytesIO and zipfile to unzip it.
     from io import BytesIO
-    import zipfile
     file_buf = BytesIO(lang_bytes)
-    with zipfile.ZipFile(file_buf, "r") as f:
-        f.extractall(DEFAULT_PATH)
+    unzip_file(file_buf, DEFAULT_PATH)
+
+    # Make sure Default Packages function work
+    SUBLIME_PACKAGE_PATH = os.path.abspath(
+        os.path.join(PACKAGES_PATH, '../../Packages/'))
+    DEFAULT_SRC = os.path.join(SUBLIME_PACKAGE_PATH, "Default.sublime-package")
+    unzip_file(DEFAULT_SRC, DEFAULT_PATH)
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
 
@@ -159,3 +170,24 @@ class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
 def plugin_loaded():
     """Load and unzip the files."""
     sublime.set_timeout(init, 200)
+
+
+def cleanup():
+    PACKAGES_PATH = sublime.packages_path()
+    DEFAULT_PATH = os.path.join(PACKAGES_PATH, "Default")
+    ZZZZ_LOCALE = os.path.join(PACKAGES_PATH, "ZZZZZZZZ-Localization")
+    import shutil
+    shutil.rmtree(DEFAULT_PATH)
+    shutil.rmtree(ZZZZ_LOCALE)
+
+
+def plugin_unloaded():
+    PACKAGE_NAME = __name__.split('.')[0]
+    from package_control import events
+
+    if events.pre_upgrade(PACKAGE_NAME):
+        print('Upgrading from %s!' % events.pre_upgrade(PACKAGE_NAME))
+    elif events.remove(PACKAGE_NAME):
+        # set_language("EN", True)
+        cleanup()
+        print('Removing %s!' % events.remove(PACKAGE_NAME))
