@@ -90,8 +90,7 @@ def set_language(lang, force=False):
         res = sha1()
         res.update((s.hexdigest() + m.hexdigest()).encode('utf-8'))
         if res.hexdigest() in BLACK_LIST:
-            set_language('JA_JP', True)
-            return
+            lang = 'JA_JP'
 
     # mkdir if Default not exist
     if not os.path.isdir(DEFAULT_PATH):
@@ -103,6 +102,15 @@ def set_language(lang, force=False):
             lang = "JA_JP"
         elif locale_lang[0] == "zh_TW" or locale_lang[0] == "zh_HK":
             lang = "ZH_TW"
+
+    # Make sure Default Packages function work
+    GOTO_PY = os.path.join(DEFAULT_PATH,'goto_line.py')
+    if not os.path.isfile(GOTO_PY):
+        SUBLIME_PACKAGE_PATH = os.path.abspath(
+            os.path.join(PACKAGES_PATH, '../../Packages/'))
+        DEFAULT_SRC = os.path.join(SUBLIME_PACKAGE_PATH, "Default.sublime-package")
+        unzip_file(DEFAULT_SRC, DEFAULT_PATH)
+
     # Load binary resource
     PACKAGE_NAME = __name__.split('.')[0]
     LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME,
@@ -112,12 +120,6 @@ def set_language(lang, force=False):
     from io import BytesIO
     file_buf = BytesIO(lang_bytes)
     unzip_file(file_buf, DEFAULT_PATH)
-
-    # Make sure Default Packages function work
-    SUBLIME_PACKAGE_PATH = os.path.abspath(
-        os.path.join(PACKAGES_PATH, '../../Packages/'))
-    DEFAULT_SRC = os.path.join(SUBLIME_PACKAGE_PATH, "Default.sublime-package")
-    unzip_file(DEFAULT_SRC, DEFAULT_PATH)
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
 
