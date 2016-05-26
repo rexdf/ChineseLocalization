@@ -198,4 +198,5 @@ def plugin_unloaded():
     elif events.remove(PACKAGE_NAME):
         # set_language("EN", True)
         cleanup()
+        sublime_plugin.reload_plugin('Default')
         print('Removing %s!' % events.remove(PACKAGE_NAME))
