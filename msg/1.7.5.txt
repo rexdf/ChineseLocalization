@@ -1,0 +1,1 @@
+Fix colorscheme problem when uninstalling
