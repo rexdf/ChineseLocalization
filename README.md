@@ -8,24 +8,24 @@ Clone this repository into `Sublime Text 3/Packages` using OS-appropriate locati
 
 OSX:
 
-    git clone -b st3 https://github.com/rexdf/ChineseLocalization.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ChineseLocalization
+    git clone -b st3 https://github.com/rexdf/Chinese-Localization.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/ChineseLocalization
 
 Windows:
 
-    git clone -b st3 https://github.com/rexdf/ChineseLocalization.git "%APPDATA%\Sublime Text 3\Packages\ChineseLocalization"
+    git clone -b st3 https://github.com/rexdf/Chinese-Localization.git "%APPDATA%\Sublime Text 3\Packages\ChineseLocalization"
 
 Linux:
 
-    git clone -b st3 https://github.com/rexdf/ChineseLocalization.git ~/.config/sublime-text-3/Packages/ChineseLocalization
+    git clone -b st3 https://github.com/rexdf/Chinese-Localization.git ~/.config/sublime-text-3/Packages/ChineseLocalization
 
 Or just download this repo as zip, rename it to `ChineseLocalization.sublime-package` and put it to `Data\Installed Packages`. (Sublime Text 3 only)
 
-![screenshot](https://raw.githubusercontent.com/rexdf/ChineseLocalization/readme/screenshot/SublimeChineseTranslation3.gif)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/SublimeChineseTranslation3.gif)
 
 
-![screenshot](https://raw.githubusercontent.com/rexdf/ChineseLocalization/readme/screenshot/sublime_translation.png)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/sublime_translation.png)
 
-![screenshot](https://raw.githubusercontent.com/rexdf/ChineseLocalization/readme/screenshot/sublime_trans_linux.png)
+![screenshot](https://raw.githubusercontent.com/rexdf/Chinese-Localization/readme/screenshot/sublime_trans_linux.png)
 
 ### Usage
 
