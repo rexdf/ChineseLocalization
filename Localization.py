@@ -111,21 +111,23 @@ def set_language(lang, force=False):
 
     # Make sure Default Packages function work
     GOTO_PY = os.path.join(DEFAULT_PATH, 'goto_line.py')
-    if not os.path.isfile(GOTO_PY):
+    is_en = lang == 'EN'
+    if is_en or not os.path.isfile(GOTO_PY):
         SUBLIME_PACKAGE_PATH = get_builtin_pkg_path()
         DEFAULT_SRC = os.path.join(
             SUBLIME_PACKAGE_PATH, "Default.sublime-package")
         unzip_file(DEFAULT_SRC, DEFAULT_PATH)
 
-    # Load binary resource
-    PACKAGE_NAME = __name__.split('.')[0]
-    LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME,
-                                           LANGS[lang]['zipfile'])
-    lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
-    # Use BytesIO and zipfile to unzip it.
-    from io import BytesIO
-    file_buf = BytesIO(lang_bytes)
-    unzip_file(file_buf, DEFAULT_PATH)
+    # Load binary resource and unzup it
+    if not is_en:
+        PACKAGE_NAME = __name__.split('.')[0]
+        LOCALZIP_RES = "Packages/{}/{}".format(PACKAGE_NAME,
+                                               LANGS[lang]['zipfile'])
+        lang_bytes = sublime.load_binary_resource(LOCALZIP_RES)
+        # Use BytesIO and zipfile to unzip it.
+        from io import BytesIO
+        file_buf = BytesIO(lang_bytes)
+        unzip_file(file_buf, DEFAULT_PATH)
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
 
