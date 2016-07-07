@@ -1,0 +1,3 @@
+English always use sublime text 3 builtin menu.
+
+英文使用ST自带的菜单。
