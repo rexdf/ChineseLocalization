@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.7.2"
+__version__ = "1.7.7"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -112,7 +112,7 @@ def set_language(lang, force=False):
     # Make sure Default Packages function work
     GOTO_PY = os.path.join(DEFAULT_PATH, 'goto_line.py')
     is_en = lang == 'EN'
-    if is_en or not os.path.isfile(GOTO_PY):
+    if is_en or force or not os.path.isfile(GOTO_PY):
         SUBLIME_PACKAGE_PATH = get_builtin_pkg_path()
         DEFAULT_SRC = os.path.join(
             SUBLIME_PACKAGE_PATH, "Default.sublime-package")
