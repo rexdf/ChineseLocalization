@@ -208,7 +208,7 @@
                 [
                     { "command": "終了タグを挿入" },
                     { "command": "expand_selection", "args": {"to": "tag"}, "caption": "タグブロックを選択" },
-                    { "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" }, "caption": "選択範囲を新規タグで囲む" }
+                    { "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/long-tag.sublime-snippet" }, "caption": "選択範囲を新規タグで囲む" }
                 ]
             },
             {
@@ -738,7 +738,7 @@
             },
             { "command": "build", "mnemonic": "B", "caption": "ビルド(B)" },
             { "command": "build", "args": {"select": true}, "caption": "ビルドして実行" },
-            { "command": "exec", "args": {"kill": true}, "caption": "ビルドキャンセル(C)", "mnemonic": "C" },
+            { "command": "cancel_build", "caption": "ビルドキャンセル(C)", "mnemonic": "C" },
             {
                 "caption": "ビルド結果(R)",
                 "mnemonic": "R",
@@ -759,10 +759,20 @@
                 "children": [ { "command": "$macros" } ]
             },
             { "caption": "-" },
-            { "command": "new_plugin", "caption": "プラグイン追加…" },
-            { "command": "new_snippet", "caption": "スニペット追加…" },
-            { "command": "new_syntax", "caption": "New Syntax…" },
-            { "command": "convert_syntax" },
+            {
+                "caption": "開発者",
+                "children":
+                [
+                    { "command": "new_plugin", "caption": "プラグイン追加…" },
+                    { "command": "new_snippet", "caption": "スニペット追加…" },
+                    { "command": "new_syntax", "caption": "New Syntax…" },
+                    { "command": "convert_syntax" },
+                    { "caption": "-" },
+                    { "command": "profile_plugins" },
+                    { "caption": "-" },
+                    { "command": "show_scope_name" },
+                ]
+            },
             { "caption": "-", "id": "end" }
         ]
     },
@@ -810,47 +820,33 @@
         "id": "preferences",
         "children":
         [
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Packagesフォルダ(B)…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Packagesフォルダ…(B)", "mnemonic": "B" },
             { "caption": "-" },
-            { "command": "open_file", "args": {"file": "${packages}/Default/Preferences.sublime-settings"}, "caption": "基本設定 – 標準" },
             {
-                "command": "open_file", "args":
+                "command": "edit_settings", "args":
                 {
-                    "file": "${packages}/User/Preferences.sublime-settings",
-                    "contents": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by file type specific settings.\n{\n\t$0\n}\n"
+                    "base_file": "${packages}/Default/Preferences.sublime-settings",
+                    "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
                 },
-                "caption": "基本設定 – ユーザ"
+                "caption": "基本設定"
             },
+            { "command": "edit_syntax_settings", "caption": "基本設定 – シンタックス指定" },
             {
-                "caption": "基本設定 – 拡張",
-                "children":
-                [
-                    { "command": "open_file_settings", "caption": "シンタックス指定 – ユーザ" },
-                    {
-                        "command": "open_file", "args":
-                        {
-                            "file": "${packages}/User/Distraction Free.sublime-settings",
-                            "contents": "{\n\t$0\n}\n"
-                        },
-                        "caption": "集中モード – ユーザ"
-                    }
-                ]
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Distraction Free.sublime-settings",
+                    "default": "{\n\t$0\n}\n"
+                },
+                "caption": "基本設定 – 集中モード"
             },
             { "caption": "-" },
             {
-                "command": "open_file", "args":
+                "command": "edit_settings", "args":
                 {
-                    "file": "${packages}/Default/Default ($platform).sublime-keymap"
+                    "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
+                    "default": "[\n\t$0\n]\n"
                 },
-                "caption": "キーバインド – 標準"
-            },
-            {
-                "command": "open_file", "args":
-                {
-                    "file": "${packages}/User/Default ($platform).sublime-keymap",
-                    "contents": "[\n\t$0\n]\n"
-                },
-                "caption": "キーバインド – ユーザ"
+                "caption": "キーバインド"
             },
             { "caption": "-" },
             {
