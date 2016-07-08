@@ -20,9 +20,12 @@ LANGS = {
         "zipfile": "JA_JP.zip",
         'syntax_md5sum': "037128b8f8d2616c7239d8e9a7183b4c"
     },
-    "EN": {
+    "EN": { # This item is deprecated and not used in programming.
         "zipfile": "EN.zip",
-        'syntax_md5sum': "2667c3fe5c1102274051920b1f581adb"
+        'syntax_md5sum': (
+            "2667c3fe5c1102274051920b1f581adb",
+            "ecd966996f5fcaff6fac2a281bec93d5",  # 3099+
+        )
     }
 }
 
@@ -67,20 +70,32 @@ def get_builtin_pkg_path():
     return ret
 
 
+def get_file_md5sum(file_path):
+    with open(syn_path, "rb") as f:
+        syntax = f.read()
+    m = md5()
+    m.update(syntax)
+    return m.hexdigest()
+
+
 def set_language(lang, force=False):
     if lang not in LANGS:
         return
+    is_en = lang == 'EN'
     PACKAGES_PATH = sublime.packages_path()
     DEFAULT_PATH = os.path.join(PACKAGES_PATH, "Default")
     SYN_PATH = os.path.join(DEFAULT_PATH, "Syntax.sublime-menu")
 
     # not force update then check current lang
     if not force and os.path.isfile(SYN_PATH):
-        with open(SYN_PATH, "rb") as f:
-            syntax = f.read()
-        m = md5()
-        m.update(syntax)
-        if m.hexdigest() == LANGS[lang]['syntax_md5sum']:
+        syntax_md5sum = get_file_md5sum(SYN_PATH)
+        english_ok, other_ok = False, False
+        if is_en:
+            english_ok = syntax_md5sum == get_setting('syntax_md5sum')
+        else:
+            other_ok = syntax_md5sum == LANGS[lang]['syntax_md5sum']
+
+        if english_ok or other_ok:
             sublime.status_message("%s has loaded." % lang)
             return
 
@@ -111,7 +126,6 @@ def set_language(lang, force=False):
 
     # Make sure Default Packages function work
     GOTO_PY = os.path.join(DEFAULT_PATH, 'goto_line.py')
-    is_en = lang == 'EN'
     if is_en or force or not os.path.isfile(GOTO_PY):
         SUBLIME_PACKAGE_PATH = get_builtin_pkg_path()
         DEFAULT_SRC = os.path.join(
@@ -128,6 +142,9 @@ def set_language(lang, force=False):
         from io import BytesIO
         file_buf = BytesIO(lang_bytes)
         unzip_file(file_buf, DEFAULT_PATH)
+    else:
+        syntax_md5sum = get_file_md5sum(SYN_PATH)
+        restore_setting('syntax_md5sum', syntax_md5sum)
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
 
