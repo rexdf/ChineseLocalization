@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.7.7"
+__version__ = "1.8.0"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
