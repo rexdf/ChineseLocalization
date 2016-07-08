@@ -1,0 +1,4 @@
+1.8.0
+Update menu items from Default package. It may be not compatible with old version of Sublime Text 3(Older than 1/26/2016).
+
+提取新版的Sublime Text菜单文件，并更新了翻译，因此会有极个别不兼容2016年1月26日之前的版本，就是很少使用的设置菜单和取消编译菜单。
