@@ -71,7 +71,7 @@ def get_builtin_pkg_path():
 
 
 def get_file_md5sum(file_path):
-    with open(syn_path, "rb") as f:
+    with open(file_path, "rb") as f:
         syntax = f.read()
     m = md5()
     m.update(syntax)
