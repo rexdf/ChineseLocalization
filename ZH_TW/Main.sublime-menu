@@ -208,7 +208,7 @@
                 [
                     { "command": "close_tag", "caption": "關閉標籤" },
                     { "command": "expand_selection", "args": {"to": "tag"}, "caption": "展開選擇到標籤" },
-                    { "command": "insert_snippet", "args": { "name": "Packages/XML/long-tag.sublime-snippet" }, "caption": "用標籤自動換行選擇" }
+                    { "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/long-tag.sublime-snippet" }, "caption": "用標籤自動換行選擇" }
                 ]
             },
             {
@@ -738,7 +738,7 @@
             },
             { "command": "build", "caption": "編譯(B)", "mnemonic": "B" },
             { "command": "build", "args": {"select": true}, "caption": "用…編譯" },
-            { "command": "exec", "args": {"kill": true}, "caption": "取消編譯(C)", "mnemonic": "C" },
+            { "command": "cancel_build", "caption": "取消編譯(C)", "mnemonic": "C" },
             {
                 "caption": "編譯結果(R)",
                 "mnemonic": "R",
@@ -759,10 +759,20 @@
                 "children": [ { "command": "$macros" } ]
             },
             { "caption": "-" },
-            { "command": "new_plugin", "caption": "新插件…" },
-            { "command": "new_snippet", "caption": "新代碼段…" },
-            { "command": "new_syntax", "caption": "新語法定義…" },
-            { "command": "convert_syntax" },
+            {
+                "caption": "插件开发",
+                "children":
+                [
+                    { "command": "new_plugin", "caption": "新插件…" },
+                    { "command": "new_snippet", "caption": "新代碼段…" },
+                    { "command": "new_syntax", "caption": "新語法定義…" },
+                    { "command": "convert_syntax" },
+                    { "caption": "-" },
+                    { "command": "profile_plugins" },
+                    { "caption": "-" },
+                    { "command": "show_scope_name" },
+                ]
+            },
             { "caption": "-", "id": "end" }
         ]
     },
@@ -812,45 +822,31 @@
         [
             { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "瀏覽程序包(B)…", "mnemonic": "B" },
             { "caption": "-" },
-            { "command": "open_file", "args": {"file": "${packages}/Default/Preferences.sublime-settings"}, "caption": "設置 – 默認" },
             {
-                "command": "open_file", "args":
+                "command": "edit_settings", "args":
                 {
-                    "file": "${packages}/User/Preferences.sublime-settings",
-                    "contents": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by file type specific settings.\n{\n\t$0\n}\n"
+                    "base_file": "${packages}/Default/Preferences.sublime-settings",
+                    "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
                 },
-                "caption": "設置 – 用戶"
+                "caption": "設置"
             },
+            { "command": "edit_syntax_settings", "caption": "設置 – 特定語法" },
             {
-                "caption": "設置 – 更多",
-                "children":
-                [
-                    { "command": "open_file_settings", "caption": "特定語法 – 用戶" },
-                    {
-                        "command": "open_file", "args":
-                        {
-                            "file": "${packages}/User/Distraction Free.sublime-settings",
-                            "contents": "{\n\t$0\n}\n"
-                        },
-                        "caption": "無干擾模式 – 用戶"
-                    }
-                ]
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Distraction Free.sublime-settings",
+                    "default": "{\n\t$0\n}\n"
+                },
+                "caption": "設置 - 無干擾模式"
             },
             { "caption": "-" },
             {
-                "command": "open_file", "args":
+                "command": "edit_settings", "args":
                 {
-                    "file": "${packages}/Default/Default ($platform).sublime-keymap"
+                    "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
+                    "default": "[\n\t$0\n]\n"
                 },
-                "caption": "按鍵組合 – 默認"
-            },
-            {
-                "command": "open_file", "args":
-                {
-                    "file": "${packages}/User/Default ($platform).sublime-keymap",
-                    "contents": "[\n\t$0\n]\n"
-                },
-                "caption": "按鍵組合 – 用戶"
+                "caption": "按鍵組合"
             },
             { "caption": "-" },
             {
