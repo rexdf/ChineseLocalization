@@ -91,7 +91,7 @@ def set_language(lang, force=False):
         syntax_md5sum = get_file_md5sum(SYN_PATH)
         english_ok, other_ok = False, False
         if is_en:
-            english_ok = syntax_md5sum == get_setting('syntax_md5sum')
+            english_ok = syntax_md5sum == get_setting('en_syntax_md5sum')
         else:
             other_ok = syntax_md5sum == LANGS[lang]['syntax_md5sum']
 
@@ -144,7 +144,7 @@ def set_language(lang, force=False):
         unzip_file(file_buf, DEFAULT_PATH)
     else:
         syntax_md5sum = get_file_md5sum(SYN_PATH)
-        restore_setting('syntax_md5sum', syntax_md5sum)
+        restore_setting('en_syntax_md5sum', syntax_md5sum)
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
 
