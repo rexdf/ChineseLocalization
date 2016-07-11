@@ -1,8 +1,8 @@
 [
     { "command": "close_by_index", "args": { "group": -1, "index": -1 }, "caption": "關閉" },
-    { "command": "close_others_by_index", "args": { "group": -1, "index": -1 }, "caption": "關閉其他" },
-    { "command": "close_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "關閉右側選項卡" },
+    { "command": "close_others_by_index", "args": { "group": -1, "index": -1 }, "caption": "關閉其它分頁" },
+    { "command": "close_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "關閉右側分頁" },
     { "caption": "-" },
-    { "command": "new_file", "caption": "新建文件" },
-    { "command": "prompt_open_file", "caption": "打開文件" }
+    { "command": "new_file", "caption": "新建檔案" },
+    { "command": "prompt_open_file", "caption": "開啟檔案" }
 ]

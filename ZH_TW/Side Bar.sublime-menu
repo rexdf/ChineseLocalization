@@ -1,11 +1,11 @@
 [
-    { "caption": "新建文件", "command": "new_file_at", "args": {"dirs": []} },
+    { "caption": "新建檔案", "command": "new_file_at", "args": {"dirs": []} },
     { "caption": "重命名…", "command": "rename_path", "args": {"paths": []} },
-    { "caption": "刪除文件", "command": "delete_file", "args": {"files": []} },
-    { "caption": "打開所在文件夾…", "command": "open_containing_folder", "args": {"files": []} },
+    { "caption": "刪除檔案", "command": "delete_file", "args": {"files": []} },
+    { "caption": "開啟所在資料夾…", "command": "open_containing_folder", "args": {"files": []} },
     { "caption": "-", "id": "folder_commands" },
-    { "caption": "新建文件夾…", "command": "new_folder", "args": {"dirs": []} },
-    { "caption": "刪除文件夾", "command": "delete_folder", "args": {"dirs": []} },
-    { "caption": "在文件夾中查找…", "command": "find_in_folder", "args": {"dirs": []} },
+    { "caption": "新建資料夾…", "command": "new_folder", "args": {"dirs": []} },
+    { "caption": "刪除資料夾", "command": "delete_folder", "args": {"dirs": []} },
+    { "caption": "在資料夾中尋找…", "command": "find_in_folder", "args": {"dirs": []} },
     { "caption": "-", "id": "end" }
 ]

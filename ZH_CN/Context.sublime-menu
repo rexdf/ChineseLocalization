@@ -11,6 +11,6 @@
     { "command": "open_in_browser", "caption": "在浏览器中打开" },
     { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "打开所在文件夹…" },
     { "command": "copy_path", "caption": "复制文件路径" },
-    { "command": "reveal_in_side_bar", "caption": "在侧边栏显示" },
+    { "command": "reveal_in_side_bar", "caption": "在侧边栏中显示" },
     { "caption": "-", "id": "end" }
 ]

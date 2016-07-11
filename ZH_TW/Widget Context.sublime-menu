@@ -1,7 +1,7 @@
 [
     { "command": "copy", "caption": "複製" },
-    { "command": "cut", "caption": "剪切" },
-    { "command": "paste", "caption": "粘貼" },
+    { "command": "cut", "caption": "剪下" },
+    { "command": "paste", "caption": "貼上" },
     { "caption": "-" },
     { "command": "select_all", "caption": "全選" }
 ]
