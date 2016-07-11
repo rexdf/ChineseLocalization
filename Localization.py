@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.8.0"
+__version__ = "1.9.0"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -20,13 +20,13 @@ LANGS = {
         "zipfile": "JA_JP.zip",
         'syntax_md5sum': "037128b8f8d2616c7239d8e9a7183b4c"
     },
-    "EN": { # This item is deprecated and not used in programming.
-        "zipfile": "EN.zip",
-        'syntax_md5sum': (
-            "2667c3fe5c1102274051920b1f581adb",
-            "ecd966996f5fcaff6fac2a281bec93d5",  # 3099+
-        )
-    }
+    # "EN": { # This item is deprecated and not used in programming.
+    #     "zipfile": "EN.zip",
+    #     'syntax_md5sum': (
+    #         "2667c3fe5c1102274051920b1f581adb",
+    #         "ecd966996f5fcaff6fac2a281bec93d5",  # 3099+
+    #     )
+    # }
 }
 
 BLACK_LIST = (
@@ -79,9 +79,12 @@ def get_file_md5sum(file_path):
 
 
 def set_language(lang, force=False):
-    if lang not in LANGS:
+    if lang == "EN":
+        is_en = True
+    elif lang not in LANGS:
         return
-    is_en = lang == 'EN'
+    else:
+        is_en = False
     PACKAGES_PATH = sublime.packages_path()
     DEFAULT_PATH = os.path.join(PACKAGES_PATH, "Default")
     SYN_PATH = os.path.join(DEFAULT_PATH, "Syntax.sublime-menu")
@@ -156,7 +159,7 @@ def set_language(lang, force=False):
     platform = sublime.platform()
     if platform == "osx":
         pattern = re.compile(r"(?<=[\u3000-\u9FFFa-zA-Z])\([A-Za-z]\)", re.M)
-        pattern_help = re.compile(r"(ヘルプ|帮助|幫助)")
+        pattern_help = re.compile(r"(ヘルプ|帮助|說明)")
 
         content = re.sub(pattern, "", content)
         content = re.sub(pattern_help, "Help", content)
