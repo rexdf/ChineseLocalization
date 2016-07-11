@@ -180,7 +180,7 @@
                 "id": "comment",
                 "children":
                 [
-                    { "command": "toggle_comment", "args": {"block": false}, "caption": "开启/关闭注释" },
+                    { "command": "toggle_comment", "args": {"block": false}, "caption": "开启/关闭单行注释" },
                     { "command": "toggle_comment", "args": {"block": true}, "caption": "开启/关闭多行注释" }
                 ]
             },
@@ -195,8 +195,8 @@
                     { "command": "delete_word", "args": { "forward": true }, "caption": "向前删除单词" },
                     { "command": "delete_word", "args": { "forward": false }, "caption": "向后删除单词" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "删除行" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "删除到末尾" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "删除到开始" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "删除到行末尾" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "删除到行开始" },
                     { "caption": "-" },
                     { "command": "transpose", "caption": "互换位置(字符/选区)" }
                 ]
@@ -624,7 +624,7 @@
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "跳到符号…" },
             { "command": "goto_symbol_in_project", "caption": "跳到项目中符号…" },
             { "command": "goto_definition", "caption": "跳到预定义…" },
-            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "转到单词…" },
+            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "跳到单词…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "跳到行…" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "往回跳" },
@@ -807,7 +807,7 @@
             { "command": "open_file", "args": {"file": "${project}"}, "caption": "编辑项目" },
             { "caption": "-" },
             { "command": "new_window_for_project", "caption": "为项目新建工作空间" },
-            { "command": "save_workspace_as", "caption": "工作空间另存为(A)...", "mnemonic": "A" },
+            { "command": "save_workspace_as", "caption": "工作空间另存为(A)…", "mnemonic": "A" },
             { "caption": "-" },
             { "command": "prompt_add_folder", "caption": "添加文件夹到项目(D)…", "mnemonic": "D" },
             { "command": "close_folder_list", "caption": "从项目中移除所有文件夹(M)", "mnemonic": "M" },
