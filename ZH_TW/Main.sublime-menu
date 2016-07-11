@@ -166,8 +166,8 @@
                 "children":
                 [
                     { "command": "indent", "caption": "縮排" },
-                    { "command": "unindent" , "caption": "取消縮排" },
-                    { "command": "reindent", "args": {"single_line": true} , "caption": "再次縮排" },
+                    { "command": "unindent", "caption": "取消縮排" },
+                    { "command": "reindent", "args": {"single_line": true}, "caption": "再次縮排" },
                     { "command": "swap_line_up", "caption": "向上切換行" },
                     { "command": "swap_line_down", "caption": "向下切換行"},
                     { "command": "duplicate_line", "caption": "複製游標所在行" },
