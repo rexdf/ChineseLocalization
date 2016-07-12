@@ -160,7 +160,7 @@ def set_language(lang, force=False):
         elif sbt_version < 3118:
             patch_version = 3105
         if patch_version:
-            PATCH_RES = "Packages/{}/patch/{}/{}/Main.sublime-menu".format(
+            PATCH_RES = "Packages/{}/patch/{}/{}/Main.sublime-menu.txt".format(
                 PACKAGE_NAME, patch_version, lang)
             content = sublime.load_resource(PATCH_RES)
             with open(MAIN_MENU, 'wb') as f:
