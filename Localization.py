@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.9.1"
+__version__ = "1.9.2"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -162,9 +162,9 @@ def set_language(lang, force=False):
         if patch_version:
             PATCH_RES = "Packages/{}/patch/{}/{}/Main.sublime-menu.txt".format(
                 PACKAGE_NAME, patch_version, lang)
-            content = sublime.load_resource(PATCH_RES)
+            content = sublime.load_binary_resource(PATCH_RES)
             with open(MAIN_MENU, 'wb') as f:
-                f.write(content.encode('utf-8'))
+                f.write(content)
 
     with open(MAIN_MENU, "rb") as f:
         content = f.read().decode("utf-8")
