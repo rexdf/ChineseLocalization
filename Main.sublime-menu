@@ -2,28 +2,51 @@
   {
     "children": [
       {
+        "caption": "Package Settings",
+        "children": [
+          {
+            "caption": "Localization",
+            "children": [
+              {
+                "args": {
+                  "file": "${packages}/User/Localization.sublime-settings"
+                },
+                "caption": "Settings",
+                "command": "open_file"
+              }
+            ]
+          }
+        ],
+        "id": "package-settings"
+      }
+    ],
+    "id": "preferences"
+  },
+  {
+    "children": [
+      {
         "caption": "Language",
         "children": [
           {
-            "command": "localize_tool",
             "args": {
               "action": "open_file",
               "file": "${packages}/Default/Main.sublime-menu"
-            }
+            },
+            "command": "localize_tool"
           },
           {
-            "command": "localize_tool",
             "args": {
               "action": "reset",
               "file": ""
-            }
+            },
+            "command": "localize_tool"
           },
           {
-            "command": "localize_tool",
             "args": {
               "action": "new_locale",
               "file": ""
-            }
+            },
+            "command": "localize_tool"
           },
           {
             "caption": "-"
@@ -79,28 +102,5 @@
       }
     ],
     "id": "help"
-  },
-  {
-    "id": "preferences",
-    "children": [
-      {
-        "caption": "Package Settings",
-        "id": "package-settings",
-        "children": [
-          {
-            "caption": "Localization",
-            "children": [
-              {
-                "caption": "Settings",
-                "command": "open_file",
-                "args": {
-                  "file": "${packages}/User/Localization.sublime-settings"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
   }
 ]
