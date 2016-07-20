@@ -1,0 +1,30 @@
+{
+  "supports": [
+    "EN",
+    "JA_JP",
+    "ZH_CN",
+    "ZH_TW"
+  ],
+  "translation": {
+    "EN": {
+      "open_file": "Edit",
+      "new_locale": "New Localization",
+      "reset":"Reset"
+    },
+    "JA_JP": {
+      "open_file": "Edit",
+      "new_locale": "New Localization",
+      "reset":"Reset"
+    },
+    "ZH_CN": {
+      "open_file": "编辑",
+      "new_locale": "新翻译",
+      "reset":"重置"
+    },
+    "ZH_TW": {
+      "open_file": "編輯",
+      "new_locale": "新翻譯",
+      "reset":"重置"
+    }
+  }
+}
