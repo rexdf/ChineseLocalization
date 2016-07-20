@@ -1,50 +1,106 @@
 [
-    {
+  {
+    "children": [
+      {
+        "caption": "Language",
         "children": [
-            {
-                "caption": "Language",
-                "children": [
-                    {
-                        "args": {
-                            "language": "ZH_CN"
-                        },
-                        "caption": "Simplified Chinese 简体中文",
-                        "checkbox": true,
-                        "command": "toggle_language",
-                        "mnemonic": "S"
-                    },
-                    {
-                        "args": {
-                            "language": "ZH_TW"
-                        },
-                        "caption": "Traditional Chinese 正體中文",
-                        "checkbox": true,
-                        "command": "toggle_language",
-                        "mnemonic": "T"
-                    },
-                    {
-                        "args": {
-                            "language": "JA_JP"
-                        },
-                        "caption": "Japanese 日本語",
-                        "checkbox": true,
-                        "command": "toggle_language",
-                        "mnemonic": "J"
-                    },
-                    {
-                        "args": {
-                            "language": "EN"
-                        },
-                        "caption": "English",
-                        "checkbox": true,
-                        "command": "toggle_language",
-                        "mnemonic": "E"
-                    }
-                ],
-                "id": "locale",
-                "mnemonic": "L"
+          {
+            "command": "localize_tool",
+            "args": {
+              "action": "open_file",
+              "file": "${packages}/Default/Main.sublime-menu"
             }
+          },
+          {
+            "command": "localize_tool",
+            "args": {
+              "action": "reset",
+              "file": ""
+            }
+          },
+          {
+            "command": "localize_tool",
+            "args": {
+              "action": "new_locale",
+              "file": ""
+            }
+          },
+          {
+            "caption": "-"
+          },
+          {
+            "args": {
+              "language": "ZH_CN"
+            },
+            "caption": "Simplified Chinese 简体中文",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "S"
+          },
+          {
+            "args": {
+              "language": "ZH_TW"
+            },
+            "caption": "Traditional Chinese 正體中文",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "T"
+          },
+          {
+            "args": {
+              "language": "JA_JP"
+            },
+            "caption": "Japanese 日本語",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "J"
+          },
+          {
+            "args": {
+              "language": "EN"
+            },
+            "caption": "English",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "E"
+          },
+          {
+            "args": {
+              "language": "Unknown"
+            },
+            "caption": "User Define",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "U"
+          }
         ],
-        "id": "help",
-    }
+        "id": "locale",
+        "mnemonic": "L"
+      }
+    ],
+    "id": "help"
+  },
+  {
+    "id": "preferences",
+    "children": [
+      {
+        "caption": "Package Settings",
+        "id": "package-settings",
+        "children": [
+          {
+            "caption": "Localization",
+            "children": [
+              {
+                "caption": "Settings",
+                "command": "open_file",
+                "args": {
+                  "file": "${packages}/User/Localization.sublime-settings"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 ]

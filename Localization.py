@@ -20,6 +20,8 @@ LANGS = {
         "zipfile": "JA_JP.zip",
         'syntax_md5sum': "037128b8f8d2616c7239d8e9a7183b4c"
     },
+    "Unknown": {
+    },
     # "EN": { # This item is deprecated and not used in programming.
     #     "zipfile": "EN.zip",
     #     'syntax_md5sum': (
@@ -85,6 +87,10 @@ def set_language(lang, force=False):
         return
     else:
         is_en = False
+    if lang == "Unknown":
+        lang = get_setting('language_name')
+        sublime.status_message("%s has loaded." % lang)
+        return
     PACKAGES_PATH = sublime.packages_path()
     DEFAULT_PATH = os.path.join(PACKAGES_PATH, "Default")
     SYN_PATH = os.path.join(DEFAULT_PATH, "Syntax.sublime-menu")
@@ -210,6 +216,47 @@ class ToggleLanguageCommand(sublime_plugin.ApplicationCommand):
 
     def is_checked(self, language):
         return get_setting('language') == language
+
+
+def get_command(language, action):
+    PACKAGE_NAME = __name__.split('.')[0]
+    MENU_RES = "Packages/{}/Menu.json".format(PACKAGE_NAME)
+    content = sublime.load_resource(MENU_RES)
+    import json
+    menu = json.loads(content, "utf-8")
+    if language not in menu["supports"]:
+        language = "EN"
+    return menu["translation"][language][action]
+
+
+class LocalizeToolCommand(sublime_plugin.WindowCommand):
+
+    def run(self, action, file=None):
+        if action == 'open_file':
+            sublime.run_command(action, {'file': file})
+        elif action == 'new_locale':
+            language = self.window.show_input_panel(
+                "Input a locale name", "EN", self.on_done_locale, None, None)
+        elif action == 'reset':
+            pass
+
+    def on_done_locale(self, locale):
+        self.__locale = locale
+        self.window.show_input_panel(
+            "Input a language name", "English", self.on_done_lang, None, None)
+
+    def on_done_lang(self, lang):
+        self.__lang = lang
+        self.on_done_new()
+
+    def on_done_new(self):
+        restore_setting('language_locale', self.__locale)
+        restore_setting('language_name', self.__lang)
+        restore_setting('language', 'Unknown')
+
+    def description(self, action, file):
+        language = get_setting('language')
+        return get_command(language, action)
 
 
 def plugin_loaded():
