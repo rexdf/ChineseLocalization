@@ -31,10 +31,10 @@ LANGS = {
     # }
 }
 
-BLACK_LIST = (
+BLACK_LIST = {
     "8a2bc3aa52a2d417b42bdc7c80534ce099fc0c65",
     "d8db73c4aa057735e80547773a4293484fd5cb45",
-)
+}
 
 
 def get_setting(name):
