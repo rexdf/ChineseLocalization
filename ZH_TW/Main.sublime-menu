@@ -773,6 +773,7 @@
                     { "command": "show_scope_name", "caption": "顯示節點名字" },
                 ]
             },
+            { "command": "install_package_control", "caption": "安裝包管理器…" },
             { "caption": "-", "id": "end" }
         ]
     },
