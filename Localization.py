@@ -163,8 +163,10 @@ def set_language(lang, force=False):
         patch_version = None
         if sbt_version < 3105:
             patch_version = 3065
-        elif sbt_version < 3118:
+        elif sbt_version < 3118: #3105~3117
             patch_version = 3105
+        elif sbt_version < 3121: #3118~3120
+            patch_version = 3118
         if patch_version:
             PATCH_RES = "Packages/{}/patch/{}/{}/Main.sublime-menu.txt".format(
                 PACKAGE_NAME, patch_version, lang)
