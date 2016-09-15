@@ -773,6 +773,7 @@
                     { "command": "show_scope_name" },
                 ]
             },
+            { "command": "install_package_control", "caption": "Install Package Control…" },
             { "caption": "-", "id": "end" }
         ]
     },
