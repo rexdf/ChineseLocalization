@@ -1,0 +1,888 @@
+[
+    {
+        "caption": "ファイル(F)",
+        "mnemonic": "F",
+        "id": "file",
+        "children":
+        [
+            { "command": "new_file", "caption": "新規作成(N)", "mnemonic": "N" },
+
+            { "command": "prompt_open_file", "caption": "ファイルを開く(O)…", "mnemonic": "O", "platform": "!OSX" },
+            { "command": "prompt_open_folder", "caption": "フォルダを開く…", "platform": "!OSX" },
+            { "command": "prompt_open", "caption": "開く…", "platform": "OSX" },
+            {
+                "caption": "最近使ったファイルを開く(R)…",
+                "mnemonic": "R",
+                "children":
+                [
+                    { "command": "reopen_last_file", "caption": "閉じたファイルを開く" },
+                    { "caption": "-" },
+                    { "command": "open_recent_file", "args": {"index": 0 } },
+                    { "command": "open_recent_file", "args": {"index": 1 } },
+                    { "command": "open_recent_file", "args": {"index": 2 } },
+                    { "command": "open_recent_file", "args": {"index": 3 } },
+                    { "command": "open_recent_file", "args": {"index": 4 } },
+                    { "command": "open_recent_file", "args": {"index": 5 } },
+                    { "command": "open_recent_file", "args": {"index": 6 } },
+                    { "command": "open_recent_file", "args": {"index": 7 } },
+                    { "caption": "-" },
+                    { "command": "open_recent_folder", "args": {"index": 0 } },
+                    { "command": "open_recent_folder", "args": {"index": 1 } },
+                    { "command": "open_recent_folder", "args": {"index": 2 } },
+                    { "command": "open_recent_folder", "args": {"index": 3 } },
+                    { "command": "open_recent_folder", "args": {"index": 4 } },
+                    { "command": "open_recent_folder", "args": {"index": 5 } },
+                    { "command": "open_recent_folder", "args": {"index": 6 } },
+                    { "command": "open_recent_folder", "args": {"index": 7 } },
+                    { "caption": "-" },
+                    { "command": "clear_recent_files", "caption": "履歴をクリア" }
+                ]
+            },
+            {
+                "caption": "エンコードを指定して開き直す",
+                "children":
+                [
+                    { "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
+                    { "caption": "UTF-16 LE", "command": "reopen", "args": {"encoding": "utf-16 le" } },
+                    { "caption": "UTF-16 BE", "command": "reopen", "args": {"encoding": "utf-16 be" } },
+                    { "caption": "-" },
+                    { "caption": "Western (Windows 1252)", "command": "reopen", "args": {"encoding": "Western (Windows 1252)" } },
+                    { "caption": "Western (ISO 8859-1)", "command": "reopen", "args": {"encoding": "Western (ISO 8859-1)" } },
+                    { "caption": "Western (ISO 8859-3)", "command": "reopen", "args": {"encoding": "Western (ISO 8859-3)" } },
+                    { "caption": "Western (ISO 8859-15)", "command": "reopen", "args": {"encoding": "Western (ISO 8859-15)" } },
+                    { "caption": "Western (Mac Roman)", "command": "reopen", "args": {"encoding": "Western (Mac Roman)" } },
+                    { "caption": "DOS (CP 437)", "command": "reopen", "args": {"encoding": "DOS (CP 437)" } },
+                    { "caption": "Arabic (Windows 1256)", "command": "reopen", "args": {"encoding": "Arabic (Windows 1256)" } },
+                    { "caption": "Arabic (ISO 8859-6)", "command": "reopen", "args": {"encoding": "Arabic (ISO 8859-6)" } },
+                    { "caption": "Baltic (Windows 1257)", "command": "reopen", "args": {"encoding": "Baltic (Windows 1257)" } },
+                    { "caption": "Baltic (ISO 8859-4)", "command": "reopen", "args": {"encoding": "Baltic (ISO 8859-4)" } },
+                    { "caption": "Celtic (ISO 8859-14)", "command": "reopen", "args": {"encoding": "Celtic (ISO 8859-14)" } },
+                    { "caption": "Central European (Windows 1250)", "command": "reopen", "args": {"encoding": "Central European (Windows 1250)" } },
+                    { "caption": "Central European (ISO 8859-2)", "command": "reopen", "args": {"encoding": "Central European (ISO 8859-2)" } },
+                    { "caption": "Cyrillic (Windows 1251)", "command": "reopen", "args": {"encoding": "Cyrillic (Windows 1251)" } },
+                    { "caption": "Cyrillic (Windows 866)", "command": "reopen", "args": {"encoding": "Cyrillic (Windows 866)" } },
+                    { "caption": "Cyrillic (ISO 8859-5)", "command": "reopen", "args": {"encoding": "Cyrillic (ISO 8859-5)" } },
+                    { "caption": "Cyrillic (KOI8-R)", "command": "reopen", "args": {"encoding": "Cyrillic (KOI8-R)" } },
+                    { "caption": "Cyrillic (KOI8-U)", "command": "reopen", "args": {"encoding": "Cyrillic (KOI8-U)" } },
+                    { "caption": "Estonian (ISO 8859-13)", "command": "reopen", "args": {"encoding": "Estonian (ISO 8859-13)" } },
+                    { "caption": "Greek (Windows 1253)", "command": "reopen", "args": {"encoding": "Greek (Windows 1253)" } },
+                    { "caption": "Greek (ISO 8859-7)", "command": "reopen", "args": {"encoding": "Greek (ISO 8859-7)" } },
+                    { "caption": "Hebrew (Windows 1255)", "command": "reopen", "args": {"encoding": "Hebrew (Windows 1255)" } },
+                    { "caption": "Hebrew (ISO 8859-8)", "command": "reopen", "args": {"encoding": "Hebrew (ISO 8859-8)" } },
+                    { "caption": "Nordic (ISO 8859-10)", "command": "reopen", "args": {"encoding": "Nordic (ISO 8859-10)" } },
+                    { "caption": "Romanian (ISO 8859-16)", "command": "reopen", "args": {"encoding": "Romanian (ISO 8859-16)" } },
+                    { "caption": "Turkish (Windows 1254)", "command": "reopen", "args": {"encoding": "Turkish (Windows 1254)" } },
+                    { "caption": "Turkish (ISO 8859-9)", "command": "reopen", "args": {"encoding": "Turkish (ISO 8859-9)" } },
+                    { "caption": "Vietnamese (Windows 1258)", "command": "reopen", "args": {"encoding": "Vietnamese (Windows 1258)" } },
+                    { "caption": "-" },
+                    { "caption": "Hexadecimal", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
+                ]
+            },
+            { "command": "clone_file", "caption": "タブを複製(E)", "mnemonic": "E" },
+            { "command": "save", "caption": "上書き保存(S)", "mnemonic": "S" },
+            {
+                "caption": "エンコードを指定して上書き保存",
+                "children":
+                [
+                    { "caption": "UTF-8", "command": "save", "args": {"encoding": "utf-8" } },
+                    { "caption": "UTF-8 with BOM", "command": "save", "args": {"encoding": "utf-8 with bom" } },
+                    { "caption": "UTF-16 LE", "command": "save", "args": {"encoding": "utf-16 le" } },
+                    { "caption": "UTF-16 LE with BOM", "command": "save", "args": {"encoding": "utf-16 le with bom" } },
+                    { "caption": "UTF-16 BE", "command": "save", "args": {"encoding": "utf-16 be" } },
+                    { "caption": "UTF-16 BE with BOM", "command": "save", "args": {"encoding": "utf-16 be with bom" } },
+                    { "caption": "-" },
+                    { "caption": "Western (Windows 1252)", "command": "save", "args": {"encoding": "Western (Windows 1252)" } },
+                    { "caption": "Western (ISO 8859-1)", "command": "save", "args": {"encoding": "Western (ISO 8859-1)" } },
+                    { "caption": "Western (ISO 8859-3)", "command": "save", "args": {"encoding": "Western (ISO 8859-3)" } },
+                    { "caption": "Western (ISO 8859-15)", "command": "save", "args": {"encoding": "Western (ISO 8859-15)" } },
+                    { "caption": "Western (Mac Roman)", "command": "save", "args": {"encoding": "Western (Mac Roman)" } },
+                    { "caption": "DOS (CP 437)", "command": "save", "args": {"encoding": "DOS (CP 437)" } },
+                    { "caption": "Arabic (Windows 1256)", "command": "save", "args": {"encoding": "Arabic (Windows 1256)" } },
+                    { "caption": "Arabic (ISO 8859-6)", "command": "save", "args": {"encoding": "Arabic (ISO 8859-6)" } },
+                    { "caption": "Baltic (Windows 1257)", "command": "save", "args": {"encoding": "Baltic (Windows 1257)" } },
+                    { "caption": "Baltic (ISO 8859-4)", "command": "save", "args": {"encoding": "Baltic (ISO 8859-4)" } },
+                    { "caption": "Celtic (ISO 8859-14)", "command": "save", "args": {"encoding": "Celtic (ISO 8859-14)" } },
+                    { "caption": "Central European (Windows 1250)", "command": "save", "args": {"encoding": "Central European (Windows 1250)" } },
+                    { "caption": "Central European (ISO 8859-2)", "command": "save", "args": {"encoding": "Central European (ISO 8859-2)" } },
+                    { "caption": "Cyrillic (Windows 1251)", "command": "save", "args": {"encoding": "Cyrillic (Windows 1251)" } },
+                    { "caption": "Cyrillic (Windows 866)", "command": "save", "args": {"encoding": "Cyrillic (Windows 866)" } },
+                    { "caption": "Cyrillic (ISO 8859-5)", "command": "save", "args": {"encoding": "Cyrillic (ISO 8859-5)" } },
+                    { "caption": "Cyrillic (KOI8-R)", "command": "save", "args": {"encoding": "Cyrillic (KOI8-R)" } },
+                    { "caption": "Cyrillic (KOI8-U)", "command": "save", "args": {"encoding": "Cyrillic (KOI8-U)" } },
+                    { "caption": "Estonian (ISO 8859-13)", "command": "save", "args": {"encoding": "Estonian (ISO 8859-13)" } },
+                    { "caption": "Greek (Windows 1253)", "command": "save", "args": {"encoding": "Greek (Windows 1253)" } },
+                    { "caption": "Greek (ISO 8859-7)", "command": "save", "args": {"encoding": "Greek (ISO 8859-7)" } },
+                    { "caption": "Hebrew (Windows 1255)", "command": "save", "args": {"encoding": "Hebrew (Windows 1255)" } },
+                    { "caption": "Hebrew (ISO 8859-8)", "command": "save", "args": {"encoding": "Hebrew (ISO 8859-8)" } },
+                    { "caption": "Nordic (ISO 8859-10)", "command": "save", "args": {"encoding": "Nordic (ISO 8859-10)" } },
+                    { "caption": "Romanian (ISO 8859-16)", "command": "save", "args": {"encoding": "Romanian (ISO 8859-16)" } },
+                    { "caption": "Turkish (Windows 1254)", "command": "save", "args": {"encoding": "Turkish (Windows 1254)" } },
+                    { "caption": "Turkish (ISO 8859-9)", "command": "save", "args": {"encoding": "Turkish (ISO 8859-9)" } },
+                    { "caption": "Vietnamese (Windows 1258)", "command": "save", "args": {"encoding": "Vietnamese (Windows 1258)" } },
+                    { "caption": "-" },
+                    { "caption": "Hexadecimal", "command": "save", "args": {"encoding": "Hexadecimal" } }
+                ]
+            },
+            { "command": "prompt_save_as", "caption": "名前を付けて保存(A)…", "mnemonic": "A" },
+            { "command": "save_all", "caption": "すべて保存(L)", "mnemonic": "L" },
+            { "caption": "-", "id": "window" },
+            { "command": "new_window", "caption": "新規ウインドウ(W)", "mnemonic": "W" },
+            { "command": "close_window", "caption": "ウインドウを閉じる" },
+            { "caption": "-", "id": "close" },
+            { "command": "close", "caption": "ファイルを閉じる(C)", "mnemonic": "C" },
+            { "command": "revert", "caption": "前回保存状態に戻す(V)", "mnemonic": "V" },
+            { "command": "close_all", "caption": "すべてのファイルを閉じる" },
+            { "caption": "-", "id": "exit" },
+            { "command": "exit", "caption": "終了(X)", "mnemonic": "X", "platform": "Windows" },
+            { "command": "exit", "caption": "終了(Q)", "mnemonic": "Q", "platform": "Linux" }
+        ]
+    },
+    {
+        "caption": "編集(E)",
+        "mnemonic": "E",
+        "id": "edit",
+        "children":
+        [
+            { "command": "undo", "mnemonic": "U", "caption": "アンドゥ(U)" },
+            { "command": "redo_or_repeat", "mnemonic": "R", "caption": "リドゥ(R)"  },
+            {
+                "caption": "選択操作のアンドゥ",
+                "children":
+                [
+                    { "command": "soft_undo", "caption": "選択操作のアンドゥ"  },
+                    { "command": "soft_redo", "caption": "選択操作のリドゥ"  }
+                ]
+            },
+            { "caption": "-", "id": "clipboard" },
+            { "command": "copy", "caption": "コピー(C)", "mnemonic": "C" },
+            { "command": "cut", "caption": "切り取り(T)", "mnemonic": "T" },
+            { "command": "paste", "caption": "貼り付け(P)", "mnemonic": "P" },
+            { "command": "paste_and_indent", "caption": "貼り付けとインデント(I)", "mnemonic": "I" },
+            { "command": "paste_from_history", "caption": "Paste from History" },
+            { "caption": "-" },
+            {
+                "caption": "Line", "caption": "行の操作(L)", "mnemonic": "L",
+                "id": "line",
+                "children":
+                [
+                    { "command": "indent", "caption": "インデント" },
+                    { "command": "unindent", "caption": "逆インデント" },
+                    { "command": "reindent", "caption": "インデント最適化", "args": {"single_line": true} },
+                    { "command": "swap_line_up", "caption": "前行と入れ替え" },
+                    { "command": "swap_line_down", "caption": "次行と入れ替え" },
+                    { "command": "duplicate_line", "caption": "行の複製挿入" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "行を削除" },
+                    { "command": "join_lines", "caption": "行の結合" }
+                ]
+            },
+            {
+                "caption": "コメント(M)", "mnemonic": "M",
+                "id": "comment",
+                "children":
+                [
+                    { "command": "toggle_comment", "args": {"block": false}, "caption": "行コメントをトグル" },
+                    { "command": "toggle_comment", "args": {"block": true}, "caption": "ブロックコメントをトグル" }
+                ]
+            },
+            {
+                "caption": "テキスト(T)", "mnemonic": "T",
+                "id": "text",
+                "children":
+                [
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "前行に空行を挿入" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "次行に空行を挿入" },
+                    { "caption": "-" },
+                    { "command": "delete_word", "args": { "forward": true }, "caption": "単語末尾まで削除" },
+                    { "command": "delete_word", "args": { "forward": false }, "caption": "単語先頭まで削除" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "行を削除" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "行末まで削除" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "行頭まで削除" },
+                    { "caption": "-" },
+                    { "command": "transpose", "caption": "文字または単語を転置" }
+                ]
+            },
+            {
+                "caption": "XMLタグ",
+                "id": "tag",
+                "children":
+                [
+                    { "command": "終了タグを挿入" },
+                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "タグブロックを選択" },
+                    { "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/long-tag.sublime-snippet" }, "caption": "選択範囲を新規タグで囲む" }
+                ]
+            },
+            {
+                "caption": "マーク",
+                "id": "mark",
+                "children":
+                [
+                    { "command": "set_mark", "caption": "マークを設定" },
+                    { "command": "select_to_mark", "caption": "マークまで選択" },
+                    { "command": "delete_to_mark", "caption": "マークまで削除 -> yankバッファ" },
+                    { "command": "swap_with_mark", "caption": "カレットとマークを転置" },
+                    { "command": "clear_bookmarks", "args": {"name": "mark"}, "caption": "マークを削除" },
+                    { "caption": "-" },
+                    { "command": "yank", "caption": "yankバッファをペースト" }
+                ]
+            },
+            {
+                "caption": "コード折りたたみ",
+                "id": "fold",
+                "children":
+                [
+                    { "command": "fold", "caption": "折りたたむ" },
+                    { "command": "unfold", "caption": "展開する" },
+                    { "command": "unfold_all", "caption": "すべて展開する" },
+                    { "caption": "-" },
+                    { "caption": "折りたたむ[レベル1]", "command": "fold_by_level", "args": {"level": 1} },
+                    { "caption": "折りたたむ[レベル2]", "command": "fold_by_level", "args": {"level": 2} },
+                    { "caption": "折りたたむ[レベル3]", "command": "fold_by_level", "args": {"level": 3} },
+                    { "caption": "折りたたむ[レベル4]", "command": "fold_by_level", "args": {"level": 4} },
+                    { "caption": "折りたたむ[レベル5]", "command": "fold_by_level", "args": {"level": 5} },
+                    { "caption": "折りたたむ[レベル6]", "command": "fold_by_level", "args": {"level": 6} },
+                    { "caption": "折りたたむ[レベル7]", "command": "fold_by_level", "args": {"level": 7} },
+                    { "caption": "折りたたむ[レベル8]", "command": "fold_by_level", "args": {"level": 8} },
+                    { "caption": "折りたたむ[レベル9]", "command": "fold_by_level", "args": {"level": 9} },
+                    { "caption": "-" },
+                    { "command": "fold_tag_attributes", "caption": "XMLタグ属性部を折りたたむ" }
+                ]
+            },
+            {
+                "caption": "大文字/小文字変換(A)", "mnemonic": "A",
+                "id": "convert_case",
+                "children":
+                [
+                    { "command": "title_case", "caption": "タイトル" },
+                    { "command": "upper_case", "caption": "大文字" },
+                    { "command": "lower_case", "caption": "小文字" },
+                    { "command": "swap_case", "caption": "大文字/小文字反転" }
+                ]
+            },
+            {
+                "caption": "折り返し",
+                "id": "wrap",
+                "children":
+                [
+                    { "command": "wrap_lines", "caption": "折り返し[現在のルーラ値]" },
+                    { "command": "wrap_lines", "args": {"width": 70}, "caption": "折り返し[ 70文字]" },
+                    { "command": "wrap_lines", "args": {"width": 78}, "caption": "折り返し[ 78文字]" },
+                    { "command": "wrap_lines", "args": {"width": 80}, "caption": "折り返し[ 80文字]" },
+                    { "command": "wrap_lines", "args": {"width": 100}, "caption": "折り返し[100文字]" },
+                    { "command": "wrap_lines", "args": {"width": 120}, "caption": "折り返し[120文字]" }
+                ]
+            },
+            { "command": "auto_complete", "caption": "単語候補の表示" },
+            { "caption": "-", "id": "permute" },
+
+            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "行ソート(S)", "mnemonic": "S" },
+            { "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "行ソート[大文字/小文字を区別]" },
+            {
+                "caption": "行ソート[その他]",
+                "children":
+                [
+                    { "command": "permute_lines", "args": {"operation": "reverse"}, "caption": "順序反転" },
+                    { "command": "permute_lines", "args": {"operation": "unique"}, "caption": "重複行削除" },
+                    { "command": "permute_lines", "args": {"operation": "shuffle"}, "caption": "順序ランダム" }
+                ]
+            },
+            {
+                "caption": "選択要素ソート",
+                "children":
+                [
+                    { "command": "sort_selection", "args": {"case_sensitive": false}, "caption": "ソート" },
+                    { "command": "sort_selection", "args": {"case_sensitive": true}, "caption": "ソート[大文字/小文字を区別]" },
+                    { "command": "permute_selection", "args": {"operation": "reverse"}, "caption": "順序反転" },
+                    { "command": "permute_selection", "args": {"operation": "unique"}, "caption": "重複要素削除" },
+                    { "command": "permute_selection", "args": {"operation": "shuffle"}, "caption": "順序ランダム" }
+                ]
+            },
+            { "caption": "-", "id": "end" }
+        ]
+    },
+    {
+        "caption": "選択(S)",
+        "mnemonic": "S",
+        "id": "selection",
+        "children":
+        [
+            { "command": "split_selection_into_lines", "caption": "選択範囲を行単位分割" },
+            { "command": "select_lines", "args": {"forward": false}, "caption": "前行にカレット追加" },
+            { "command": "select_lines", "args": {"forward": true}, "caption": "次行にカレット追加" },
+            { "command": "single_selection", "caption": "カレットの複数化解除" },
+            { "command": "invert_selection" },
+            { "caption": "-" },
+            { "command": "select_all", "caption": "すべて選択" },
+            { "command": "expand_selection", "args": {"to": "line"}, "caption": "選択範囲拡張[行単位]" },
+            { "command": "find_under_expand", "caption": "選択範囲拡張[単語単位]" },
+            { "command": "expand_selection_to_paragraph", "caption": "選択範囲拡張[段落単位]" },
+            { "command": "expand_selection", "args": {"to": "scope"}, "caption": "選択範囲拡張[スコープ単位]" },
+            { "command": "expand_selection", "args": {"to": "brackets"}, "caption": "選択範囲拡張[括弧単位]" },
+            { "command": "expand_selection", "args": {"to": "indentation"}, "caption": "選択範囲拡張[インデント単位]" },
+            { "command": "expand_selection", "args": {"to": "tag"}, "caption": "選択範囲拡張[XMLタグ単位]" }
+        ]
+    },
+    {
+        "caption": "検索(I)",
+        "mnemonic": "I",
+        "id": "find",
+        "children":
+        [
+            { "command": "show_panel", "args": {"panel": "find"}, "caption": "検索…" },
+            { "command": "find_next","caption": "次を検索" },
+            { "command": "find_prev", "caption": "前を検索" },
+            { "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false}, "caption": "インクリメンタル検索" },
+            { "caption": "-" },
+            { "command": "show_panel", "args": {"panel": "replace"}, "caption": "置換…" },
+            { "command": "replace_next","caption": "次を置換" },
+            { "caption": "-" },
+            { "command": "find_under", "caption": "クイック検索" },
+            { "command": "find_all_under", "caption": "クイック全検索" },
+            { "command": "find_under_expand", "caption": "クイック選択範囲追加" },
+            { "command": "find_under_expand_skip", "caption": "クイック選択スキップ", "platform": "!OSX" },
+            { "caption": "-" },
+            { "command": "slurp_find_string", "caption": "選択条件として使用" },
+            { "command": "slurp_replace_string", "caption": "置換条件として使用" },
+            { "caption": "-" },
+            { "command": "show_panel", "args": {"panel": "find_in_files"}, "caption": "ファイル内検索…" },
+            {
+                "caption": "検索結果(R)",
+                "mnemonic": "R",
+                "children":
+                [
+                    { "command": "show_panel", "args": {"panel": "output.find_results"}, "caption": "パネル表示" },
+                    { "command": "next_result", "caption": "次の検索結果" },
+                    { "command": "prev_result", "caption": "前の検索結果" }
+                ]
+            }
+        ]
+    },
+    {
+        "caption": "表示(V)",
+        "mnemonic": "V",
+        "id": "view",
+        "children":
+        [
+            {
+                "caption": "サイドバー",
+                "id": "side_bar",
+                "children":
+                [
+                    { "command": "toggle_side_bar", "caption": "表示/非表示" },
+                    { "caption": "-" },
+                    { "command": "toggle_show_open_files", "caption": "OPEN FILES表示/非表示" }
+                ]
+            },
+            { "command": "toggle_minimap", "caption": "ミニマップ" },
+            { "command": "toggle_tabs", "caption": "タブ" },
+            { "command": "toggle_status_bar", "caption": "ステータスバー" },
+            { "command": "toggle_menu", "caption": "メニューバー" },
+            { "command": "show_panel", "args": {"panel": "console", "toggle": true} , "caption": "コンソール"},
+            { "caption": "-", "id": "full_screen" },
+            { "command": "toggle_full_screen", "caption": "フルスクリーン" },
+            { "command": "toggle_distraction_free", "caption": "集中モード" },
+            { "caption": "-", "id": "groups" },
+            {
+                "caption": "画面分割(L)",
+                "mnemonic": "L",
+                "id": "layout",
+                "children":
+                [
+                    {
+                        "caption": "分割解除",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1]]
+                        }
+                    },
+                    {
+                        "caption": "2列",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.5, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+                        }
+                    },
+                    {
+                        "caption": "3列",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.33, 0.66, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]
+                        }
+                    },
+                    {
+                        "caption": "4列",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.25, 0.5, 0.75, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1], [3, 0, 4, 1]]
+                        }
+                    },
+                    {
+                        "caption": "2行",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 1.0],
+                            "rows": [0.0, 0.5, 1.0],
+                            "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
+                        }
+                    },
+                    {
+                        "caption": "3行",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 1.0],
+                            "rows": [0.0, 0.33, 0.66, 1.0],
+                            "cells": [[0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 1, 3]]
+                        }
+                    },
+                    {
+                        "caption": "4分割",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.5, 1.0],
+                            "rows": [0.0, 0.5, 1.0],
+                            "cells":
+                            [
+                                [0, 0, 1, 1], [1, 0, 2, 1],
+                                [0, 1, 1, 2], [1, 1, 2, 2]
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "caption": "Groups",
+                "children":
+                [
+                    { "command": "new_pane", "caption": "Move File to New Group" },
+                    { "command": "new_pane", "args": {"move": false}, "caption": "New Group" },
+                    { "command": "close_pane", "caption": "Close Group" },
+
+                    { "caption": "-" },
+
+                    {
+                        "caption": "Max Columns: 1",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 1 }
+                    },
+                    {
+                        "caption": "Max Columns: 2",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 2 }
+                    },
+                    {
+                        "caption": "Max Columns: 3",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 3 }
+                    },
+                    {
+                        "caption": "Max Columns: 4",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 4 }
+                    },
+                    {
+                        "caption": "Max Columns: 5",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 5 }
+                    },
+                ]
+            },
+            {
+                "caption": "分割画面選択(F)",
+                "mnemonic": "F",
+                "children":
+                [
+
+                    { "command": "focus_neighboring_group", "caption": "Next" },
+                    { "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "Previous" },
+                    { "caption": "-" },
+                    { "command": "focus_group", "args": {"group": 0}, "caption": "Group 1" },
+                    { "command": "focus_group", "args": {"group": 1}, "caption": "Group 2" },
+                    { "command": "focus_group", "args": {"group": 2}, "caption": "Group 3" },
+                    { "command": "focus_group", "args": {"group": 3}, "caption": "Group 4" }
+                ]
+            },
+            {
+                "caption": "分割画面にファイル移動(M)",
+                "mnemonic": "M",
+                "children":
+                [
+                    { "command": "move_to_neighboring_group", "caption": "Next" },
+                    { "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "Previous" },
+                    { "caption": "-" },
+                    { "command": "move_to_group", "args": {"group": 0}, "caption": "Group 1" },
+                    { "command": "move_to_group", "args": {"group": 1}, "caption": "Group 2" },
+                    { "command": "move_to_group", "args": {"group": 2}, "caption": "Group 3" },
+                    { "command": "move_to_group", "args": {"group": 3}, "caption": "Group 4" }
+                ]
+            },
+            { "caption": "-" },
+            {
+                "caption": "シンタックス(S)",
+                "mnemonic": "S",
+                "id": "syntax",
+                "children": [ { "command": "$file_types" } ]
+            },
+            {
+                "caption": "インデント設定(I)",
+                "mnemonic": "I",
+                "id": "indentation",
+                "children":
+                [
+                    { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "スペースを使用", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "インデント幅[1]", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "インデント幅[2]", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "インデント幅[3]", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "インデント幅[4]", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "インデント幅[5]", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "インデント幅[6]", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "インデント幅[7]", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "インデント幅[8]", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "detect_indentation", "caption": "ファイルから推測" },
+                    { "caption": "-" },
+                    { "command": "expand_tabs", "caption": "インデントをスペースに変換", "args": {"set_translate_tabs": true} },
+                    { "command": "unexpand_tabs", "caption": "インデントをタブに変換", "args": {"set_translate_tabs": true} }
+                ]
+            },
+            {
+                "caption": "改行コード(N)",
+                "mnemonic": "N",
+                "id": "line_endings",
+                "children":
+                [
+                    { "command": "set_line_ending", "args": {"type": "windows"}, "caption": "Windows[CRLF]", "checkbox": true },
+                    { "command": "set_line_ending", "args": {"type": "unix"}, "caption": "Unix[LF]", "checkbox": true },
+                    { "command": "set_line_ending", "args": {"type": "cr"}, "caption": "Mac OS 9[CR]", "checkbox": true }
+                ]
+            },
+            { "caption": "-", "id": "settings" },
+            { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "折り返し(W)", "mnemonic": "W", "checkbox": true },
+            {
+                "caption": "折り返し幅",
+                "children":
+                [
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "自動", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 120}, "caption": "120文字", "checkbox": true }
+                ]
+            },
+            {
+                "caption": "ルーラ",
+                "children":
+                [
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "なし", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [120]}, "caption": "120文字", "checkbox": true }
+                ]
+            },
+            { "caption": "-" },
+            { "command": "toggle_setting", "args": {"setting": "spell_check"}, "caption": "スペルチェックをトグル", "checkbox": true },
+            { "command": "next_misspelling", "caption": "次のスペルチェック結果" },
+            { "command": "prev_misspelling", "caption": "前のスペルチェック結果" },
+            {
+                "caption": "スペルチェック辞書",
+                "children": [ { "command": "$dictionaries" } ]
+            }
+        ]
+    },
+    {
+        "caption": "移動(G)",
+        "mnemonic": "G",
+        "id": "goto",
+        "children":
+        [
+            { "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "移動[汎用(A)…", "mnemonic": "A" },
+            { "caption": "-" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "移動[シンボル]…" },
+            { "command": "goto_symbol_in_project", "caption": "Goto Symbol in Project…" },
+            { "command": "goto_definition", "caption": "移動[定義]…" },
+            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "移動[行番号]…" },
+            { "caption": "-" },
+            { "command": "jump_back", "caption": "Jump Back" },
+            { "command": "jump_forward", "caption": "Jump Forward" },
+            { "caption": "-" },
+            {
+                "caption": "ファイル移動(T)",
+                "mnemonic": "T",
+                "id": "switch_file",
+                "children":
+                [
+                    { "command": "next_view", "caption": "次のファイル" },
+                    { "command": "prev_view", "caption": "前のファイル" },
+                    { "caption": "-" },
+                    { "command": "next_view_in_stack", "caption": "スタックの次のファイル" },
+                    { "command": "prev_view_in_stack", "caption": "スタックの前のファイル" },
+                    { "caption": "-" },
+                    { "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "h", "ipp", "inl", "m", "mm"]}, "caption": "ヘッダ/実装ファイル(H)", "mnemonic": "H" },
+                    { "caption": "-" },
+                    { "command": "select_by_index", "args": { "index": 0 }}, //, "caption": "タブ1" 
+                    { "command": "select_by_index", "args": { "index": 1 }}, //, "caption": "タブ2" 
+                    { "command": "select_by_index", "args": { "index": 2 }}, //, "caption": "タブ3" 
+                    { "command": "select_by_index", "args": { "index": 3 }}, //, "caption": "タブ4" 
+                    { "command": "select_by_index", "args": { "index": 4 }}, //, "caption": "タブ5" 
+                    { "command": "select_by_index", "args": { "index": 5 }}, //, "caption": "タブ6" 
+                    { "command": "select_by_index", "args": { "index": 6 }}, //, "caption": "タブ7" 
+                    { "command": "select_by_index", "args": { "index": 7 }}, //, "caption": "タブ8" 
+                    { "command": "select_by_index", "args": { "index": 8 }}, //, "caption": "タブ9" 
+                    { "command": "select_by_index", "args": { "index": 9 }}  //, "caption": "タブ10"
+                ]
+            },
+            { "caption": "-" },
+            {
+                "caption": "スクロール(S)",
+                "mnemonic": "S",
+                "id": "scroll",
+                "children":
+                [
+                    { "command": "show_at_center", "caption": "選択範囲を画面中央に" },
+                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "一行分上へ" },
+                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "一行分下へ" }
+                ]
+            },
+            {
+                "caption": "ブックマーク(B)",
+                "mnemonic": "B",
+                "id": "bookmarks",
+                "children":
+                [
+                    { "command": "toggle_bookmark", "caption": "設定/解除" },
+                    { "command": "next_bookmark", "caption": "次のブックマーク" },
+                    { "command": "prev_bookmark", "caption": "前のブックマーク" },
+                    { "command": "clear_bookmarks", "caption": "すべて解除" },
+                    { "command": "select_all_bookmarks", "caption": "すべて選択" },
+                    { "caption": "-" },
+                    { "command": "select_bookmark", "args": {"index": 0} }, //, "caption": "ブックマーク1" 
+                    { "command": "select_bookmark", "args": {"index": 1} }, //, "caption": "ブックマーク2" 
+                    { "command": "select_bookmark", "args": {"index": 2} }, //, "caption": "ブックマーク3" 
+                    { "command": "select_bookmark", "args": {"index": 3} }, //, "caption": "ブックマーク4" 
+                    { "command": "select_bookmark", "args": {"index": 4} }, //, "caption": "ブックマーク5" 
+                    { "command": "select_bookmark", "args": {"index": 5} }, //, "caption": "ブックマーク6" 
+                    { "command": "select_bookmark", "args": {"index": 6} }, //, "caption": "ブックマーク7" 
+                    { "command": "select_bookmark", "args": {"index": 7} }, //, "caption": "ブックマーク8" 
+                    { "command": "select_bookmark", "args": {"index": 8} }, //, "caption": "ブックマーク9" 
+                    { "command": "select_bookmark", "args": {"index": 9} }, //, "caption": "ブックマーク10"
+                    { "command": "select_bookmark", "args": {"index": 10} }, //, "caption": "ブックマーク11"
+                    { "command": "select_bookmark", "args": {"index": 11} }, //, "caption": "ブックマーク12"
+                    { "command": "select_bookmark", "args": {"index": 12} }, //, "caption": "ブックマーク13"
+                    { "command": "select_bookmark", "args": {"index": 13} }, //, "caption": "ブックマーク14"
+                    { "command": "select_bookmark", "args": {"index": 14} }, //, "caption": "ブックマーク15"
+                    { "command": "select_bookmark", "args": {"index": 15} }  //, "caption": "ブックマーク16"
+                ]
+            },
+            { "caption": "-" },
+            { "command": "move_to", "args": {"to": "brackets"}, "caption": "対応する括弧へ" }
+        ]
+    },
+    {
+        "caption": "ツール(T)",
+        "mnemonic": "T",
+        "id": "tools",
+        "children":
+        [
+            { "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "コマンドパレット…" },
+            { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "スニペット…" },
+            { "caption": "-", "id": "build" },
+            {
+                "caption": "ビルドシステム(U)",
+                "mnemonic": "U",
+                "children":
+                [
+                    { "command": "set_build_system", "args": { "file": "" }, "caption": "自動", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_build_system", "args": {"index": 0}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 1}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 2}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 3}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 4}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 5}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 6}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 7}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 8}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 9}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 10}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 11}, "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "$build_systems" },
+                    { "caption": "-" },
+                    { "command": "new_build_system", "caption": "ビルドシステム追加…" }
+                ]
+            },
+            { "command": "build", "mnemonic": "B", "caption": "ビルド(B)" },
+            { "command": "build", "args": {"select": true}, "caption": "ビルドして実行" },
+            { "command": "cancel_build", "caption": "ビルドキャンセル(C)", "mnemonic": "C" },
+            {
+                "caption": "ビルド結果(R)",
+                "mnemonic": "R",
+                "children":
+                [
+                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "パネル表示(S)", "mnemonic": "S" },
+                    { "command": "next_result", "caption": "次の結果(N)", "mnemonic": "N" },
+                    { "command": "prev_result", "caption": "前の結果(P)", "mnemonic": "P" }
+                ]
+            },
+            { "command": "toggle_save_all_on_build", "caption": "すべて保存してビルド(A)", "mnemonic": "A", "checkbox": true },
+            { "caption": "-", "id": "macros" },
+            { "command": "toggle_record_macro", "caption": "マクロ記録開始/停止(M)", "mnemonic": "M" },
+            { "command": "run_macro", "caption": "マクロ再生(P)", "mnemonic": "P" },
+            { "command": "save_macro", "caption": "マクロ保存(V)…", "mnemonic": "V" },
+            {
+                "caption": "マクロ",
+                "children": [ { "command": "$macros" } ]
+            },
+            { "caption": "-" },
+            {
+                "caption": "開発者",
+                "children":
+                [
+                    { "command": "new_plugin", "caption": "プラグイン追加…" },
+                    { "command": "new_snippet", "caption": "スニペット追加…" },
+                    { "command": "new_syntax", "caption": "New Syntax…" },
+                    { "command": "convert_syntax" },
+                    { "caption": "-" },
+                    { "command": "profile_plugins" },
+                    { "caption": "-" },
+                    { "command": "show_scope_name" },
+                ]
+            },
+            { "command": "install_package_control", "caption": "Install Package Control…" },
+            { "caption": "-", "id": "end" }
+        ]
+    },
+    {
+        "caption": "プロジェクト(P)",
+        "id": "project",
+        "mnemonic": "P",
+        "children":
+        [
+            { "command": "prompt_open_project_or_workspace", "caption": "プロジェクトを開く(O)…", "mnemonic": "O" },
+            { "command": "prompt_switch_project_or_workspace", "caption": "Switch Project…" },
+            { "command": "prompt_select_workspace", "caption": "プロジェクト移動(S)…", "mnemonic": "S" },
+            {
+                "caption": "最近開いたプロジェクト",
+                "children":
+                [
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 0 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 1 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 2 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 3 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 4 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 5 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 6 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 7 } },
+                    { "caption": "-" },
+                    { "command": "clear_recent_projects_and_workspaces", "caption": "履歴をクリア" }
+                ]
+            },
+            { "caption": "-" },
+            { "command": "save_project_and_workspace_as", "caption": "名前を付けてプロジェクトを保存(A)…", "mnemonic": "A" },
+            { "command": "close_workspace", "mnemonic": "C", "caption": "プロジェクトを閉じる(C)" },
+            { "command": "open_file", "args": {"file": "${project}"}, "caption": "プロジェクト設定" },
+            { "caption": "-" },
+            { "command": "new_window_for_project", "caption": "New Workspace for Project" },
+            { "command": "save_workspace_as", "caption": "Save Workspace As…", "mnemonic": "A" },
+            { "caption": "-" },
+            { "command": "prompt_add_folder", "caption": "プロジェクトにフォルダを追加(D)…", "mnemonic": "D" },
+            { "command": "close_folder_list", "caption": "プロジェクトの全フォルダを削除(M)", "mnemonic": "M" },
+            { "command": "refresh_folder_list", "caption": "フォルダを再読み込み(E)", "mnemonic": "E" },
+        ]
+    },
+    {
+        "caption": "基本設定(N)",
+        "mnemonic": "N",
+        "id": "preferences",
+        "children":
+        [
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Packagesフォルダ…(B)", "mnemonic": "B" },
+            { "caption": "-" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Preferences.sublime-settings",
+                    "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
+                },
+                "caption": "基本設定"
+            },
+            { "command": "edit_syntax_settings", "caption": "基本設定 – シンタックス指定" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Distraction Free.sublime-settings",
+                    "default": "{\n\t$0\n}\n"
+                },
+                "caption": "基本設定 – 集中モード"
+            },
+            { "caption": "-" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
+                    "default": "[\n\t$0\n]\n"
+                },
+                "caption": "キーバインド"
+            },
+            { "caption": "-" },
+            {
+                "caption": "フォント",
+                "children":
+                [
+                    { "command": "increase_font_size", "caption": "拡大" },
+                    { "command": "decrease_font_size", "caption": "縮小" },
+                    { "caption": "-" },
+                    { "command": "reset_font_size", "caption": "リセット" }
+                ]
+            },
+            {
+                "caption": "カラースキーマ",
+                "children": [ { "command": "$color_schemes" } ]
+            }
+        ]
+    },
+    {
+        "caption": "ヘルプ(H)",
+        "mnemonic": "H",
+        "id": "help",
+        "children":
+        [
+            { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "ドキュメント" },
+            { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
+            { "command": "open_url", "args": {"url": "http://i.rexdf.org"}, "caption": "Rexdf" },
+            { "caption": "-" },
+            { "command": "purchase_license", "caption": "ライセンス購入"},
+            { "command": "show_license_window", "caption": "ライセンス登録" },
+            { "command": "remove_license", "caption": "ライセンス削除"},
+            { "caption": "-" },
+            { "command": "update_check", "caption": "Check for Updates…", "platform": "!Linux" },
+            { "command": "show_changelog", "caption": "Changelog…" },
+            { "command": "show_about_window", "caption": "Sublime Text 3について(A)", "mnemonic": "A" }
+        ]
+    }
+]
