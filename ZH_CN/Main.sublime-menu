@@ -876,6 +876,8 @@
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "官方Twitter" },
             { "command": "open_url", "args": {"url": "http://i.rexdf.org"}, "caption": "汉化 by Rexdf" },
             { "caption": "-" },
+            { "command": "show_progress_window", "caption": "索引状态…" },
+            { "caption": "-" },
             { "command": "purchase_license", "caption": "购买授权"},
             { "command": "show_license_window", "caption": "输入注册码" },
             { "command": "remove_license", "caption": "删除注册信息"},

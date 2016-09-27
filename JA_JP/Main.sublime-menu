@@ -876,6 +876,8 @@
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
             { "command": "open_url", "args": {"url": "http://i.rexdf.org"}, "caption": "Rexdf" },
             { "caption": "-" },
+            { "command": "show_progress_window", "caption": "Indexing Status…" },
+            { "caption": "-" },
             { "command": "purchase_license", "caption": "ライセンス購入"},
             { "command": "show_license_window", "caption": "ライセンス登録" },
             { "command": "remove_license", "caption": "ライセンス削除"},

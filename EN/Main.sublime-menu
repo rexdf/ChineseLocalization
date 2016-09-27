@@ -875,6 +875,8 @@
             { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "Documentation" },
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
             { "caption": "-" },
+            { "command": "show_progress_window", "caption": "Indexing Status…" },
+            { "caption": "-" },
             { "command": "purchase_license"},
             { "command": "show_license_window", "caption": "Enter License" },
             { "command": "remove_license"},
