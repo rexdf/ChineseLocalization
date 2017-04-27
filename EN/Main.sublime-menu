@@ -265,6 +265,7 @@
                 [
                     { "command": "wrap_lines", "caption": "Wrap Paragraph at Ruler" },
                     { "command": "wrap_lines", "args": {"width": 70}, "caption": "Wrap paragraph at 70 characters" },
+                    { "command": "wrap_lines", "args": {"width": 72}, "caption": "Wrap paragraph at 72 characters" },
                     { "command": "wrap_lines", "args": {"width": 78}, "caption": "Wrap paragraph at 78 characters" },
                     { "command": "wrap_lines", "args": {"width": 80}, "caption": "Wrap paragraph at 80 characters" },
                     { "command": "wrap_lines", "args": {"width": 100}, "caption": "Wrap paragraph at 100 characters" },
@@ -584,6 +585,7 @@
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Automatic", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100", "checkbox": true },
@@ -597,6 +599,7 @@
                     { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "None", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [72]}, "caption": "72", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100", "checkbox": true },
@@ -851,6 +854,14 @@
             },
             { "caption": "-" },
             {
+                "caption": "Color Scheme…",
+                "command": "select_color_scheme"
+            },
+            {
+                "caption": "Theme…",
+                "command": "select_theme"
+            },
+            {
                 "caption": "Font",
                 "children":
                 [
@@ -860,10 +871,6 @@
                     { "command": "reset_font_size", "caption": "Reset" }
                 ]
             },
-            {
-                "caption": "Color Scheme",
-                "children": [ { "command": "$color_schemes" } ]
-            }
         ]
     },
     {

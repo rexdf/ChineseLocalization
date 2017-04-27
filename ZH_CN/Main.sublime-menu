@@ -265,6 +265,7 @@
                 [
                     { "command": "wrap_lines", "caption": "标尺处自动换行" },
                     { "command": "wrap_lines", "args": {"width": 70}, "caption": "每 70 个字符自动换行" },
+                    { "command": "wrap_lines", "args": {"width": 72}, "caption": "每 72 个字符自动换行" },
                     { "command": "wrap_lines", "args": {"width": 78}, "caption": "每 78 个字符自动换行" },
                     { "command": "wrap_lines", "args": {"width": 80}, "caption": "每 80 个字符自动换行" },
                     { "command": "wrap_lines", "args": {"width": 100}, "caption": "每 100 个字符自动换行" },
@@ -584,6 +585,7 @@
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "自动", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100", "checkbox": true },
@@ -597,6 +599,7 @@
                     { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "无", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [72]}, "caption": "72", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100", "checkbox": true },
@@ -851,6 +854,14 @@
             },
             { "caption": "-" },
             {
+                "caption": "配色方案…",
+                "command": "select_color_scheme"
+            },
+            {
+                "caption": "主题…",
+                "command": "select_theme"
+            },
+            {
                 "caption": "字体",
                 "children":
                 [
@@ -860,10 +871,6 @@
                     { "command": "reset_font_size", "caption": "默认" }
                 ]
             },
-            {
-                "caption": "配色方案",
-                "children": [ { "command": "$color_schemes" } ]
-            }
         ]
     },
     {

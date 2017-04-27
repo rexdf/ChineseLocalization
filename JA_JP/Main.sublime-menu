@@ -265,6 +265,7 @@
                 [
                     { "command": "wrap_lines", "caption": "折り返し[現在のルーラ値]" },
                     { "command": "wrap_lines", "args": {"width": 70}, "caption": "折り返し[ 70文字]" },
+                    { "command": "wrap_lines", "args": {"width": 72}, "caption": "折り返し[ 72文字]" },
                     { "command": "wrap_lines", "args": {"width": 78}, "caption": "折り返し[ 78文字]" },
                     { "command": "wrap_lines", "args": {"width": 80}, "caption": "折り返し[ 80文字]" },
                     { "command": "wrap_lines", "args": {"width": 100}, "caption": "折り返し[100文字]" },
@@ -584,6 +585,7 @@
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "自動", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72文字", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78文字", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80文字", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100文字", "checkbox": true },
@@ -597,6 +599,7 @@
                     { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "なし", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70文字", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [72]}, "caption": "72文字", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78文字", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80文字", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100文字", "checkbox": true },
@@ -851,6 +854,14 @@
             },
             { "caption": "-" },
             {
+                "caption": "カラースキーマ…",
+                "command": "select_color_scheme"
+            },
+            {
+                "caption": "テーマ…",
+                "command": "select_theme"
+            },
+            {
                 "caption": "フォント",
                 "children":
                 [
@@ -860,10 +871,6 @@
                     { "command": "reset_font_size", "caption": "リセット" }
                 ]
             },
-            {
-                "caption": "カラースキーマ",
-                "children": [ { "command": "$color_schemes" } ]
-            }
         ]
     },
     {
