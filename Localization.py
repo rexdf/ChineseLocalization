@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.9.7"
+__version__ = "1.9.8"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -169,6 +169,8 @@ def set_language(lang, force=False):
             patch_version = 3118
         elif sbt_version < 3125: #3121~3124
             sbt_version = 3121
+        elif sbt_version < 3127: #3126
+            sbt_version = 3126
         if patch_version:
             PATCH_RES = "Packages/{}/patch/{}/{}/Main.sublime-menu.txt".format(
                 PACKAGE_NAME, patch_version, lang)
