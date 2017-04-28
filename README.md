@@ -18,7 +18,7 @@ Linux:
 
     git clone -b st3 https://github.com/rexdf/ChineseLocalization.git ~/.config/sublime-text-3/Packages/ChineseLocalization
 
-~~~Or just download this repo as zip, rename it to `ChineseLocalization.sublime-package` and put it to `Data\Installed Packages`. (Sublime Text 3 only)~~~ You need to unpack and pack it again to make sure all files in the zip root rather than `ChineseLocalization-st3` folder.
+~~Or just download this repo as zip, rename it to `ChineseLocalization.sublime-package` and put it to `Data\Installed Packages`. (Sublime Text 3 only)~~ You need to unpack and pack it again to make sure all files in the zip root rather than `ChineseLocalization-st3` folder.
 
 **Recommand for 3124+, click Menu `Tools\Install Package Control` , then Menu `Preferences\Package Control ` , install `Chinese​Localizations`.**
 
