@@ -838,7 +838,7 @@
                     "base_file": "${packages}/Default/Distraction Free.sublime-settings",
                     "default": "{\n\t$0\n}\n"
                 },
-                "caption": "设置 - 无干扰模式"
+                "caption": "设置 – 无干扰模式"
             },
             { "caption": "-" },
             {
