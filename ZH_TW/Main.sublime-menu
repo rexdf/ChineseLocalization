@@ -380,7 +380,7 @@
             { "command": "show_panel", "args": {"panel": "console", "toggle": true}, "caption": "開啟/關閉主控台" },
             { "caption": "-", "id": "full_screen" },
             { "command": "toggle_full_screen", "caption": "切換全螢幕顯示" },
-            { "command": "toggle_distraction_free", "caption": "切換無幹擾模式" },
+            { "command": "toggle_distraction_free", "caption": "切換無干擾模式" },
             { "caption": "-", "id": "groups" },
             {
                 "caption": "布局(L)",
