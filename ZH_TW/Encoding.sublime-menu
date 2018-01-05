@@ -41,7 +41,7 @@
     },
 
     {
-        "caption": "指定開啟編碼",
+        "caption": "指定編碼方式開啟",
         "children":
         [
             { "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
