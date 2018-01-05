@@ -1,0 +1,7 @@
+1.10.0
+Fix #20
+合并繁体中文翻译pull requests
+
+翻译更新到3152，支持到3156.
+
+Support Sublime Text 3152+, update translation to 3156.
