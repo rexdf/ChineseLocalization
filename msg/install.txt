@@ -5,3 +5,8 @@ When uninstalling this plugin, it will swith back to English.
 要换回英语不需要卸载本插件，请直接从菜单切换英文。
 
 现在带有多个版本的翻译文件，可以支持Sublime Text 3的各个版本。
+
+請使用主選單的 說明/Language 子選單來切換語言。 目前支援 簡體中文 正體中文 日本語。 
+要換回英文不需要移除本外掛程式，請直接從選單切換成英文。
+
+現在帶有多個版本的翻譯檔案，可以支援Sublime Text 3的各個版本。
