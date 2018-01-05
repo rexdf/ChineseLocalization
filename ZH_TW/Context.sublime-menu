@@ -1,6 +1,6 @@
 [
-    { "command": "open_context_url", "caption": "開啟當前游標下的網址" },
-    { "command": "context_goto_definition", "caption": "跳轉到定義處" },
+    { "command": "open_context_url", "caption": "開啟網址" },
+    { "command": "context_goto_definition", "caption": "前往定義處" },
     { "caption": "-", "id": "clipboard" },
     { "command": "copy", "caption": "複製" },
     { "command": "cut", "caption": "剪下" },
@@ -11,6 +11,6 @@
     { "command": "open_in_browser", "caption": "在瀏覽器中開啟" },
     { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "開啟所在資料夾…" },
     { "command": "copy_path", "caption": "複製檔案路徑" },
-    { "command": "reveal_in_side_bar", "caption": "在側邊欄中顯示" },
+    { "command": "reveal_in_side_bar", "caption": "在側邊列中顯示" },
     { "caption": "-", "id": "end" }
 ]

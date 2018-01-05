@@ -1,17 +1,17 @@
 [
-     { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "使用空格縮排", "checkbox": true },
+     { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "使用空白鍵縮排", "checkbox": true },
      { "caption": "-" },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "制表符寬度: 1", "checkbox": true },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "制表符寬度: 2", "checkbox": true },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "制表符寬度: 3", "checkbox": true },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "制表符寬度: 4", "checkbox": true },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "制表符寬度: 5", "checkbox": true },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "制表符寬度: 6", "checkbox": true },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "制表符寬度: 7", "checkbox": true },
-     { "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "制表符寬度: 8", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Tab 寬度: 1", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Tab 寬度: 2", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Tab 寬度: 3", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Tab 寬度: 4", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Tab 寬度: 5", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Tab 寬度: 6", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Tab 寬度: 7", "checkbox": true },
+     { "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Tab 寬度: 8", "checkbox": true },
      { "caption": "-" },
      { "command": "detect_indentation", "caption": "使用緩衝區縮排方式" },
      { "caption": "-" },
-     { "command": "expand_tabs", "caption": "轉為空格縮排", "args": {"set_translate_tabs": true} },
-     { "command": "unexpand_tabs", "caption": "轉為制表符縮排", "args": {"set_translate_tabs": true} }
+     { "command": "expand_tabs", "caption": "轉換為空白鍵縮排", "args": {"set_translate_tabs": true} },
+     { "command": "unexpand_tabs", "caption": "轉換為 Tab 縮排", "args": {"set_translate_tabs": true} }
  ]
