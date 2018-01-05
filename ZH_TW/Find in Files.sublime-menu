@@ -1,8 +1,8 @@
 [
     { "command": "clear_location", "caption": "清除目前路徑" },
     { "command": "add_directory", "caption": "新增資料夾" },
-    { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "新增包括過濾(萬用字元)" },
-    { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "新增排除過濾(萬用字元)" },
+    { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "新增包含篩選器(萬用字元)" },
+    { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "新增排除篩選器(萬用字元)" },
     { "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "新增開啟的資料夾" },
     { "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "新增開啟的檔案" },
     { "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "新增目前檔案" },
