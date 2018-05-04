@@ -1,1 +1,16 @@
-...
+[
+    { "command": "open_context_url" },
+    { "command": "context_goto_definition", "caption": "Goto Definition" },
+    { "caption": "-", "id": "clipboard" },
+    { "command": "Kopieren" },
+    { "command": "Ausschneiden" },
+    { "command": "Einfügen" },
+    { "caption": "-", "id": "selection" },
+    { "command": "select_all" },
+    { "caption": "-", "id": "Datei" },
+    { "command": "open_in_browser", "caption": "In Browser öfnnen" },
+    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "Open Containing Folder…" },
+    { "command": "copy_path", "caption": "Kopiere Dateiverzeichniss" },
+    { "command": "reveal_in_side_bar", "caption": "Reveal in Side Bar" },
+    { "caption": "-", "id": "ende" }
+]
