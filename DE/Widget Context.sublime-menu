@@ -1,0 +1,7 @@
+[
+    { "command": "kopieren" },
+    { "command": "auuschneiden" },
+    { "command": "einfügen" },
+    { "caption": "-" },
+    { "command": "select_all" }
+]
