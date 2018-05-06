@@ -1,6 +1,6 @@
 [
-    { "command": "clear_location", "caption": "Clear" },
-    { "command": "add_directory", "caption": "Add Folder" },
+    { "command": "clear_location", "caption": "löschen" },
+    { "command": "add_directory", "caption": "Verzeichniss hinzufügen" },
     { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "Add Include Filter" },
     { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "Add Exclude Filter" },
     { "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "Add Open Folders" },
