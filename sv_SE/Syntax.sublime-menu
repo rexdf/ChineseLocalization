@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Syntax",
+        "caption": "Syntax", //sv_SE
         "children": [ { "command": "$file_types" } ]
     }
 ]
