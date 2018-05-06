@@ -373,10 +373,10 @@
                     { "command": "toggle_show_open_files" }
                 ]
             },
-            { "command": "toggle_minimap","caption": "Afficher/Masquer la mini-carte" },
-            { "command": "toggle_tabs", "caption": "Afficher/Masquer les onglets" },
-            { "command": "toggle_status_bar", "caption": "Afficher/Masquer la barre d’état" },
-            { "command": "toggle_menu", "caption": "Afficher/Masquer le menu" },
+            { "command": "toggle_minimap","caption": "Masquer la mini-carte" },
+            { "command": "toggle_tabs", "caption": "Masquer les onglets" },
+            { "command": "toggle_status_bar", "caption": "Masquer la barre d’état" },
+            { "command": "toggle_menu", "caption": "Masquer le menu" },
             { "command": "show_panel", "args": {"panel": "console", "toggle": true} },
             { "caption": "-", "id": "full_screen" },
             { "command": "toggle_full_screen" },
@@ -627,6 +627,7 @@
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Aller au symbole…" },
             { "command": "goto_symbol_in_project", "caption": "Aller au symbole du projet…" },
             { "command": "goto_definition", "caption": "Aller à la définition…" },
+            { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Aller au mot…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Aller à la ligne…" },
             { "caption": "-" },

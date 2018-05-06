@@ -627,6 +627,7 @@
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Ir a Símbolo…" },
             { "command": "goto_symbol_in_project", "caption": "Ir a Símbolo en Proyecto…" },
             { "command": "goto_definition", "caption": "Ir a Definición…" },
+            { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Ir a Palabra…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Ir a Línea…" },
             { "caption": "-" },

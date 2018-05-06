@@ -597,6 +597,7 @@
                     { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "Нет", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70 символов", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [72]}, "caption": "72 символов", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78 символов", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80 символов", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100 символов", "checkbox": true },
@@ -624,6 +625,7 @@
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Перейти к идентификатору…" },
             { "command": "goto_symbol_in_project", "caption": "Перейти к идентификатору в проекте…" },
             { "command": "goto_definition", "caption": "Перейти к определению…" },
+            { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Перейти к слову…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Перейти к строке…" },
             { "caption": "-" },
@@ -851,6 +853,14 @@
             },
             { "caption": "-" },
             {
+                "caption": "Цветовая схема…",
+                "command": "select_color_scheme"
+            },
+            {
+                "caption": "Theme…",
+                "command": "select_theme"
+            },
+            {
                 "caption": "Размер текста",
                 "children":
                 [
@@ -860,10 +870,6 @@
                     { "command": "reset_font_size", "caption": "Сбросить" }
                 ]
             },
-            {
-                "caption": "Цветовая схема",
-                "children": [ { "command": "$color_schemes" } ]
-            }
         ]
     },
     {
@@ -878,6 +884,7 @@
             { "command": "show_progress_window", "caption": "Статус индексации…" },
             { "caption": "-" },
             { "command": "purchase_license", "caption": "Купить лицензию"},
+            { "command": "upgrade_license"},
             { "command": "show_license_window", "caption": "Ввести лицензию" },
             { "command": "remove_license", "caption": "Удалить лицензию"},
             { "caption": "-" },

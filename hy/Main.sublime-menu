@@ -626,6 +626,7 @@
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Անցնել Նշանին…" },
             { "command": "goto_symbol_in_project", "caption": "Անցնել Նախագծի մեջի Նշանին…" },
             { "command": "goto_definition", "caption": "Անցնել Սահմանմանը…" },
+            { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Անցնել Տողին…" },
             { "caption": "-" },
@@ -853,6 +854,14 @@
             },
             { "caption": "-" },
             {
+                "caption": "Գունավորում",
+                "command": "select_color_scheme"
+            },
+            {
+                "caption": "Theme…",
+                "command": "select_theme"
+            },
+            {
                 "caption": "Տառատեսակ",
                 "children":
                 [
@@ -862,10 +871,6 @@
                     { "command": "reset_font_size", "caption": "Վերատեղադրել" }
                 ]
             },
-            {
-                "caption": "Գունավորում",
-                "children": [ { "command": "$color_schemes" } ]
-            }
         ]
     },
     {
@@ -880,6 +885,7 @@
             { "command": "show_progress_window", "caption": "Ցուցակավորման վիճակ…" },
             { "caption": "-" },
             { "command": "purchase_license", "caption": "Գնել Թույլատրագիր"},
+	    { "command": "upgrade_license"},
             { "command": "show_license_window", "caption": "Մուտքագրել Թույլատրագիրը" },
             { "command": "remove_license"},
             { "caption": "-" },
