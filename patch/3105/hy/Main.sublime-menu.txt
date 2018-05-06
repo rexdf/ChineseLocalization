@@ -1,0 +1,891 @@
+[
+    {
+        "caption": "• Նիշք",
+        "mnemonic": "F",
+        "id": "file",
+        "children":
+        [
+            { "command": "new_file", "caption": "Նոր Նիշք", "mnemonic": "N" },
+
+            { "command": "prompt_open_file", "caption": "Բացել Նիշքը…", "mnemonic": "O", "platform": "!OSX" },
+            { "command": "prompt_open_folder", "caption": "Բացել Պանակը…", "platform": "!OSX" },
+            { "command": "prompt_open", "caption": "Բացել…", "platform": "OSX" },
+            {
+                "caption": "Բացել վերջին օգտագործածներից՝",
+                "mnemonic": "R",
+                "children":
+                [
+                    { "command": "reopen_last_file", "caption": "Վերաբացել վերջին փակված նիշքը" },
+                    { "caption": "-" },
+                    { "command": "open_recent_file", "args": {"index": 0 } },
+                    { "command": "open_recent_file", "args": {"index": 1 } },
+                    { "command": "open_recent_file", "args": {"index": 2 } },
+                    { "command": "open_recent_file", "args": {"index": 3 } },
+                    { "command": "open_recent_file", "args": {"index": 4 } },
+                    { "command": "open_recent_file", "args": {"index": 5 } },
+                    { "command": "open_recent_file", "args": {"index": 6 } },
+                    { "command": "open_recent_file", "args": {"index": 7 } },
+                    { "caption": "-" },
+                    { "command": "open_recent_folder", "args": {"index": 0 } },
+                    { "command": "open_recent_folder", "args": {"index": 1 } },
+                    { "command": "open_recent_folder", "args": {"index": 2 } },
+                    { "command": "open_recent_folder", "args": {"index": 3 } },
+                    { "command": "open_recent_folder", "args": {"index": 4 } },
+                    { "command": "open_recent_folder", "args": {"index": 5 } },
+                    { "command": "open_recent_folder", "args": {"index": 6 } },
+                    { "command": "open_recent_folder", "args": {"index": 7 } },
+                    { "caption": "-" },
+                    { "command": "clear_recent_files", "caption": "Մաքրել ցանկը" }
+                ]
+            },
+            {
+                "caption": "Վերաբացել այս կոդավորումով՝",
+                "children":
+                [
+                    { "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
+                    { "caption": "UTF-16 LE", "command": "reopen", "args": {"encoding": "utf-16 le" } },
+                    { "caption": "UTF-16 BE", "command": "reopen", "args": {"encoding": "utf-16 be" } },
+                    { "caption": "-" },
+                    { "caption": "Western (Windows 1252)", "command": "reopen", "args": {"encoding": "Western (Windows 1252)" } },
+                    { "caption": "Western (ISO 8859-1)", "command": "reopen", "args": {"encoding": "Western (ISO 8859-1)" } },
+                    { "caption": "Western (ISO 8859-3)", "command": "reopen", "args": {"encoding": "Western (ISO 8859-3)" } },
+                    { "caption": "Western (ISO 8859-15)", "command": "reopen", "args": {"encoding": "Western (ISO 8859-15)" } },
+                    { "caption": "Western (Mac Roman)", "command": "reopen", "args": {"encoding": "Western (Mac Roman)" } },
+                    { "caption": "DOS (CP 437)", "command": "reopen", "args": {"encoding": "DOS (CP 437)" } },
+                    { "caption": "Arabic (Windows 1256)", "command": "reopen", "args": {"encoding": "Arabic (Windows 1256)" } },
+                    { "caption": "Arabic (ISO 8859-6)", "command": "reopen", "args": {"encoding": "Arabic (ISO 8859-6)" } },
+                    { "caption": "Baltic (Windows 1257)", "command": "reopen", "args": {"encoding": "Baltic (Windows 1257)" } },
+                    { "caption": "Baltic (ISO 8859-4)", "command": "reopen", "args": {"encoding": "Baltic (ISO 8859-4)" } },
+                    { "caption": "Celtic (ISO 8859-14)", "command": "reopen", "args": {"encoding": "Celtic (ISO 8859-14)" } },
+                    { "caption": "Central European (Windows 1250)", "command": "reopen", "args": {"encoding": "Central European (Windows 1250)" } },
+                    { "caption": "Central European (ISO 8859-2)", "command": "reopen", "args": {"encoding": "Central European (ISO 8859-2)" } },
+                    { "caption": "Cyrillic (Windows 1251)", "command": "reopen", "args": {"encoding": "Cyrillic (Windows 1251)" } },
+                    { "caption": "Cyrillic (Windows 866)", "command": "reopen", "args": {"encoding": "Cyrillic (Windows 866)" } },
+                    { "caption": "Cyrillic (ISO 8859-5)", "command": "reopen", "args": {"encoding": "Cyrillic (ISO 8859-5)" } },
+                    { "caption": "Cyrillic (KOI8-R)", "command": "reopen", "args": {"encoding": "Cyrillic (KOI8-R)" } },
+                    { "caption": "Cyrillic (KOI8-U)", "command": "reopen", "args": {"encoding": "Cyrillic (KOI8-U)" } },
+                    { "caption": "Estonian (ISO 8859-13)", "command": "reopen", "args": {"encoding": "Estonian (ISO 8859-13)" } },
+                    { "caption": "Greek (Windows 1253)", "command": "reopen", "args": {"encoding": "Greek (Windows 1253)" } },
+                    { "caption": "Greek (ISO 8859-7)", "command": "reopen", "args": {"encoding": "Greek (ISO 8859-7)" } },
+                    { "caption": "Hebrew (Windows 1255)", "command": "reopen", "args": {"encoding": "Hebrew (Windows 1255)" } },
+                    { "caption": "Hebrew (ISO 8859-8)", "command": "reopen", "args": {"encoding": "Hebrew (ISO 8859-8)" } },
+                    { "caption": "Nordic (ISO 8859-10)", "command": "reopen", "args": {"encoding": "Nordic (ISO 8859-10)" } },
+                    { "caption": "Romanian (ISO 8859-16)", "command": "reopen", "args": {"encoding": "Romanian (ISO 8859-16)" } },
+                    { "caption": "Turkish (Windows 1254)", "command": "reopen", "args": {"encoding": "Turkish (Windows 1254)" } },
+                    { "caption": "Turkish (ISO 8859-9)", "command": "reopen", "args": {"encoding": "Turkish (ISO 8859-9)" } },
+                    { "caption": "Vietnamese (Windows 1258)", "command": "reopen", "args": {"encoding": "Vietnamese (Windows 1258)" } },
+                    { "caption": "-" },
+                    { "caption": "Տասնվեցական", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
+                ]
+            },
+            { "command": "clone_file", "caption": "Ընթացիկ տեսքը Նոր Նիշքում", "mnemonic": "e" },
+            { "caption": "-" },
+            { "command": "save", "caption": "Պահել", "mnemonic": "S" },
+            {
+                "caption": "Պահել այս կոդավորումով՝",
+                "children":
+                [
+                    { "caption": "UTF-8", "command": "save", "args": {"encoding": "utf-8" } },
+                    { "caption": "UTF-8 with BOM", "command": "save", "args": {"encoding": "utf-8 with bom" } },
+                    { "caption": "UTF-16 LE", "command": "save", "args": {"encoding": "utf-16 le" } },
+                    { "caption": "UTF-16 LE with BOM", "command": "save", "args": {"encoding": "utf-16 le with bom" } },
+                    { "caption": "UTF-16 BE", "command": "save", "args": {"encoding": "utf-16 be" } },
+                    { "caption": "UTF-16 BE with BOM", "command": "save", "args": {"encoding": "utf-16 be with bom" } },
+                    { "caption": "-" },
+                    { "caption": "Western (Windows 1252)", "command": "save", "args": {"encoding": "Western (Windows 1252)" } },
+                    { "caption": "Western (ISO 8859-1)", "command": "save", "args": {"encoding": "Western (ISO 8859-1)" } },
+                    { "caption": "Western (ISO 8859-3)", "command": "save", "args": {"encoding": "Western (ISO 8859-3)" } },
+                    { "caption": "Western (ISO 8859-15)", "command": "save", "args": {"encoding": "Western (ISO 8859-15)" } },
+                    { "caption": "Western (Mac Roman)", "command": "save", "args": {"encoding": "Western (Mac Roman)" } },
+                    { "caption": "DOS (CP 437)", "command": "save", "args": {"encoding": "DOS (CP 437)" } },
+                    { "caption": "Arabic (Windows 1256)", "command": "save", "args": {"encoding": "Arabic (Windows 1256)" } },
+                    { "caption": "Arabic (ISO 8859-6)", "command": "save", "args": {"encoding": "Arabic (ISO 8859-6)" } },
+                    { "caption": "Baltic (Windows 1257)", "command": "save", "args": {"encoding": "Baltic (Windows 1257)" } },
+                    { "caption": "Baltic (ISO 8859-4)", "command": "save", "args": {"encoding": "Baltic (ISO 8859-4)" } },
+                    { "caption": "Celtic (ISO 8859-14)", "command": "save", "args": {"encoding": "Celtic (ISO 8859-14)" } },
+                    { "caption": "Central European (Windows 1250)", "command": "save", "args": {"encoding": "Central European (Windows 1250)" } },
+                    { "caption": "Central European (ISO 8859-2)", "command": "save", "args": {"encoding": "Central European (ISO 8859-2)" } },
+                    { "caption": "Cyrillic (Windows 1251)", "command": "save", "args": {"encoding": "Cyrillic (Windows 1251)" } },
+                    { "caption": "Cyrillic (Windows 866)", "command": "save", "args": {"encoding": "Cyrillic (Windows 866)" } },
+                    { "caption": "Cyrillic (ISO 8859-5)", "command": "save", "args": {"encoding": "Cyrillic (ISO 8859-5)" } },
+                    { "caption": "Cyrillic (KOI8-R)", "command": "save", "args": {"encoding": "Cyrillic (KOI8-R)" } },
+                    { "caption": "Cyrillic (KOI8-U)", "command": "save", "args": {"encoding": "Cyrillic (KOI8-U)" } },
+                    { "caption": "Estonian (ISO 8859-13)", "command": "save", "args": {"encoding": "Estonian (ISO 8859-13)" } },
+                    { "caption": "Greek (Windows 1253)", "command": "save", "args": {"encoding": "Greek (Windows 1253)" } },
+                    { "caption": "Greek (ISO 8859-7)", "command": "save", "args": {"encoding": "Greek (ISO 8859-7)" } },
+                    { "caption": "Hebrew (Windows 1255)", "command": "save", "args": {"encoding": "Hebrew (Windows 1255)" } },
+                    { "caption": "Hebrew (ISO 8859-8)", "command": "save", "args": {"encoding": "Hebrew (ISO 8859-8)" } },
+                    { "caption": "Nordic (ISO 8859-10)", "command": "save", "args": {"encoding": "Nordic (ISO 8859-10)" } },
+                    { "caption": "Romanian (ISO 8859-16)", "command": "save", "args": {"encoding": "Romanian (ISO 8859-16)" } },
+                    { "caption": "Turkish (Windows 1254)", "command": "save", "args": {"encoding": "Turkish (Windows 1254)" } },
+                    { "caption": "Turkish (ISO 8859-9)", "command": "save", "args": {"encoding": "Turkish (ISO 8859-9)" } },
+                    { "caption": "Vietnamese (Windows 1258)", "command": "save", "args": {"encoding": "Vietnamese (Windows 1258)" } },
+                    { "caption": "-" },
+                    { "caption": "Hexadecimal", "command": "save", "args": {"encoding": "Hexadecimal" } }
+                ]
+            },
+            { "command": "prompt_save_as", "caption": "Պահել իբրև…", "mnemonic": "A" },
+            { "command": "save_all", "caption": "Պահել Բոլորը", "mnemonic": "l" },
+            { "caption": "-", "id": "window" },
+            { "command": "new_window", "caption": "Նոր Պատուհան", "mnemonic": "W" },
+            { "command": "close_window", "caption": "Փակել Պատուհանը" },
+            { "caption": "-", "id": "close" },
+            { "command": "close", "caption": "Փակել Նիշքը", "mnemonic": "C" },
+            { "command": "revert", "caption": "Հետադարձել Նիշքը", "mnemonic": "v" },
+            { "command": "close_all", "caption": "Փակել Բոլոր Նիշքերը" },
+            { "caption": "-", "id": "exit" },
+            { "command": "exit", "caption": "Ելք", "mnemonic": "x", "platform": "Windows" },
+            { "command": "exit", "caption": "Դուրս գալ", "mnemonic": "Q", "platform": "Linux" },
+        ]
+    },
+    {
+        "caption": "• Խմբագրել",
+        "mnemonic": "E",
+        "id": "edit",
+        "children":
+        [
+            { "command": "undo", "caption": "Հետարկել", "mnemonic": "U" },
+            { "command": "redo_or_repeat", "caption": "Կրկնել", "mnemonic": "R" },
+            {
+                "caption": "Հետարկել Ընտրվածքը",
+                "children":
+                [
+                    { "command": "soft_undo", "caption": "Փափուկ Հետարկել" },
+                    { "command": "soft_redo", "caption": "Փափուկ Կրկնել" }
+                ]
+            },
+            { "caption": "-", "id": "clipboard" },
+            { "command": "copy", "caption": "Պատճենել", "mnemonic": "C" },
+            { "command": "cut", "caption": "Կտրել", "mnemonic": "t" },
+            { "command": "paste", "caption": "Փակցնել", "mnemonic": "P" },
+            { "command": "paste_and_indent", "caption": "Փակցնել ու Նահանջ դնել", "mnemonic": "I" },
+            { "command": "paste_from_history", "caption": "Փակցնել Պատմությունից" },
+            { "caption": "-" },
+            {
+                "caption": "Տող", "mnemonic": "L",
+                "id": "line",
+                "children":
+                [
+                    { "command": "indent", "caption": "Նահանջ դնել" },
+                    { "command": "unindent", "caption": "Հետնահանջել" },
+                    { "command": "reindent", "caption": "Վերանահանջել", "args": {"single_line": true} },
+                    { "command": "swap_line_up", "caption": "Փոխանակել Վերևի տողի հետ" },
+                    { "command": "swap_line_down", "caption": "Փոխանակել Ներքևի տողի հետ" },
+                    { "command": "duplicate_line", "caption": "Կրկնօրինակել տողը" },
+                    { "command": "run_macro_file", "caption": "Գործարկել Մակրո նիշքը", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Ջնջել Տողը" },
+                    { "command": "join_lines", "caption": "Միացնել տողերը" }
+                ]
+            },
+            {
+                "caption": "Մեկնաբանություն", "mnemonic": "m",
+                "id": "comment",
+
+                "children":
+                [
+                    { "command": "toggle_comment", "args": {"block": false}, "caption": "Փոխարկել Ամեն Տողը Մեկնաբանության" },
+                    { "command": "toggle_comment", "args": {"block": true}, "caption": "Փոխարկել Հատվածը Մեկնաբանության" }
+                ]
+            },
+            {
+                "caption": "Գրվածք", "mnemonic": "T",
+                "id": "text",
+                "children":
+                [
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Ներդնել Նախորդող Տող" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Ներդնել Հաջորդող Տող" },
+                    { "caption": "-" },
+                    { "command": "delete_word", "args": { "forward": true }, "caption": "Ջնջել Հաջորդող Բառը" },
+                    { "command": "delete_word", "args": { "forward": false }, "caption": "Ջնջել Նախորդող Բառը" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Ջնջել Տողը" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Ջնջել Նշորդից մինչև Տողի Վերջ" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Ջնջել Նշորդից մինչև Տողի Սկիզբ" },
+                    { "caption": "-" },
+                    { "command": "Վերադասավորել" }
+                ]
+            },
+            {
+                "caption": "Պիտակ",
+                "id": "tag",
+                "children":
+                [
+                    { "command": "close_tag", "caption": "Փակել Պիտակը" },
+                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Ընդլայնել Ընտրվածքը մինչև Պիտակը" },
+                    { "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/long-tag.sublime-snippet" }, "caption": "Ծալել Ընտրվածքը Պիտակի հետ" }
+                ]
+            },
+            {
+                "caption": "Նշան",
+                "id": "mark",
+                "children":
+                [
+                    { "command": "set_mark", "caption": "Դնել Նշանը" },
+                    { "command": "select_to_mark", "caption": "Ընտրել մինչև Նշանը" },
+                    { "command": "delete_to_mark", "caption": "Ջնջել մինչև Նշանը" },
+                    { "command": "swap_with_mark", "caption": "Փոխանակել Նշանի հետ" },
+                    { "command": "clear_bookmarks", "args": {"name": "mark"}, "caption": "Հեռացնել Նշանը" },
+                    { "caption": "-" },
+                    { "command": "Փակցնել (Մինչև Նշանը Հեռացվածը" }
+                ]
+            },
+            {
+                "caption": "Կոդի Ծալում",
+                "id": "fold",
+                "children":
+                [
+                    { "command": "fold", "caption": "Ծալել" },
+                    { "command": "unfold", "caption": "Ծալաբացել" },
+                    { "command": "unfold_all", "caption": "Ծալաբացել Բոլորը" },
+                    { "caption": "-" },
+                    { "caption": "Ծալել Բոլորը", "command": "fold_by_level", "args": {"level": 1} },
+                    { "caption": "Ծալքի Մակարդակ 2", "command": "fold_by_level", "args": {"level": 2} },
+                    { "caption": "Ծալքի Մակարդակ 3", "command": "fold_by_level", "args": {"level": 3} },
+                    { "caption": "Ծալքի Մակարդակ 4", "command": "fold_by_level", "args": {"level": 4} },
+                    { "caption": "Ծալքի Մակարդակ 5", "command": "fold_by_level", "args": {"level": 5} },
+                    { "caption": "Ծալքի Մակարդակ 6", "command": "fold_by_level", "args": {"level": 6} },
+                    { "caption": "Ծալքի Մակարդակ 7", "command": "fold_by_level", "args": {"level": 7} },
+                    { "caption": "Ծալքի Մակարդակ 8", "command": "fold_by_level", "args": {"level": 8} },
+                    { "caption": "Ծալքի Մակարդակ 9", "command": "fold_by_level", "args": {"level": 9} },
+                    { "caption": "-" },
+                    { "command": "fold_tag_attributes", "caption": "Ծալել Պիտակի Հատկանիշները" }
+                ]
+            },
+            {
+                "caption": "Փոխարկել Տառաշարը", "mnemonic": "a",
+                "id": "convert_case",
+                "children":
+                [
+                    { "command": "title_case", "caption": "Անվանման Տառաշար" },
+                    { "command": "upper_case", "caption": "ՎԵՐԻՆ ՏԱՌԱՇԱՐ" },
+                    { "command": "lower_case", "caption": "ստորին տառաշար" },
+                    { "command": "swap_case", "caption": "Փոխանակել տառաշարը" }
+                ]
+            },
+            {
+                "caption": "Պարբերության Ծալում",
+                "id": "wrap",
+                "children":
+                [
+                    { "command": "wrap_lines", "caption": "Ծալել Պարբերությունը Քանոնով" },
+                    { "command": "wrap_lines", "args": {"width": 70}, "caption": "Ծալել Պարբերությունը 70 գրանշանի վրա" },
+                    { "command": "wrap_lines", "args": {"width": 78}, "caption": "Ծալել Պարբերությունը 78 գրանշանի վրա" },
+                    { "command": "wrap_lines", "args": {"width": 80}, "caption": "Ծալել Պարբերությունը 80 գրանշանի վրա" },
+                    { "command": "wrap_lines", "args": {"width": 100}, "caption": "Ծալել Պարբերությունը 100 գրանշանի վրա" },
+                    { "command": "wrap_lines", "args": {"width": 120}, "caption": "Ծալել Պարբերությունը 120 գրանշանի վրա" }
+                ]
+            },
+            { "command": "auto_complete", "caption": "Ցուցադրել Ավարտումները" },
+            { "caption": "-", "id": "permute" },
+
+            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "Տեսակավորել Տողերը", "mnemonic": "S" },
+            { "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "Տեսակավորել Տողերը (Տառաշարազգայուն)" },
+            {
+                "caption": "Տեղափոխել Տողերը",
+                "children":
+                [
+                    { "command": "permute_lines", "args": {"operation": "reverse"}, "caption": "Հետադարձ" },
+                    { "command": "permute_lines", "args": {"operation": "unique"}, "caption": "Եզակի" },
+                    { "command": "permute_lines", "args": {"operation": "shuffle"}, "caption": "Խառը" }
+                ]
+            },
+            {
+                "caption": "Տեղափոխել Ընտրվածքները",
+                "children":
+                [
+                    { "command": "sort_selection", "args": {"case_sensitive": false}, "caption": "Տեսակավորել" },
+                    { "command": "sort_selection", "args": {"case_sensitive": true}, "caption": "Տեսակավորել (Տառաշարազգայուն)" },
+                    { "command": "permute_selection", "args": {"operation": "reverse"}, "caption": "Հետադարձ" },
+                    { "command": "permute_selection", "args": {"operation": "unique"}, "caption": "Եզակի" },
+                    { "command": "permute_selection", "args": {"operation": "shuffle"}, "caption": "Խառը" }
+                ]
+            },
+            { "caption": "-", "id": "end" }
+        ]
+    },
+    {
+        "caption": "• Ընտրվածք",
+        "mnemonic": "S",
+        "id": "selection",
+        "children":
+        [
+            { "command": "split_selection_into_lines", "caption": "Բաժանել Տողերի" },
+            { "command": "select_lines", "args": {"forward": false}, "caption": "Ավելացնել Նախորդ Տողը" },
+            { "command": "select_lines", "args": {"forward": true}, "caption": "Ավելացնել Հաջորդ Տողը" },
+            { "command": "single_selection", "caption": "Միայնակ Ընտրվածք" },
+            { "command": "invert_selection", "caption": "Հակադարձ Ընտրվածք" },
+            { "caption": "-" },
+            { "command": "select_all", "caption": "Ընտրել Բոլորը" },
+            { "command": "expand_selection", "args": {"to": "line"}, "caption": "Ընտրել ամբողջ Տողը" },
+            { "command": "find_under_expand", "caption": "Ընտրել ամբողջ Բառը" },
+            { "command": "expand_selection_to_paragraph", "caption": "Ընտրել ամբողջ Պարբերությունը" },
+            { "command": "expand_selection", "args": {"to": "scope"}, "caption": "Ընտրել ամբողջ Շրջանը" },
+            { "command": "expand_selection", "args": {"to": "brackets"}, "caption": "Ընտրել Փակագծերի պարունակությունը" },
+            { "command": "expand_selection", "args": {"to": "indentation"}, "caption": "Ընտրել մինչև Նահանջը" },
+            { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Ընտրել մինչև Պիտակը" }
+        ]
+    },
+    {
+        "caption": "• Գտնել",
+        "mnemonic": "i",
+        "id": "find",
+        "children":
+        [
+            { "command": "show_panel", "args": {"panel": "find", "reverse": false}, "caption": "Գտնել…" },
+            { "command": "find_next", "caption": "Գտնել Հաջորդը" },
+            { "command": "find_prev", "caption": "Գտնել Նախորդը" },
+            { "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false}, "caption": "Գտնել ու Ընտրել" },
+            { "caption": "-" },
+            { "command": "show_panel", "args": {"panel": "replace", "reverse": false}, "caption": "Փոխարինել…" },
+            { "command": "replace_next", "caption": "Փոխարինել Հաջորդը" },
+            { "caption": "-" },
+            { "command": "find_under", "caption": "Արագ Գտնել" },
+            { "command": "find_all_under", "caption": "Արագ Գտնել Բոլորը" },
+            { "command": "find_under_expand", "caption": "Արագ Ավելացնել Հաջորդը" },
+            { "command": "find_under_expand_skip", "caption": "Արագ Զանցել Հաջորդը", "platform": "!OSX" },
+            { "caption": "-" },
+            { "command": "slurp_find_string", "caption": "Ընտրվածքը Օգտագործել Գտնելու համար" },
+            { "command": "slurp_replace_string", "caption": "Ընտրվածքը Օգտագործել Փոխարինելու համար" },
+            { "caption": "-" },
+            { "command": "show_panel", "args": {"panel": "find_in_files"}, "caption": "Գտնել Նիշքերում…" },
+            {
+                "caption": "Գտնելու Արդյունքները",
+                "mnemonic": "R",
+                "children":
+                [
+                    { "command": "show_panel", "args": {"panel": "output.find_results"}, "caption": "Ցուցադրել Արդյունքների Վահանակը" },
+                    { "command": "next_result", "caption": "Հաջորդ Արդյունքը" },
+                    { "command": "prev_result", "caption": "Նախորդ Արդյունքը" }
+                ]
+            }
+        ]
+    },
+    {
+        "caption": "• Տեսք",
+        "mnemonic": "V",
+        "id": "view",
+        "children":
+        [
+            {
+                "caption": "Կողագոտի",
+                "id": "side_bar",
+                "children":
+                [
+                    { "command": "toggle_side_bar", "caption": "Անջատել Կողագոտին" },
+                    { "caption": "-" },
+                    { "command": "toggle_show_open_files", "caption": "Թաքցնել Բաց Նիշքերը" }
+                ]
+            },
+            { "command": "toggle_minimap", "caption": "Միացնել/Անջատել Քարտեզը" },
+            { "command": "toggle_tabs", "caption": "Միացնել/Անջատել Ներդիրները" },
+            { "command": "toggle_status_bar", "caption": "Միացնել/Անջատել Վիճակագոտին" },
+            { "command": "toggle_menu", "caption": "Միացնել/Անջատել Ընտրացանկը" },
+            { "command": "show_panel", "caption": "Միացնել/Անջատել Վահանակը", "args": {"panel": "console", "toggle": true} },
+            { "caption": "-", "id": "full_screen" },
+            { "command": "toggle_full_screen", "caption": "Միացնել/Անջատել Լիաէկրան Տեսքը" },
+            { "command": "toggle_distraction_free", "caption": "Միացնել/Անջատել Առանց Շեղման Տեսքը" },
+            { "caption": "-", "id": "groups" },
+            {
+                "caption": "Շարվածք",
+                "mnemonic": "L",
+                "id": "layout",
+                "children":
+                [
+                    {
+                        "caption": "Միակ",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1]]
+                        }
+                    },
+                    {
+                        "caption": "Սյունակներ՝ 2",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.5, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+                        }
+                    },
+                    {
+                        "caption": "Սյունակներ՝ 3",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.33, 0.66, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1]]
+                        }
+                    },
+                    {
+                        "caption": "Սյունակներ՝ 4",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.25, 0.5, 0.75, 1.0],
+                            "rows": [0.0, 1.0],
+                            "cells": [[0, 0, 1, 1], [1, 0, 2, 1], [2, 0, 3, 1], [3, 0, 4, 1]]
+                        }
+                    },
+                    {
+                        "caption": "Սյունակներ՝ 2",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 1.0],
+                            "rows": [0.0, 0.5, 1.0],
+                            "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
+                        }
+                    },
+                    {
+                        "caption": "Շարքեր՝ 3",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 1.0],
+                            "rows": [0.0, 0.33, 0.66, 1.0],
+                            "cells": [[0, 0, 1, 1], [0, 1, 1, 2], [0, 2, 1, 3]]
+                        }
+                    },
+                    {
+                        "caption": "Շարքեր՝ 4",
+                        "command": "set_layout",
+                        "args":
+                        {
+                            "cols": [0.0, 0.5, 1.0],
+                            "rows": [0.0, 0.5, 1.0],
+                            "cells":
+                            [
+                                [0, 0, 1, 1], [1, 0, 2, 1],
+                                [0, 1, 1, 2], [1, 1, 2, 2]
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "caption": "Խմբեր",
+                "children":
+                [
+                    { "command": "new_pane", "caption": "Տեղափոխել Նիշքը Նոր Խմբի մեջ" },
+                    { "command": "new_pane", "args": {"move": false}, "caption": "New Group" },
+                    { "command": "close_pane", "caption": "Փակել Խումբը" },
+
+                    { "caption": "-" },
+
+                    {
+                        "caption": "Առավելագույն Սյունակներ՝ 1",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 1 }
+                    },
+                    {
+                        "caption": "Առավելագույն Սյունակներ՝ 2",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 2 }
+                    },
+                    {
+                        "caption": "Առավելագույն Սյունակներ՝ 3",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 3 }
+                    },
+                    {
+                        "caption": "Առավելագույն Սյունակներ՝ 4",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 4 }
+                    },
+                    {
+                        "caption": "Առավելագույն Սյունակներ՝ 5",
+                        "command": "set_max_columns",
+                        "checkbox": true,
+                        "args": { "columns": 5 }
+                    },
+                ]
+            },
+            {
+                "caption": "Կիզակետային Խումբ",
+                "mnemonic": "F",
+                "children":
+                [
+
+                    { "command": "focus_neighboring_group", "caption": "Հաջորդ" },
+                    { "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "Նախորդ" },
+                    { "caption": "-" },
+                    { "command": "focus_group", "args": {"group": 0}, "caption": "Group 1" },
+                    { "command": "focus_group", "args": {"group": 1}, "caption": "Group 2" },
+                    { "command": "focus_group", "args": {"group": 2}, "caption": "Group 3" },
+                    { "command": "focus_group", "args": {"group": 3}, "caption": "Group 4" }
+                ]
+            },
+            {
+                "caption": "Տեղափոխել Նիշքը Խմբի մեջ",
+                "mnemonic": "M",
+                "children":
+                [
+                    { "command": "move_to_neighboring_group", "caption": "Հաջորդ" },
+                    { "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "Նախորդ" },
+                    { "caption": "-" },
+                    { "command": "move_to_group", "args": {"group": 0}, "caption": "Group 1" },
+                    { "command": "move_to_group", "args": {"group": 1}, "caption": "Group 2" },
+                    { "command": "move_to_group", "args": {"group": 2}, "caption": "Group 3" },
+                    { "command": "move_to_group", "args": {"group": 3}, "caption": "Group 4" }
+                ]
+            },
+            { "caption": "-" },
+            {
+                "caption": "Շարահյուսություն",
+                "mnemonic": "S",
+                "id": "syntax",
+                "children": [ { "command": "$file_types" } ]
+            },
+            {
+                "caption": "Նահանջ",
+                "mnemonic": "I",
+                "id": "indentation",
+                "children":
+                [
+                    { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "Նահանջել Բացատներ օգտագործելով", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Ներդիրի Լայնք՝ 1", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Ներդիրի Լայնք՝ 2", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Ներդիրի Լայնք՝ 3", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Ներդիրի Լայնք՝ 4", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Ներդիրի Լայնք՝ 5", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Ներդիրի Լայնք՝ 6", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Ներդիրի Լայնք՝ 7", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Ներդիրի Լայնք՝ 8", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "detect_indentation", "caption": "Գուշակել Կարգավորումները Պահնակից" },
+                    { "caption": "-" },
+                    { "command": "expand_tabs", "caption": "Փոխարկել Նահանջը Բացատների", "args": {"set_translate_tabs": true} },
+                    { "command": "unexpand_tabs", "caption": "Փոխարկել Նահանջը Ներդիրների", "args": {"set_translate_tabs": true} }
+                ]
+            },
+            {
+                "caption": "Տողերի Վերջավորություններ",
+                "mnemonic": "n",
+                "id": "line_endings",
+                "children":
+                [
+                    { "command": "set_line_ending", "args": {"type": "windows"}, "caption": "Windows", "checkbox": true },
+                    { "command": "set_line_ending", "args": {"type": "unix"}, "caption": "Unix", "checkbox": true },
+                    { "command": "set_line_ending", "args": {"type": "cr"}, "caption": "Mac OS 9", "checkbox": true }
+                ]
+            },
+            { "caption": "-", "id": "settings" },
+                { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "Բառերի Ծալում", "mnemonic": "W", "checkbox": true },
+            {
+                "caption": "Բառերի Ծալման Սյունակ",
+                "children":
+                [
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Ինքնաշխատորեն", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 120}, "caption": "120", "checkbox": true }
+                ]
+            },
+            {
+                "caption": "Քանոն",
+                "children":
+                [
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "Անջատված", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [78]}, "caption": "78", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [80]}, "caption": "80", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [100]}, "caption": "100", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": [120]}, "caption": "120", "checkbox": true }
+                ]
+            },
+            { "caption": "-" },
+            { "command": "toggle_setting", "args": {"setting": "spell_check"}, "caption": "Ուղղագրության Ստուգում", "checkbox": true },
+            { "command": "next_misspelling", "caption": "Հաջորդ Ուղղագրական Սխալը" },
+            { "command": "prev_misspelling", "caption": "Նախորդ Ուղղագրական Սխալը" },
+            {
+                "caption": "Բառարան",
+                "children": [ { "command": "$dictionaries" } ]
+            }
+        ]
+    },
+    {
+        "caption": "• Անցնել",
+        "mnemonic": "G",
+        "id": "goto",
+        "children":
+        [
+            { "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "Անցնել ցանկացած…", "mnemonic": "A" },
+            { "caption": "-" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Անցնել Նշանին…" },
+            { "command": "goto_symbol_in_project", "caption": "Անցնել Նախագծի մեջի Նշանին…" },
+            { "command": "goto_definition", "caption": "Անցնել Սահմանմանը…" },
+            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Անցնել Տողին…" },
+            { "caption": "-" },
+            { "command": "jump_back", "caption": "Ցատկել Հետ" },
+            { "command": "jump_forward", "caption": "Ցատկել Առաջ" },
+            { "caption": "-" },
+            {
+                "caption": "Փոխարկել Նիշքը",
+                "mnemonic": "t",
+                "id": "switch_file",
+                "children":
+                [
+                    { "command": "next_view", "caption": "Հաջորդ Նիշքը" },
+                    { "command": "prev_view", "caption": "Նախորդ Նիշքը" },
+                    { "caption": "-" },
+                    { "command": "next_view_in_stack", "caption": "Հաջորդ Նիշքը Բլոկում" },
+                    { "command": "prev_view_in_stack", "caption": "Նախորդ Նիշքը Բլոկում" },
+                    { "caption": "-" },
+                    { "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]}, "caption": "Switch Header/Implementation", "mnemonic": "H" },
+                    { "caption": "-" },
+                    { "command": "select_by_index", "args": { "index": 0 } },
+                    { "command": "select_by_index", "args": { "index": 1 } },
+                    { "command": "select_by_index", "args": { "index": 2 } },
+                    { "command": "select_by_index", "args": { "index": 3 } },
+                    { "command": "select_by_index", "args": { "index": 4 } },
+                    { "command": "select_by_index", "args": { "index": 5 } },
+                    { "command": "select_by_index", "args": { "index": 6 } },
+                    { "command": "select_by_index", "args": { "index": 7 } },
+                    { "command": "select_by_index", "args": { "index": 8 } },
+                    { "command": "select_by_index", "args": { "index": 9 } }
+                ]
+            },
+            { "caption": "-" },
+            {
+                "caption": "Ոլորել",
+                "mnemonic": "S",
+                "id": "scroll",
+                "children":
+                [
+                    { "command": "show_at_center", "caption": "Ոլորել մինչև Ընտրվածքը" },
+                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "Մի Տող Վերև" },
+                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "Մի Տող Ներքև" }
+                ]
+            },
+            {
+                "caption": "Էջանշաններ",
+                "mnemonic": "B",
+                "id": "bookmarks",
+                "children":
+                [
+                    { "command": "toggle_bookmark", "caption": "Փոխարկել Էջանշանը" },
+                    { "command": "next_bookmark", "caption": "Հաջորդ Էջանշանը" },
+                    { "command": "prev_bookmark", "caption": "Նախորդ Էջանշանը" },
+                    { "command": "clear_bookmarks", "caption": "Մաքրել Էջանշանները" },
+                    { "command": "select_all_bookmarks", "caption": "Ընտրել Բոլոր Էջանշանները" },
+                    { "caption": "-" },
+                    { "command": "select_bookmark", "args": {"index": 0} },
+                    { "command": "select_bookmark", "args": {"index": 1} },
+                    { "command": "select_bookmark", "args": {"index": 2} },
+                    { "command": "select_bookmark", "args": {"index": 3} },
+                    { "command": "select_bookmark", "args": {"index": 4} },
+                    { "command": "select_bookmark", "args": {"index": 5} },
+                    { "command": "select_bookmark", "args": {"index": 6} },
+                    { "command": "select_bookmark", "args": {"index": 7} },
+                    { "command": "select_bookmark", "args": {"index": 8} },
+                    { "command": "select_bookmark", "args": {"index": 9} },
+                    { "command": "select_bookmark", "args": {"index": 10} },
+                    { "command": "select_bookmark", "args": {"index": 11} },
+                    { "command": "select_bookmark", "args": {"index": 12} },
+                    { "command": "select_bookmark", "args": {"index": 13} },
+                    { "command": "select_bookmark", "args": {"index": 14} },
+                    { "command": "select_bookmark", "args": {"index": 15} }
+                ]
+            },
+            { "caption": "-" },
+            { "command": "move_to", "args": {"to": "brackets"}, "caption": "Ցատկել Զուգադիր Փակագծին" }
+        ]
+    },
+    {
+        "caption": "• Գործիքներ",
+        "mnemonic": "T",
+        "id": "tools",
+        "children":
+        [
+            { "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "Հրամանի Պնակ…" },
+            { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "Հատվածներ…" },
+            { "caption": "-", "id": "build" },
+            {
+                "caption": "Կառուցել Համակարգը",
+                "mnemonic": "u",
+                "children":
+                [
+                    { "command": "set_build_system", "args": { "file": "" }, "caption": "Ինքնաշխատորեն", "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "set_build_system", "args": {"index": 0}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 1}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 2}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 3}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 4}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 5}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 6}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 7}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 8}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 9}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 10}, "checkbox": true },
+                    { "command": "set_build_system", "args": {"index": 11}, "checkbox": true },
+                    { "caption": "-" },
+                    { "command": "$build_systems" },
+                    { "caption": "-" },
+                    { "command": "new_build_system", "caption": "Նոր Համակարգի Կառուցում…" }
+                ]
+            },
+            { "command": "build", "mnemonic": "B" },
+            { "command": "build", "args": {"select": true}, "caption": "Կառուցել օգտագործելով…" },
+            { "command": "cancel_build", "caption": "Չեղարկել Կառուցումը", "mnemonic": "C" },
+            {
+                "caption": "Կառուցման Արդյունքներ",
+                "mnemonic": "R",
+                "children":
+                [
+                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Ցուցադրել Կառուցման Արդյունքները", "mnemonic": "S" },
+                    { "command": "next_result", "mnemonic": "N" },
+                    { "command": "prev_result", "caption": "Նախորդ Արդյունքը", "mnemonic": "P" }
+                ]
+            },
+            { "command": "toggle_save_all_on_build", "caption": "Պահել Բոլորը Կառուցելուց Առաջ", "mnemonic": "A", "checkbox": true },
+            { "caption": "-", "id": "macros" },
+            { "command": "toggle_record_macro", "caption": "Գրել Մակրոն", "mnemonic": "M" },
+            { "command": "run_macro", "caption": "Վերարտադրել Մակրոն", "mnemonic": "P" },
+            { "command": "save_macro", "caption": "Պահել Մակրոն…", "mnemonic": "v" },
+            {
+                "caption": "Մակրոներ",
+                "children": [ { "command": "$macros" } ]
+            },
+            { "caption": "-" },
+            {
+                "caption": "Մշակող",
+                "children":
+                [
+                    { "command": "new_plugin", "caption": "Նոր Խրվակ…" },
+                    { "command": "new_snippet", "caption": "Նոր Հատված…" },
+                    { "command": "new_syntax", "caption": "Նոր Շարահյուսություն…" },
+                    { "command": "convert_syntax" },
+                    { "caption": "-" },
+                    { "command": "profile_plugins", "caption": "Խրվակների իրադարձությունների տվյալներ" },
+                    { "caption": "-" },
+                    { "command": "show_scope_name", "caption": "Ցուցադրել Շրջանի Անվանումը" },
+                ]
+            },
+            { "command": "install_package_control", "caption": "Տեղադրել Փաթեթների Կառավարիչը…" },
+            { "caption": "-", "id": "end" }
+        ]
+    },
+    {
+        "caption": "• Նախագիծ",
+        "id": "project",
+        "mnemonic": "P",
+        "children":
+        [
+            { "command": "prompt_open_project_or_workspace", "caption": "Բացել Նախագիծը…" },
+            { "command": "prompt_switch_project_or_workspace", "caption": "Փոխարկել Նախագիծը…" },
+            { "command": "prompt_select_workspace", "caption": "Արագ Փոխարկել Նախագիծը…", "mnemonic": "S" },
+            {
+                "caption": "Բացել վերջին օգտագործածներից՝",
+                "children":
+                [
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 0 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 1 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 2 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 3 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 4 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 5 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 6 } },
+                    { "command": "open_recent_project_or_workspace", "args": {"index": 7 } },
+                    { "caption": "-" },
+                    { "command": "clear_recent_projects_and_workspaces", "caption": "Մաքրել Միավորները" }
+                ]
+            },
+            { "caption": "-" },
+            { "command": "save_project_and_workspace_as", "caption": "Պահել Նախագիծը իբրև…", "mnemonic": "A" },
+            { "command": "close_workspace", "caption": "Փակել Նախագիծը", "mnemonic": "C" },
+            { "command": "open_file", "args": {"file": "${project}"}, "caption": "Խմբագրել Նախագիքը" },
+            { "caption": "-" },
+            { "command": "new_window_for_project", "caption": "Նոր Աշխատատարածք Նախագծի համար" },
+            { "command": "save_workspace_as", "caption": "Պահել Աշխատատարածքը իբրև…", "mnemonic": "A" },
+            { "caption": "-" },
+            { "command": "prompt_add_folder", "caption": "Ավելացնել Պանակը Նախագծին…", "mnemonic": "d" },
+            { "command": "close_folder_list", "caption": "Հեռացնել Բոլոր Պանակները Նախագծից", "mnemonic": "m" },
+            { "command": "refresh_folder_list", "caption": "Թարմացնել Պանակները", "mnemonic": "e" },
+        ]
+    },
+    {
+        "caption": "• Նախընտրություններ",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Զննել Փաթեթները…", "mnemonic": "B" },
+            { "caption": "-" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Preferences.sublime-settings",
+                    "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
+                },
+                "caption": "Կարգավորումներ"
+            },
+            { "command": "edit_syntax_settings", "caption": "Կարգավորումներ – Ըստ Շարահյուսության" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Distraction Free.sublime-settings",
+                    "default": "{\n\t$0\n}\n"
+                },
+                "caption": "Կարգավորումներ – Առանց Շեղման"
+            },
+            { "caption": "-" },
+            {
+                "command": "edit_settings", "args":
+                {
+                    "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
+                    "default": "[\n\t$0\n]\n"
+                },
+                "caption": "Ստեղների Կապոցներ"
+            },
+            { "caption": "-" },
+            {
+                "caption": "Տառատեսակ",
+                "children":
+                [
+                    { "command": "increase_font_size", "caption": "Մեծացնել" },
+                    { "command": "decrease_font_size", "caption": "Փոքրացնել" },
+                    { "caption": "-" },
+                    { "command": "reset_font_size", "caption": "Վերատեղադրել" }
+                ]
+            },
+            {
+                "caption": "Գունավորում",
+                "children": [ { "command": "$color_schemes" } ]
+            }
+        ]
+    },
+    {
+        "caption": "• Օգնություն",
+        "mnemonic": "H",
+        "id": "help",
+        "children":
+        [
+            { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "Թղթաբանություն" },
+            { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
+            { "caption": "-" },
+            { "command": "show_progress_window", "caption": "Ցուցակավորման վիճակ…" },
+            { "caption": "-" },
+            { "command": "purchase_license", "caption": "Գնել Թույլատրագիր"},
+            { "command": "show_license_window", "caption": "Մուտքագրել Թույլատրագիրը" },
+            { "command": "remove_license"},
+            { "caption": "-" },
+            { "command": "update_check", "caption": "Ստուգել Արդիացումների առկայությունը…", "platform": "!Linux" },
+            { "command": "show_changelog", "caption": "Փոփոխությունների ցանկ…" },
+            { "command": "show_about_window", "caption": "Sublime Text-ի մասին", "mnemonic": "A" }
+        ]
+    }
+]
