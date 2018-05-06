@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Syntax",
+        "caption": "Շարահյուսություն",
         "children": [ { "command": "$file_types" } ]
     }
 ]
