@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Set Encoding",
+        "caption": "Установить кодировку",
         "children":
         [
             { "caption": "UTF-8", "command": "set_encoding", "args": {"encoding": "utf-8" } },
@@ -41,7 +41,7 @@
     },
 
     {
-        "caption": "Reopen with Encoding",
+        "caption": "Переоткрыть в кодировке",
         "children":
         [
             { "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },

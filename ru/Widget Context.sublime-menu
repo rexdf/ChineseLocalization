@@ -1,7 +1,7 @@
 [
-    { "command": "copy" },
-    { "command": "cut" },
-    { "command": "paste" },
+    { "command": "copy", "caption": "Копировать" },
+    { "command": "cut", "caption": "Вырезать" },
+    { "command": "paste", "caption": "Вставить" },
     { "caption": "-" },
-    { "command": "select_all" }
+    { "command": "select_all", "caption": "Выделить всё" }
 ]
