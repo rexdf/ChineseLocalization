@@ -20,6 +20,30 @@ LANGS = {
         "zipfile": "JA_JP.zip",
         'syntax_md5sum': "037128b8f8d2616c7239d8e9a7183b4c"
     },
+    "de_DE": {
+        "zipfile": "de_DE.zip",
+        'syntax_md5sum': "2b1256d95592a5c2a517e86d4be2e4cf"
+    },
+    "es_ES": {
+        "zipfile": "es_ES.zip",
+        'syntax_md5sum': "9ae95c10fda7a268dba6f3deb1d7045e"
+    },
+    "fr_FR": {
+        "zipfile": "fr_FR.zip",
+        'syntax_md5sum': "d01201fb6fc53dd28fc6f48a9bb3da9d"
+    },
+    "hy": {
+        "zipfile": "hy.zip",
+        'syntax_md5sum': "aaea3b150c9dcc9f6fe67ef9740d201d"
+    },
+    "ru": {
+        "zipfile": "ru.zip",
+        'syntax_md5sum': "9c3fc2f79bd059749fa221c0d8810c71"
+    },
+    "sv_SE": {
+        "zipfile": "sv_SE.zip",
+        'syntax_md5sum': "8e92e8b31f9003c4e494deca2808d23f"
+    },
     "Unknown": {
     },
     # "EN": { # This item is deprecated and not used in programming.
