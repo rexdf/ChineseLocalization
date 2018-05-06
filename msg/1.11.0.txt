@@ -1,3 +1,8 @@
+1.11.1
+新加语言bug修复
+
+bugfix for new languages support
+
 1.11.0
 除了目前已经支持的繁简中文日语，新增支持俄语、西班牙语、法语等欧洲语言。德语也在等待pull requests中。
 
