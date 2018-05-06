@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.11.0"
+__version__ = "1.11.1"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -156,6 +156,8 @@ def set_language(lang, force=False):
             lang = "JA_JP"
         elif locale_lang[0] == "zh_TW" or locale_lang[0] == "zh_HK":
             lang = "ZH_TW"
+        elif locale_lang[0] in LANGS:
+            lang = locale_lang[0]
 
     # Make sure Default Packages function work
     GOTO_PY = os.path.join(DEFAULT_PATH, 'goto_line.py')
