@@ -80,6 +80,60 @@
           },
           {
             "args": {
+              "language": "ru"
+            },
+            "caption": "Russian Русский",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "R"
+          },
+          {
+            "args": {
+              "language": "es_ES"
+            },
+            "caption": "Spanish Español",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "P"
+          },
+          {
+            "args": {
+              "language": "fr_FR"
+            },
+            "caption": "French Français",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "F"
+          },
+          {
+            "args": {
+              "language": "de_DE"
+            },
+            "caption": "German Deutsche",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "G"
+          },
+          {
+            "args": {
+              "language": "sv_SE"
+            },
+            "caption": "Swedish Svenska",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "V"
+          },
+          {
+            "args": {
+              "language": "hy"
+            },
+            "caption": "Armenian Հայերեն",
+            "checkbox": true,
+            "command": "toggle_language",
+            "mnemonic": "H"
+          },
+          {
+            "args": {
               "language": "EN"
             },
             "caption": "English",
