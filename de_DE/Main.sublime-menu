@@ -1,6 +1,6 @@
 [
     {
-        "caption": "File",
+        "caption": "Datei",
         "mnemonic": "F",
         "id": "file",
         "children":
