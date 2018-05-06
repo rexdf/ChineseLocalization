@@ -1,0 +1,12 @@
+1.11.0
+除了目前已经支持的繁简中文日语，新增支持俄语、西班牙语、法语等欧洲语言。德语也在等待pull requests中。
+
+Add support for Русский(Russian) Español(Spanish) Հայերեն(Armenian) Svenska(Swedish) Français(French)
+
+
+1.10.0
+Fix #20
+合并繁体中文翻译pull requests
+翻译更新到3152，支持到3156.
+
+Support Sublime Text 3152+, update translation to 3156.
