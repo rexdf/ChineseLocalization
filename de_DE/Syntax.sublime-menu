@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Syntax",
+        "caption": "Syntax", // de_DE
         "children": [ { "command": "$file_types" } ]
     }
 ]
