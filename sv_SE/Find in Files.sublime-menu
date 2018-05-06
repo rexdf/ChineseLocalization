@@ -1,9 +1,9 @@
 [
-    { "command": "clear_location", "caption": "Clear" },
-    { "command": "add_directory", "caption": "Add Folder" },
-    { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "Add Include Filter" },
-    { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "Add Exclude Filter" },
-    { "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "Add Open Folders" },
-    { "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "Add Open Files" },
-    { "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "Add Current File" },
+    { "command": "clear_location", "caption": "Rensa" },
+    { "command": "add_directory", "caption": "Lägg till mapp" },
+    { "command": "add_where_snippet", "args": {"snippet": "*.${0:txt}"}, "caption": "Lägg till inkluderande filter" },
+    { "command": "add_where_snippet", "args": {"snippet": "-*.${0:txt}"}, "caption": "Lägg till exkluderande filter" },
+    { "command": "add_where_snippet", "args": {"snippet": "<open folders>"}, "caption": "Lägg till öppna mappar" },
+    { "command": "add_where_snippet", "args": {"snippet": "<open files>"}, "caption": "Lägg till öppna filer" },
+    { "command": "add_where_snippet", "args": {"snippet": "<current file>"}, "caption": "Lägg till nuvarande fil" },
 ]
