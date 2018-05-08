@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Set Encoding",
+        "caption": "Kodierung festlegen",
         "children":
         [
             { "caption": "UTF-8", "command": "set_encoding", "args": {"encoding": "utf-8" } },
@@ -36,12 +36,12 @@
             { "caption": "Turkish (ISO 8859-9)", "command": "set_encoding", "args": {"encoding": "Turkish (ISO 8859-9)" } },
             { "caption": "Vietnamese (Windows 1258)", "command": "set_encoding", "args": {"encoding": "Vietnamese (Windows 1258)" } },
             { "caption": "-" },
-            { "caption": "Hexadecimal", "command": "set_encoding", "args": {"encoding": "Hexadecimal" } }
+            { "caption": "Hexadezimal", "command": "set_encoding", "args": {"encoding": "Hexadezimal" } }
         ]
     },
 
     {
-        "caption": "Reopen with Encoding",
+        "caption": "Wiederöffnen mit Kodierung",
         "children":
         [
             { "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
@@ -77,7 +77,7 @@
             { "caption": "Turkish (ISO 8859-9)", "command": "reopen", "args": {"encoding": "Turkish (ISO 8859-9)" } },
             { "caption": "Vietnamese (Windows 1258)", "command": "reopen", "args": {"encoding": "Vietnamese (Windows 1258)" } },
             { "caption": "-" },
-            { "caption": "Hexadecimal", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
+            { "caption": "Hexadezimal", "command": "reopen", "args": {"encoding": "Hexadezimal" } }
         ]
     },
 ]
