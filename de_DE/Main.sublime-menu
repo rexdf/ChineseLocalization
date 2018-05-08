@@ -1,21 +1,21 @@
 [
     {
         "caption": "Datei",
-        "mnemonic": "F",
+        "mnemonic": "D",
         "id": "file",
         "children":
         [
-            { "command": "new_file", "caption": "New File", "mnemonic": "N" },
+            { "command": "new_file", "caption": "Neue Datei", "mnemonic": "N" },
 
-            { "command": "prompt_open_file", "caption": "Open File…", "mnemonic": "O", "platform": "!OSX" },
-            { "command": "prompt_open_folder", "caption": "Open Folder…", "platform": "!OSX" },
-            { "command": "prompt_open", "caption": "Open…", "platform": "OSX" },
+            { "command": "prompt_open_file", "caption": "Datei öffnen…", "mnemonic": "O", "platform": "!OSX" },
+            { "command": "prompt_open_folder", "caption": "Verzeichnis öffnen…", "platform": "!OSX" },
+            { "command": "prompt_open", "caption": "Öffen…", "platform": "OSX" },
             {
-                "caption": "Open Recent",
+                "caption": "Zuletzt geöffnet",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "reopen_last_file", "caption": "Reopen Closed File" },
+                    { "command": "reopen_last_file", "caption": "Geschlossene Datei wieder öffnen" },
                     { "caption": "-" },
                     { "command": "open_recent_file", "args": {"index": 0 } },
                     { "command": "open_recent_file", "args": {"index": 1 } },
@@ -35,11 +35,11 @@
                     { "command": "open_recent_folder", "args": {"index": 6 } },
                     { "command": "open_recent_folder", "args": {"index": 7 } },
                     { "caption": "-" },
-                    { "command": "clear_recent_files", "caption": "Clear Items" }
+                    { "command": "clear_recent_files", "caption": "elemente löschen" }
                 ]
             },
             {
-                "caption": "Reopen with Encoding",
+                "caption": "Wiederöffnen mit Codierung",
                 "children":
                 [
                     { "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
@@ -78,10 +78,10 @@
                     { "caption": "Hexadecimal", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
                 ]
             },
-            { "command": "clone_file", "caption": "New View into File", "mnemonic": "e" },
-            { "command": "save", "caption": "Save", "mnemonic": "S" },
+            { "command": "clone_file", "caption": "Neuer Blick in die Datei", "mnemonic": "e" },
+            { "command": "save", "caption": "Speichern", "mnemonic": "S" },
             {
-                "caption": "Save with Encoding",
+                "caption": "Speichern mit Codierung",
                 "children":
                 [
                     { "caption": "UTF-8", "command": "save", "args": {"encoding": "utf-8" } },
@@ -123,30 +123,30 @@
                     { "caption": "Hexadecimal", "command": "save", "args": {"encoding": "Hexadecimal" } }
                 ]
             },
-            { "command": "prompt_save_as", "caption": "Save As…", "mnemonic": "A" },
-            { "command": "save_all", "caption": "Save All", "mnemonic": "l" },
+            { "command": "prompt_save_as", "caption": "Speichern als…", "mnemonic": "A" },
+            { "command": "save_all", "caption": "Alle speichern", "mnemonic": "l" },
             { "caption": "-", "id": "window" },
-            { "command": "new_window", "caption": "New Window", "mnemonic": "W" },
-            { "command": "close_window", "caption": "Close Window" },
+            { "command": "new_window", "caption": "Neues Fenster", "mnemonic": "W" },
+            { "command": "close_window", "caption": "Fenster schließen" },
             { "caption": "-", "id": "close" },
-            { "command": "close", "caption": "Close File", "mnemonic": "C" },
-            { "command": "revert", "caption": "Revert File", "mnemonic": "v" },
-            { "command": "close_all", "caption": "Close All Files" },
+            { "command": "close", "caption": "Datei schließen", "mnemonic": "C" },
+            { "command": "revert", "caption": "Datei zurücksetzen", "mnemonic": "v" },
+            { "command": "close_all", "caption": "Alle Dateien schließen" },
             { "caption": "-", "id": "exit" },
-            { "command": "exit", "caption": "Exit", "mnemonic": "x", "platform": "Windows" },
-            { "command": "exit", "caption": "Quit", "mnemonic": "Q", "platform": "Linux" },
+            { "command": "exit", "caption": "Beenden", "mnemonic": "x", "platform": "Windows" },
+            { "command": "exit", "caption": "Beenden", "mnemonic": "Q", "platform": "Linux" },
         ]
     },
     {
-        "caption": "Edit",
-        "mnemonic": "E",
+        "caption": "Bearbeiten",
+        "mnemonic": "B",
         "id": "edit",
         "children":
         [
             { "command": "undo", "mnemonic": "U" },
             { "command": "redo_or_repeat", "mnemonic": "R" },
             {
-                "caption": "Undo Selection",
+                "caption": "Auswahl aufheben",
                 "children":
                 [
                     { "command": "soft_undo" },
@@ -662,27 +662,27 @@
             },
             { "caption": "-" },
             {
-                "caption": "Scroll",
+                "caption": "Scrollen",
                 "mnemonic": "S",
                 "id": "scroll",
                 "children":
                 [
-                    { "command": "show_at_center", "caption": "Scroll to Selection" },
-                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "Line Up" },
-                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "Line Down" }
+                    { "command": "show_at_center", "caption": "Scrollen zur Auswahl" },
+                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "Zeile nach oben" },
+                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "Zeile nach unten" }
                 ]
             },
             {
-                "caption": "Bookmarks",
-                "mnemonic": "B",
+                "caption": "Lesezeichen",
+                "mnemonic": "L",
                 "id": "bookmarks",
                 "children":
                 [
-                    { "command": "toggle_bookmark" },
-                    { "command": "next_bookmark" },
-                    { "command": "prev_bookmark" },
-                    { "command": "clear_bookmarks" },
-                    { "command": "select_all_bookmarks" },
+                    { "command": "toggle_bookmark", "caption": "Lesezeichen umschalten" },
+                    { "command": "next_bookmark", "caption": "Nächstes Lesezeichen" },
+                    { "command": "prev_bookmark", "caption": "Vorheriges Lesezeichen" },
+                    { "command": "clear_bookmarks", "caption": "Lesezeichen entfernen" },
+                    { "command": "select_all_bookmarks", "caption": "Alle Lesezeichen auswählen" },
                     { "caption": "-" },
                     { "command": "select_bookmark", "args": {"index": 0} },
                     { "command": "select_bookmark", "args": {"index": 1} },
@@ -703,7 +703,7 @@
                 ]
             },
             { "caption": "-" },
-            { "command": "move_to", "args": {"to": "brackets"}, "caption": "Jump to Matching Bracket" }
+            { "command": "move_to", "args": {"to": "brackets"}, "caption": "Zu passender Klammer springen" }
         ]
     },
     {
@@ -712,15 +712,15 @@
         "id": "tools",
         "children":
         [
-            { "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "Command Palette…" },
-            { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "Snippets…" },
+            { "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "Befehlspalette…" },
+            { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "Schnippsel…" },
             { "caption": "-", "id": "build" },
             {
                 "caption": "Build System",
                 "mnemonic": "u",
                 "children":
                 [
-                    { "command": "set_build_system", "args": { "file": "" }, "caption": "Automatic", "checkbox": true },
+                    { "command": "set_build_system", "args": { "file": "" }, "caption": "Automatik", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_build_system", "args": {"index": 0}, "checkbox": true },
                     { "command": "set_build_system", "args": {"index": 1}, "checkbox": true },
@@ -737,61 +737,61 @@
                     { "caption": "-" },
                     { "command": "$build_systems" },
                     { "caption": "-" },
-                    { "command": "new_build_system", "caption": "New Build System…" }
+                    { "command": "new_build_system", "caption": "Neues Build System…" }
                 ]
             },
             { "command": "build", "mnemonic": "B" },
-            { "command": "build", "args": {"select": true}, "caption": "Build With…" },
-            { "command": "cancel_build", "caption": "Cancel Build", "mnemonic": "C" },
+            { "command": "build", "args": {"select": true}, "caption": "Build mit…" },
+            { "command": "cancel_build", "caption": "Build abbrechen", "mnemonic": "C" },
             {
-                "caption": "Build Results",
+                "caption": "Build erstellen",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Show Build Results", "mnemonic": "S" },
-                    { "command": "next_result", "mnemonic": "N" },
-                    { "command": "prev_result", "caption": "Previous Result", "mnemonic": "P" }
+                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Build-Ergebnisse anzeigen", "mnemonic": "S" },
+                    { "command": "next_result", "caption": "Nächster Buil","mnemonic": "N" },
+                    { "command": "prev_result", "caption": "Vorheriger Build", "mnemonic": "V" }
                 ]
             },
-            { "command": "toggle_save_all_on_build", "caption": "Save All on Build", "mnemonic": "A", "checkbox": true },
+            { "command": "toggle_save_all_on_build", "caption": "Alles beim Bauen speichern", "mnemonic": "A", "checkbox": true },
             { "caption": "-", "id": "macros" },
             { "command": "toggle_record_macro", "mnemonic": "M" },
-            { "command": "run_macro", "caption": "Playback Macro", "mnemonic": "P" },
-            { "command": "save_macro", "caption": "Save Macro…", "mnemonic": "v" },
+            { "command": "run_macro", "caption": "Makro wiedergabe", "mnemonic": "P" },
+            { "command": "save_macro", "caption": "Makro speichern…", "mnemonic": "v" },
             {
-                "caption": "Macros",
+                "caption": "Makros",
                 "children": [ { "command": "$macros" } ]
             },
             { "caption": "-" },
             {
-                "caption": "Developer",
+                "caption": "Entwickler",
                 "children":
                 [
-                    { "command": "new_plugin", "caption": "New Plugin…" },
-                    { "command": "new_snippet", "caption": "New Snippet…" },
-                    { "command": "new_syntax", "caption": "New Syntax…" },
+                    { "command": "new_plugin", "caption": "Neues Plugin…" },
+                    { "command": "new_snippet", "caption": "Neues Schnippsel…" },
+                    { "command": "new_syntax", "caption": "Neuer Syntax…" },
                     { "command": "convert_syntax" },
                     { "caption": "-" },
-                    { "command": "profile_plugins" },
+                    { "command": "profile_plugins", "caption": "Profil Plugins" },
                     { "caption": "-" },
-                    { "command": "show_scope_name" },
+                    { "command": "show_scope_name", "caption": "Bereichsnamen anzeigen" },
                 ]
             },
-            { "command": "install_package_control", "caption": "Install Package Control…" },
+            { "command": "install_package_control", "caption": "Paketsteuerung installieren…" },
             { "caption": "-", "id": "end" }
         ]
     },
     {
-        "caption": "Project",
+        "caption": "Projekt",
         "id": "project",
         "mnemonic": "P",
         "children":
         [
-            { "command": "prompt_open_project_or_workspace", "caption": "Open Project…" },
-            { "command": "prompt_switch_project_or_workspace", "caption": "Switch Project…" },
-            { "command": "prompt_select_workspace", "caption": "Quick Switch Project…", "mnemonic": "S" },
+            { "command": "prompt_open_project_or_workspace", "caption": "Projekt öffnen…" },
+            { "command": "prompt_switch_project_or_workspace", "caption": "Projekt wechseln…" },
+            { "command": "prompt_select_workspace", "caption": "Projekt Schnellwechsel…", "mnemonic": "S" },
             {
-                "caption": "Open Recent",
+                "caption": "Zuletzt geöffnet",
                 "children":
                 [
                     { "command": "open_recent_project_or_workspace", "args": {"index": 0 } },
@@ -803,29 +803,29 @@
                     { "command": "open_recent_project_or_workspace", "args": {"index": 6 } },
                     { "command": "open_recent_project_or_workspace", "args": {"index": 7 } },
                     { "caption": "-" },
-                    { "command": "clear_recent_projects_and_workspaces", "caption": "Clear Items" }
+                    { "command": "clear_recent_projects_and_workspaces", "caption": "Elemente löschen" }
                 ]
             },
             { "caption": "-" },
-            { "command": "save_project_and_workspace_as", "caption": "Save Project As…", "mnemonic": "A" },
-            { "command": "close_workspace", "caption": "Close Project", "mnemonic": "C" },
-            { "command": "open_file", "args": {"file": "${project}"}, "caption": "Edit Project" },
+            { "command": "save_project_and_workspace_as", "caption": "Projekt speichern als…", "mnemonic": "A" },
+            { "command": "close_workspace", "caption": "Projekt schließen", "mnemonic": "C" },
+            { "command": "open_file", "args": {"file": "${project}"}, "caption": "Projekt bearbeiten" },
             { "caption": "-" },
-            { "command": "new_window_for_project", "caption": "New Workspace for Project" },
-            { "command": "save_workspace_as", "caption": "Save Workspace As…", "mnemonic": "A" },
+            { "command": "new_window_for_project", "caption": "Neuer Arbeitsbereich für das Projekt" },
+            { "command": "save_workspace_as", "caption": "Arbeitsbereich speichern unter…", "mnemonic": "A" },
             { "caption": "-" },
-            { "command": "prompt_add_folder", "caption": "Add Folder to Project…", "mnemonic": "d" },
-            { "command": "close_folder_list", "caption": "Remove all Folders from Project", "mnemonic": "m" },
-            { "command": "refresh_folder_list", "caption": "Refresh Folders", "mnemonic": "e" },
+            { "command": "prompt_add_folder", "caption": "Ordner zum Projekt hinzufügen…", "mnemonic": "d" },
+            { "command": "close_folder_list", "caption": "Alle Ordner aus dem Projekt entfernen", "mnemonic": "m" },
+            { "command": "refresh_folder_list", "caption": "Ordner aktualisieren", "mnemonic": "e" },
         ]
     },
     {
-        "caption": "Preferences",
+        "caption": "Extras",
         "mnemonic": "n",
         "id": "preferences",
         "children":
         [
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Browse Packages…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Pakete durchsuchen…", "mnemonic": "B" },
             { "caption": "-" },
             {
                 "command": "edit_settings", "args":
@@ -833,16 +833,16 @@
                     "base_file": "${packages}/Default/Preferences.sublime-settings",
                     "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
                 },
-                "caption": "Settings"
+                "caption": "Einstellungen"
             },
-            { "command": "edit_syntax_settings", "caption": "Settings – Syntax Specific" },
+            { "command": "edit_syntax_settings", "caption": "Einstellungen - Syntax-spezifisch" },
             {
                 "command": "edit_settings", "args":
                 {
                     "base_file": "${packages}/Default/Distraction Free.sublime-settings",
                     "default": "{\n\t$0\n}\n"
                 },
-                "caption": "Settings – Distraction Free"
+                "caption": "Einstellungen - Distraktionsfrei"
             },
             { "caption": "-" },
             {
@@ -851,31 +851,31 @@
                     "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
                     "default": "[\n\t$0\n]\n"
                 },
-                "caption": "Key Bindings"
+                "caption": "Tastenbelegung"
             },
             { "caption": "-" },
             {
-                "caption": "Color Scheme…",
+                "caption": "Farbschema…",
                 "command": "select_color_scheme"
             },
             {
-                "caption": "Theme…",
+                "caption": "Thema…",
                 "command": "select_theme"
             },
             {
-                "caption": "Font",
+                "caption": "Schrift",
                 "children":
                 [
-                    { "command": "increase_font_size", "caption": "Larger" },
-                    { "command": "decrease_font_size", "caption": "Smaller" },
+                    { "command": "increase_font_size", "caption": "Größer" },
+                    { "command": "decrease_font_size", "caption": "Kleiner" },
                     { "caption": "-" },
-                    { "command": "reset_font_size", "caption": "Reset" }
+                    { "command": "reset_font_size", "caption": "Zurücksetzen" }
                 ]
             },
         ]
     },
     {
-        "caption": "Help",
+        "caption": "Hilfe",
         "mnemonic": "H",
         "id": "help",
         "children":
@@ -883,16 +883,16 @@
             { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "Documentation" },
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
             { "caption": "-" },
-            { "command": "show_progress_window", "caption": "Indexing Status…" },
+            { "command": "show_progress_window", "caption": "Status der Indizierung…" },
             { "caption": "-" },
             { "command": "purchase_license"},
             { "command": "upgrade_license"},
-            { "command": "show_license_window", "caption": "Enter License" },
+            { "command": "show_license_window", "caption": "Lizenz eingeben" },
             { "command": "remove_license"},
             { "caption": "-" },
-            { "command": "update_check", "caption": "Check for Updates…", "platform": "!Linux" },
-            { "command": "show_changelog", "caption": "Changelog…" },
-            { "command": "show_about_window", "caption": "About Sublime Text", "mnemonic": "A" }
+            { "command": "update_check", "caption": "Nach Updates suchen…", "platform": "!Linux" },
+            { "command": "show_changelog", "caption": "Änderungsprotokoll…" },
+            { "command": "show_about_window", "caption": "Über Sublime Text", "mnemonic": "A" }
         ]
     }
 ]
