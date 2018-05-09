@@ -80,7 +80,7 @@
           },
           {
             "args": {
-              "language": "ru"
+              "language": "ru_RU"
             },
             "caption": "Russian Русский",
             "checkbox": true,
@@ -125,7 +125,7 @@
           },
           {
             "args": {
-              "language": "hy"
+              "language": "hy_AM"
             },
             "caption": "Armenian Հայերեն",
             "checkbox": true,
