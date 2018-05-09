@@ -33,11 +33,11 @@ LANGS = {
         'syntax_md5sum': "d01201fb6fc53dd28fc6f48a9bb3da9d"
     },
     "hy": {
-        "zipfile": "hy.zip",
+        "zipfile": "hy_AM.zip",
         'syntax_md5sum': "aaea3b150c9dcc9f6fe67ef9740d201d"
     },
     "ru": {
-        "zipfile": "ru.zip",
+        "zipfile": "ru_RU.zip",
         'syntax_md5sum': "9c3fc2f79bd059749fa221c0d8810c71"
     },
     "sv_SE": {
