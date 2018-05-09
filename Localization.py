@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.11.1"
+__version__ = "1.11.2"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -32,11 +32,11 @@ LANGS = {
         "zipfile": "fr_FR.zip",
         'syntax_md5sum': "d01201fb6fc53dd28fc6f48a9bb3da9d"
     },
-    "hy": {
+    "hy_AM": {
         "zipfile": "hy_AM.zip",
         'syntax_md5sum': "aaea3b150c9dcc9f6fe67ef9740d201d"
     },
-    "ru": {
+    "ru_RU": {
         "zipfile": "ru_RU.zip",
         'syntax_md5sum': "9c3fc2f79bd059749fa221c0d8810c71"
     },
