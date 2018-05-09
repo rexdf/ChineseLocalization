@@ -94,7 +94,7 @@
             "caption": "Spanish Español",
             "checkbox": true,
             "command": "toggle_language",
-            "mnemonic": "P"
+            "mnemonic": "E"
           },
           {
             "args": {
@@ -121,7 +121,7 @@
             "caption": "Swedish Svenska",
             "checkbox": true,
             "command": "toggle_language",
-            "mnemonic": "V"
+            "mnemonic": "v"
           },
           {
             "args": {
@@ -130,7 +130,7 @@
             "caption": "Armenian Հայերեն",
             "checkbox": true,
             "command": "toggle_language",
-            "mnemonic": "H"
+            "mnemonic": "A"
           },
           {
             "args": {
