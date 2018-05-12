@@ -3,7 +3,7 @@ Simplified Chinese and Traditional Chinese Translation for Sublime Text 3. Suppo
 
 I try to support more languages. Now Japanese is partially supported.
 
-I add support to  Русский(Russian) Español(Spanish) Հայերեն(Armenian) Svenska(Swedish) Français(French) in version 1.11.0.
+I add support to Deutsche(German) Русский(Russian) Español(Spanish) Հայերեն(Armenian) Svenska(Swedish) Français(French) in version 1.11.0.
 
 ### Manual Install
 
@@ -23,7 +23,7 @@ Linux:
 
 ---
 
-~~Or just download this repo as zip, rename it to `ChineseLocalization.sublime-package` and put it to `Data\Installed Packages`. (Sublime Text 3 only)~~ You need to unpack and pack it again to make sure all files in the zip root rather than `ChineseLocalization-st3` folder. Or just unzip them to `ChineseLocalization` folder in `Data/Packages` folder.
+~~Or just download this repo as zip, rename it to `ChineseLocalization.sublime-package` and put it to `Data\Installed Packages`. (Sublime Text 3 only)~~ You need to unpack and pack it again to make sure all files in the zip root rather than `ChineseLocalization-st3` folder. Or just unzip them to `ChineseLocalization` folder in `Data/Packages` folder(You can open that folder by click main menu `Preferences\Browse Packages...`).
 
 
 ### Package Control Install
