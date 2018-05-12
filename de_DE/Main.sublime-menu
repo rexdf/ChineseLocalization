@@ -7,11 +7,11 @@
         [
             { "command": "new_file", "caption": "Neue Datei", "mnemonic": "N" },
 
-            { "command": "prompt_open_file", "caption": "Datei öffnen…", "mnemonic": "O", "platform": "!OSX" },
+            { "command": "prompt_open_file", "caption": "Datei öffnen(O)…", "mnemonic": "O", "platform": "!OSX" },
             { "command": "prompt_open_folder", "caption": "Verzeichnis öffnen…", "platform": "!OSX" },
             { "command": "prompt_open", "caption": "Öffen…", "platform": "OSX" },
             {
-                "caption": "Zuletzt geöffnet",
+                "caption": "Zuletzt geöffnet(R)",
                 "mnemonic": "R",
                 "children":
                 [
@@ -123,18 +123,18 @@
                     { "caption": "Hexadecimal", "command": "save", "args": {"encoding": "Hexadecimal" } }
                 ]
             },
-            { "command": "prompt_save_as", "caption": "Speichern als…", "mnemonic": "A" },
+            { "command": "prompt_save_as", "caption": "Speichern als(A)…", "mnemonic": "A" },
             { "command": "save_all", "caption": "Alle speichern", "mnemonic": "l" },
             { "caption": "-", "id": "window" },
-            { "command": "new_window", "caption": "Neues Fenster", "mnemonic": "W" },
+            { "command": "new_window", "caption": "Neues Fenster(W)", "mnemonic": "W" },
             { "command": "close_window", "caption": "Fenster schließen" },
             { "caption": "-", "id": "close" },
-            { "command": "close", "caption": "Datei schließen", "mnemonic": "C" },
-            { "command": "revert", "caption": "Datei zurücksetzen", "mnemonic": "v" },
+            { "command": "close", "caption": "Datei schließen(C)", "mnemonic": "C" },
+            { "command": "revert", "caption": "Datei zurücksetzen(v)", "mnemonic": "v" },
             { "command": "close_all", "caption": "Alle Dateien schließen" },
             { "caption": "-", "id": "exit" },
-            { "command": "exit", "caption": "Beenden", "mnemonic": "x", "platform": "Windows" },
-            { "command": "exit", "caption": "Beenden", "mnemonic": "Q", "platform": "Linux" },
+            { "command": "exit", "caption": "Beenden(x)", "mnemonic": "x", "platform": "Windows" },
+            { "command": "exit", "caption": "Beenden(Q)", "mnemonic": "Q", "platform": "Linux" },
         ]
     },
     {
@@ -742,13 +742,13 @@
             },
             { "command": "build", "mnemonic": "B" },
             { "command": "build", "args": {"select": true}, "caption": "Build mit…" },
-            { "command": "cancel_build", "caption": "Build abbrechen", "mnemonic": "C" },
+            { "command": "cancel_build", "caption": "Build abbrechen(C)", "mnemonic": "C" },
             {
-                "caption": "Build erstellen",
+                "caption": "Build erstellen(R)",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Build-Ergebnisse anzeigen", "mnemonic": "S" },
+                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Build-Ergebnisse anzeigen(S)", "mnemonic": "S" },
                     { "command": "next_result", "caption": "Nächster Buil","mnemonic": "N" },
                     { "command": "prev_result", "caption": "Vorheriger Build", "mnemonic": "V" }
                 ]
@@ -756,8 +756,8 @@
             { "command": "toggle_save_all_on_build", "caption": "Alles beim Bauen speichern", "mnemonic": "A", "checkbox": true },
             { "caption": "-", "id": "macros" },
             { "command": "toggle_record_macro", "mnemonic": "M" },
-            { "command": "run_macro", "caption": "Makro wiedergabe", "mnemonic": "P" },
-            { "command": "save_macro", "caption": "Makro speichern…", "mnemonic": "v" },
+            { "command": "run_macro", "caption": "Makro wiedergabe(P)", "mnemonic": "P" },
+            { "command": "save_macro", "caption": "Makro speichern(v)…", "mnemonic": "v" },
             {
                 "caption": "Makros",
                 "children": [ { "command": "$macros" } ]
@@ -807,8 +807,8 @@
                 ]
             },
             { "caption": "-" },
-            { "command": "save_project_and_workspace_as", "caption": "Projekt speichern als…", "mnemonic": "A" },
-            { "command": "close_workspace", "caption": "Projekt schließen", "mnemonic": "C" },
+            { "command": "save_project_and_workspace_as", "caption": "Projekt speichern als…", "mnemonic": "a" },
+            { "command": "close_workspace", "caption": "Projekt schließen(C)", "mnemonic": "C" },
             { "command": "open_file", "args": {"file": "${project}"}, "caption": "Projekt bearbeiten" },
             { "caption": "-" },
             { "command": "new_window_for_project", "caption": "Neuer Arbeitsbereich für das Projekt" },
@@ -821,11 +821,11 @@
     },
     {
         "caption": "Extras",
-        "mnemonic": "n",
+        "mnemonic": "E",
         "id": "preferences",
         "children":
         [
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Pakete durchsuchen…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Pakete durchsuchen(B)…", "mnemonic": "B" },
             { "caption": "-" },
             {
                 "command": "edit_settings", "args":
@@ -892,7 +892,7 @@
             { "caption": "-" },
             { "command": "update_check", "caption": "Nach Updates suchen…", "platform": "!Linux" },
             { "command": "show_changelog", "caption": "Änderungsprotokoll…" },
-            { "command": "show_about_window", "caption": "Über Sublime Text", "mnemonic": "A" }
+            { "command": "show_about_window", "caption": "Über Sublime Text(A)", "mnemonic": "A" }
         ]
     }
 ]
