@@ -35,7 +35,7 @@
                     { "command": "open_recent_folder", "args": {"index": 6 } },
                     { "command": "open_recent_folder", "args": {"index": 7 } },
                     { "caption": "-" },
-                    { "command": "clear_recent_files", "caption": "elemente löschen" }
+                    { "command": "clear_recent_files", "caption": "Elemente löschen" }
                 ]
             },
             {
