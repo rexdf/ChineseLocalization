@@ -182,6 +182,7 @@ def set_language(lang, force=False):
         restore_setting('en_syntax_md5sum', syntax_md5sum)
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
+    SIDE_BAR = os.path.join(DEFAULT_PATH, "Side Bar.sublime-menu")
 
     # compatible with 3114-
     if not is_en:
@@ -203,7 +204,7 @@ def set_language(lang, force=False):
             patch_version = 3156
         if patch_version:
             for patch_file_name, org_file_name in (("Main.sublime-menu.txt", MAIN_MENU),
-                                             ("Side Bar.sublime-menu.txt", "Side Bar.sublime-menu")):
+                                             ("Side Bar.sublime-menu.txt", SIDE_BAR)):
                 PATCH_RES = "Packages/{}/patch/{}/{}/{}".format(
                     PACKAGE_NAME, patch_version, lang, patch_file_name)
                 content = sublime.load_binary_resource(PATCH_RES)
