@@ -189,22 +189,26 @@ def set_language(lang, force=False):
         patch_version = None
         if sbt_version < 3105:
             patch_version = 3065
-        elif sbt_version < 3118: #3105~3117
+        elif sbt_version < 3118:  # 3105~3117
             patch_version = 3105
-        elif sbt_version < 3121: #3118~3120
+        elif sbt_version < 3121:  # 3118~3120
             patch_version = 3118
-        elif sbt_version < 3125: #3121~3124
+        elif sbt_version < 3125:  # 3121~3124
             patch_version = 3121
-        elif sbt_version < 3127: #3126
+        elif sbt_version < 3127:  # 3126
             patch_version = 3126
-        elif sbt_version < 3152: #3131
+        elif sbt_version < 3152:  # 3131
             patch_version = 3131
+        elif sbt_version < 3170:  # 3156
+            patch_version = 3156
         if patch_version:
-            PATCH_RES = "Packages/{}/patch/{}/{}/Main.sublime-menu.txt".format(
-                PACKAGE_NAME, patch_version, lang)
-            content = sublime.load_binary_resource(PATCH_RES)
-            with open(MAIN_MENU, 'wb') as f:
-                f.write(content)
+            for patch_file_name, org_file_name in (("Main.sublime-menu.txt", MAIN_MENU),
+                                             ("Side Bar.sublime-menu.txt", "Side Bar.sublime-menu")):
+                PATCH_RES = "Packages/{}/patch/{}/{}/{}".format(
+                    PACKAGE_NAME, patch_version, lang, patch_file_name)
+                content = sublime.load_binary_resource(PATCH_RES)
+                with open(org_file_name, 'wb') as f:
+                    f.write(content)
 
     with open(MAIN_MENU, "rb") as f:
         content = f.read().decode("utf-8")
