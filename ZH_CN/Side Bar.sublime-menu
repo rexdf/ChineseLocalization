@@ -3,6 +3,7 @@
 	{ "caption": "重命名…", "command": "rename_path", "args": {"paths": []} },
 	{ "caption": "删除文件", "command": "delete_file", "args": {"files": []} },
 	{ "caption": "打开所在文件夹…", "command": "open_containing_folder", "args": {"files": []} },
+    { "caption": "Reveal Link Source", "command": "reveal_link_source", "args": {"dirs": []} },
 	{ "caption": "-", "id": "folder_commands" },
 	{ "caption": "新建文件夹…", "command": "new_folder", "args": {"dirs": []} },
 	{ "caption": "删除文件夹", "command": "delete_folder", "args": {"dirs": []} },

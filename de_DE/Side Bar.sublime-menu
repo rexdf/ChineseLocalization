@@ -3,6 +3,7 @@
 	{ "caption": "Umbennen…", "command": "rename_path", "args": {"paths": []} },
 	{ "caption": "Datei löschen", "command": "delete_file", "args": {"files": []} },
 	{ "caption": "Öffne vorhandenen Ordner…", "command": "open_containing_folder", "args": {"files": []} },
+    { "caption": "Reveal Link Source", "command": "reveal_link_source", "args": {"dirs": []} },
 	{ "caption": "-", "id": "folder_commands" },
 	{ "caption": "Neuer Ordner…", "command": "new_folder", "args": {"dirs": []} },
 	{ "caption": "Lösche Ordner", "command": "delete_folder", "args": {"dirs": []} },
