@@ -1,0 +1,11 @@
+[
+	{ "caption": "Новый файл", "command": "new_file_at", "args": {"dirs": []} },
+	{ "caption": "Переименовать…", "command": "rename_path", "args": {"paths": []} },
+	{ "caption": "Удалить файл", "command": "delete_file", "args": {"files": []} },
+	{ "caption": "Открыть папку файла…", "command": "open_containing_folder", "args": {"files": []} },
+	{ "caption": "-", "id": "folder_commands" },
+	{ "caption": "Новая папка…", "command": "new_folder", "args": {"dirs": []} },
+	{ "caption": "Удалить папку", "command": "delete_folder", "args": {"dirs": []} },
+	{ "caption": "Найти в папке…", "command": "find_in_folder", "args": {"dirs": []} },
+	{ "caption": "-", "id": "end" }
+]
