@@ -1,3 +1,9 @@
+1.11.4
+更新德语翻译. 加入3170支持，目前支持到3176.
+
+Update German translation. Support Sublime Text 3170 and 3176.
+
+
 1.11.3 1.11.2
 更新德语翻译，修复mnemonic问题
 
