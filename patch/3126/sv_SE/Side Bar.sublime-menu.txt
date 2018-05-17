@@ -1,0 +1,11 @@
+[
+	{ "caption": "Ny fil", "command": "new_file_at", "args": {"dirs": []} },
+	{ "caption": "By namn…", "command": "rename_path", "args": {"paths": []} },
+	{ "caption": "Radera fil", "command": "delete_file", "args": {"files": []} },
+	{ "caption": "Öppna innehållande mapp…", "command": "open_containing_folder", "args": {"files": []} },
+	{ "caption": "-", "id": "folder_commands" },
+	{ "caption": "Ny mapp…", "command": "new_folder", "args": {"dirs": []} },
+	{ "caption": "Radera mapp", "command": "delete_folder", "args": {"dirs": []} },
+	{ "caption": "Sök i mapp…", "command": "find_in_folder", "args": {"dirs": []} },
+	{ "caption": "-", "id": "end" }
+]
