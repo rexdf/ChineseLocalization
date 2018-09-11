@@ -881,8 +881,8 @@
         "children":
         [
             { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "在线文档" },
-            { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "官方Twitter" },
-            { "command": "open_url", "args": {"url": "http://i.rexdf.org"}, "caption": "汉化 by Rexdf" },
+            { "command": "open_url", "args": {"url": "https://twitter.com/sublimehq"}, "caption": "官方Twitter" },
+            { "command": "open_url", "args": {"url": "https://i.rexdf.org"}, "caption": "汉化 by Rexdf" },
             { "caption": "-" },
             { "command": "show_progress_window", "caption": "索引状态…" },
             { "caption": "-" },

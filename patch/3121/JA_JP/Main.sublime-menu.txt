@@ -873,8 +873,8 @@
         "children":
         [
             { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "ドキュメント" },
-            { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
-            { "command": "open_url", "args": {"url": "http://i.rexdf.org"}, "caption": "Rexdf" },
+            { "command": "open_url", "args": {"url": "https://twitter.com/sublimehq"}, "caption": "Twitter" },
+            { "command": "open_url", "args": {"url": "https://i.rexdf.org"}, "caption": "Rexdf" },
             { "caption": "-" },
             { "command": "purchase_license", "caption": "ライセンス購入"},
             { "command": "show_license_window", "caption": "ライセンス登録" },
