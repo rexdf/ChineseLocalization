@@ -1,0 +1,23 @@
+[
+    { "command": "open_context_url", "caption": "打开网址" },
+    { "command": "context_goto_definition", "caption": "转到定义" },
+    { "caption": "-", "id": "diff" },
+    { "command": "toggle_inline_diff", "caption": "显示/隐藏内嵌差异块" },
+    { "caption": "-", "id": "clipboard" },
+    { "command": "copy", "caption": "复制" },
+    { "command": "cut", "caption": "剪切" },
+    { "command": "paste", "caption": "粘贴" },
+    { "caption": "-", "id": "selection" },
+    { "command": "select_all", "caption": "全选" },
+    { "caption": "-", "id": "repo_commands" },
+    { "caption": "Sublime Merge: 打开 Git 仓库…", "command": "sublime_merge_open_repo" },
+    { "caption": "Sublime Merge: 文件历史…", "command": "sublime_merge_file_history" },
+    { "caption": "Sublime Merge: 追溯行历史…", "command": "sublime_merge_line_history" },
+    { "caption": "Sublime Merge: 追溯文件…", "command": "sublime_merge_blame_file" },
+    { "caption": "-", "id": "file" },
+    { "command": "open_in_browser", "caption": "在浏览器中打开" },
+    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "打开所在文件夹…" },
+    { "command": "copy_path", "caption": "复制文件路径" },
+    { "command": "reveal_in_side_bar", "caption": "在侧边栏中显示" },
+    { "caption": "-", "id": "end" }
+]

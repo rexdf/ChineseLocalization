@@ -1,0 +1,17 @@
+[
+	{ "caption": "新建文件", "command": "new_file_at", "args": {"dirs": []} },
+	{ "caption": "重命名…", "command": "rename_path", "args": {"paths": []} },
+	{ "caption": "删除文件", "command": "delete_file", "args": {"files": []} },
+	{ "caption": "打开所在文件夹…", "command": "open_containing_folder", "args": {"files": []} },
+	{ "caption": "显示链接源", "command": "reveal_link_source", "args": {"dirs": []} },
+	{ "caption": "-", "id": "repo_commands" },
+	{ "caption": "Sublime Merge: 打开 Git 仓库…", "command": "sublime_merge_open_repo", "args": {"paths": []}},
+	{ "caption": "Sublime Merge: 文件历史…", "command": "sublime_merge_file_history", "args": {"files": []}},
+	{ "caption": "Sublime Merge: 文件夹历史…", "command": "sublime_merge_folder_history", "args": {"paths": []}},
+	{ "caption": "Sublime Merge: 追溯文件…", "command": "sublime_merge_blame_file", "args": {"files": []}},
+	{ "caption": "-", "id": "folder_commands" },
+	{ "caption": "新建文件夹…", "command": "new_folder", "args": {"dirs": []} },
+	{ "caption": "删除文件夹", "command": "delete_folder", "args": {"dirs": []} },
+	{ "caption": "在文件夹中查找…", "command": "find_in_folder", "args": {"dirs": []} },
+	{ "caption": "-", "id": "end" }
+]

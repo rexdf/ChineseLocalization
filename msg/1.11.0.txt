@@ -1,3 +1,8 @@
+1.11.7
+更新简体中文翻译. 加入3200支持，目前支持到3211.
+
+Update Simplified Chinese translation. Support Sublime Text 3200 and 3211.
+
 1.11.6 1.11.5
 更新链接为https
 

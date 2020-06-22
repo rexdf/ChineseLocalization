@@ -3,7 +3,7 @@ import sublime_plugin
 import os
 from hashlib import md5
 
-__version__ = "1.11.6"
+__version__ = "1.11.7"
 
 CONFIG_NAME = "Localization.sublime-settings"
 
@@ -183,6 +183,7 @@ def set_language(lang, force=False):
 
     MAIN_MENU = os.path.join(DEFAULT_PATH, "Main.sublime-menu")
     SIDE_BAR = os.path.join(DEFAULT_PATH, "Side Bar.sublime-menu")
+    CONTEXT = os.path.join(DEFAULT_PATH, "Context.sublime-menu")
 
     # compatible with 3114-
     if not is_en:
@@ -202,9 +203,12 @@ def set_language(lang, force=False):
             patch_version = 3131
         elif sbt_version < 3170:  # 3156
             patch_version = 3156
+        elif sbt_version < 3212:  # 3200~3211
+            patch_version = 3200
         if patch_version:
             for patch_file_name, org_file_name in (("Main.sublime-menu.txt", MAIN_MENU),
-                                             ("Side Bar.sublime-menu.txt", SIDE_BAR)):
+                                             ("Side Bar.sublime-menu.txt", SIDE_BAR),
+                                             ("Context.sublime-menu.txt", CONTEXT)):
                 PATCH_RES = "Packages/{}/patch/{}/{}/{}".format(
                     PACKAGE_NAME, patch_version, lang, patch_file_name)
                 content = sublime.load_binary_resource(PATCH_RES)
