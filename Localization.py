@@ -219,7 +219,6 @@ def set_language(lang, force=False):
                 with open(org_file_name, 'wb') as f:
                     f.write(content)
 
-
     with open(MAIN_MENU, "rb") as f:
         content = f.read().decode("utf-8")
 
