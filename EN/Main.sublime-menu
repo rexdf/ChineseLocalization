@@ -154,8 +154,8 @@
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "mnemonic": "C" },
             { "command": "cut", "mnemonic": "t" },
+            { "command": "copy", "mnemonic": "C" },
             { "command": "paste", "mnemonic": "P" },
             { "command": "paste_and_indent", "mnemonic": "I" },
             { "command": "paste_from_history", "caption": "Paste from History" },
@@ -189,6 +189,9 @@
                 "id": "text",
                 "children":
                 [
+                    { "command": "revert_modification" },
+                    { "command": "toggle_inline_diff" },
+                    { "caption": "-" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Insert Line Before" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Insert Line After" },
                     { "caption": "-" },
@@ -630,6 +633,9 @@
             { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Goto Line…" },
+            { "caption": "-" },
+            { "command": "next_modification", "caption": "Next Modification" },
+            { "command": "prev_modification", "caption": "Previous Modification" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "Jump Back" },
             { "command": "jump_forward", "caption": "Jump Forward" },

@@ -154,8 +154,8 @@
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "caption": "Копировать", "mnemonic": "C" },
             { "command": "cut", "caption": "Вырезать", "mnemonic": "t" },
+            { "command": "copy", "caption": "Копировать", "mnemonic": "C" },
             { "command": "paste", "caption": "Вставить", "mnemonic": "P" },
             { "command": "paste_and_indent", "caption": "Вставить с отступами", "mnemonic": "I" },
             { "command": "paste_from_history", "caption": "Вставить из истории" },
@@ -189,6 +189,9 @@
                 "id": "text",
                 "children":
                 [
+                    { "command": "revert_modification" },
+                    { "command": "toggle_inline_diff" },
+                    { "caption": "-" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Вставить строку перед текущей строкой" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Вставить строку после текущей строки" },
                     { "caption": "-" },
@@ -265,6 +268,7 @@
                 [
                     { "command": "wrap_lines", "caption": "Ограничить текст по линейке" },
                     { "command": "wrap_lines", "args": {"width": 70}, "caption": "Ограничить текст 70 знаками" },
+                    { "command": "wrap_lines", "args": {"width": 72}, "caption": "Ограничить текст 72 знаками" },
                     { "command": "wrap_lines", "args": {"width": 78}, "caption": "Ограничить текст 78 знаками" },
                     { "command": "wrap_lines", "args": {"width": 80}, "caption": "Ограничить текст 80 знаками" },
                     { "command": "wrap_lines", "args": {"width": 100}, "caption": "Ограничить текст 100 знаками" },
@@ -584,6 +588,7 @@
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Автоматическая", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70 символов", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72 символов", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78 символов", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80 символов", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100 символов", "checkbox": true },
@@ -628,6 +633,9 @@
             { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Перейти к слову…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Перейти к строке…" },
+            { "caption": "-" },
+            { "command": "next_modification", "caption": "Next Modification" },
+            { "command": "prev_modification", "caption": "Previous Modification" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "На предыдущую позицию" },
             { "command": "jump_forward", "caption": "На следующую позицию" },

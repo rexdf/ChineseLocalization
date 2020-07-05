@@ -155,8 +155,8 @@
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "caption": "Պատճենել", "mnemonic": "C" },
             { "command": "cut", "caption": "Կտրել", "mnemonic": "t" },
+            { "command": "copy", "caption": "Պատճենել", "mnemonic": "C" },
             { "command": "paste", "caption": "Փակցնել", "mnemonic": "P" },
             { "command": "paste_and_indent", "caption": "Փակցնել ու Նահանջ դնել", "mnemonic": "I" },
             { "command": "paste_from_history", "caption": "Փակցնել Պատմությունից" },
@@ -179,7 +179,6 @@
             {
                 "caption": "Մեկնաբանություն", "mnemonic": "m",
                 "id": "comment",
-
                 "children":
                 [
                     { "command": "toggle_comment", "args": {"block": false}, "caption": "Փոխարկել Ամեն Տողը Մեկնաբանության" },
@@ -191,6 +190,9 @@
                 "id": "text",
                 "children":
                 [
+                    { "command": "revert_modification" },
+                    { "command": "toggle_inline_diff" },
+                    { "caption": "-" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Ներդնել Նախորդող Տող" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Ներդնել Հաջորդող Տող" },
                     { "caption": "-" },
@@ -267,6 +269,7 @@
                 [
                     { "command": "wrap_lines", "caption": "Ծալել Պարբերությունը Քանոնով" },
                     { "command": "wrap_lines", "args": {"width": 70}, "caption": "Ծալել Պարբերությունը 70 գրանշանի վրա" },
+                    { "command": "wrap_lines", "args": {"width": 72}, "caption": "Ծալել Պարբերությունը 72 գրանշանի վրա" },
                     { "command": "wrap_lines", "args": {"width": 78}, "caption": "Ծալել Պարբերությունը 78 գրանշանի վրա" },
                     { "command": "wrap_lines", "args": {"width": 80}, "caption": "Ծալել Պարբերությունը 80 գրանշանի վրա" },
                     { "command": "wrap_lines", "args": {"width": 100}, "caption": "Ծալել Պարբերությունը 100 գրանշանի վրա" },
@@ -586,6 +589,7 @@
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Ինքնաշխատորեն", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 78}, "caption": "78", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 80}, "caption": "80", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 100}, "caption": "100", "checkbox": true },
@@ -629,6 +633,9 @@
             { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Անցնել Տողին…" },
+            { "caption": "-" },
+            { "command": "next_modification", "caption": "Next Modification" },
+            { "command": "prev_modification", "caption": "Previous Modification" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "Ցատկել Հետ" },
             { "command": "jump_forward", "caption": "Ցատկել Առաջ" },

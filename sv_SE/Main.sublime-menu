@@ -189,6 +189,9 @@
                 "id": "text",
                 "children":
                 [
+                    { "command": "revert_modification" },
+                    { "command": "toggle_inline_diff" },
+                    { "caption": "-" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Infoga rad före" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Infoga rad efter" },
                     { "caption": "-" },
@@ -627,8 +630,12 @@
             { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Gå till tecken…" },
             { "command": "goto_symbol_in_project", "caption": "Gå till tecken i projekt…" },
             { "command": "goto_definition", "caption": "Gå till definition…" },
+            { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Gå till rad…" },
+            { "caption": "-" },
+            { "command": "next_modification", "caption": "Next Modification" },
+            { "command": "prev_modification", "caption": "Previous Modification" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "Hoppa tillbaka" },
             { "command": "jump_forward", "caption": "Hoppa framåt" },

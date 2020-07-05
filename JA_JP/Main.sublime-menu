@@ -154,8 +154,8 @@
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "caption": "コピー(C)", "mnemonic": "C" },
             { "command": "cut", "caption": "切り取り(T)", "mnemonic": "T" },
+            { "command": "copy", "caption": "コピー(C)", "mnemonic": "C" },
             { "command": "paste", "caption": "貼り付け(P)", "mnemonic": "P" },
             { "command": "paste_and_indent", "caption": "貼り付けとインデント(I)", "mnemonic": "I" },
             { "command": "paste_from_history", "caption": "Paste from History" },
@@ -189,6 +189,9 @@
                 "id": "text",
                 "children":
                 [
+                    { "command": "revert_modification" },
+                    { "command": "toggle_inline_diff" },
+                    { "caption": "-" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "前行に空行を挿入" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "次行に空行を挿入" },
                     { "caption": "-" },
@@ -630,6 +633,9 @@
             { "command": "goto_reference", "caption": "Goto Reference…" },
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "移動[行番号]…" },
+            { "caption": "-" },
+            { "command": "next_modification", "caption": "Next Modification" },
+            { "command": "prev_modification", "caption": "Previous Modification" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "Jump Back" },
             { "command": "jump_forward", "caption": "Jump Forward" },

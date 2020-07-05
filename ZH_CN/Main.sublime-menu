@@ -154,8 +154,8 @@
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "caption": "复制(C)", "mnemonic": "C" },
             { "command": "cut", "caption": "剪切(T)", "mnemonic": "T" },
+            { "command": "copy", "caption": "复制(C)", "mnemonic": "C" },
             { "command": "paste", "caption": "粘贴(P)", "mnemonic": "P" },
             { "command": "paste_and_indent", "caption": "粘贴并缩进(I)", "mnemonic": "I" },
             { "command": "paste_from_history", "caption": "从历史记录中粘贴" },
@@ -189,6 +189,9 @@
                 "id": "text",
                 "children":
                 [
+                    { "command": "revert_modification" },
+                    { "command": "toggle_inline_diff" },
+                    { "caption": "-" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "在此前插入行" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "在此后插入行" },
                     { "caption": "-" },
@@ -631,6 +634,9 @@
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "跳到单词…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "跳到行…" },
             { "caption": "-" },
+            { "command": "next_modification", "caption": "Next Modification" },
+            { "command": "prev_modification", "caption": "Previous Modification" },
+            { "caption": "-" },
             { "command": "jump_back", "caption": "往回跳" },
             { "command": "jump_forward", "caption": "往前跳" },
             { "caption": "-" },
@@ -803,7 +809,7 @@
                     { "command": "open_recent_project_or_workspace", "args": {"index": 6 } },
                     { "command": "open_recent_project_or_workspace", "args": {"index": 7 } },
                     { "caption": "-" },
-                    { "command": "clear_recent_workspaces", "caption": "清除项目记录" }
+                    { "command": "clear_recent_projects_and_workspaces", "caption": "清除项目记录" }
                 ]
             },
             { "caption": "-" },
