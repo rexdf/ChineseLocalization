@@ -1,0 +1,12 @@
+[
+    { "caption": "新規作成", "command": "new_file_at", "args": {"dirs": []} },
+    { "caption": "名前変更…", "command": "rename_path", "args": {"paths": []} },
+    { "caption": "削除", "command": "delete_file", "args": {"files": []} },
+    { "caption": "ファイルのあるフォルダを開く…", "command": "open_containing_folder", "args": {"files": []} },
+    { "caption": "Reveal Link Source", "command": "reveal_link_source", "args": {"dirs": []} },
+    { "caption": "-", "id": "folder_commands" },
+    { "caption": "フォルダの新規作成…", "command": "new_folder", "args": {"dirs": []} },
+    { "caption": "削除", "command": "delete_folder", "args": {"dirs": []} },
+    { "caption": "検索…", "command": "find_in_folder", "args": {"dirs": []} },
+    { "caption": "-", "id": "end" }
+]

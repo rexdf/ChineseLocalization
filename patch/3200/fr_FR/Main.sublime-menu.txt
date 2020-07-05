@@ -1,21 +1,21 @@
 [
     {
-        "caption": "File",
+        "caption": "Fichier",
         "mnemonic": "F",
         "id": "file",
         "children":
         [
-            { "command": "new_file", "caption": "New File", "mnemonic": "N" },
+            { "command": "new_file", "caption": "Nouveau fichier", "mnemonic": "N" },
 
-            { "command": "prompt_open_file", "caption": "Open File…", "mnemonic": "O", "platform": "!OSX" },
-            { "command": "prompt_open_folder", "caption": "Open Folder…", "platform": "!OSX" },
-            { "command": "prompt_open", "caption": "Open…", "platform": "OSX" },
+            { "command": "prompt_open_file", "caption": "Ouvrir fichier…", "mnemonic": "O", "platform": "!OSX" },
+            { "command": "prompt_open_folder", "caption": "Ouvrir dossier…", "platform": "!OSX" },
+            { "command": "prompt_open", "caption": "Ouvrir…", "platform": "OSX" },
             {
-                "caption": "Open Recent",
+                "caption": "Ouvrir récent",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "reopen_last_file", "caption": "Reopen Closed File" },
+                    { "command": "reopen_last_file", "caption": "Rouvrir le dernier élément" },
                     { "caption": "-" },
                     { "command": "open_recent_file", "args": {"index": 0 } },
                     { "command": "open_recent_file", "args": {"index": 1 } },
@@ -35,11 +35,11 @@
                     { "command": "open_recent_folder", "args": {"index": 6 } },
                     { "command": "open_recent_folder", "args": {"index": 7 } },
                     { "caption": "-" },
-                    { "command": "clear_recent_files", "caption": "Clear Items" }
+                    { "command": "clear_recent_files", "caption": "Effacer la liste des fichiers récents" }
                 ]
             },
             {
-                "caption": "Reopen with Encoding",
+                "caption": "Rouvrir avec l’encodage",
                 "children":
                 [
                     { "caption": "UTF-8", "command": "reopen", "args": {"encoding": "utf-8" } },
@@ -78,10 +78,10 @@
                     { "caption": "Hexadecimal", "command": "reopen", "args": {"encoding": "Hexadecimal" } }
                 ]
             },
-            { "command": "clone_file", "caption": "New View into File", "mnemonic": "e" },
-            { "command": "save", "caption": "Save", "mnemonic": "S" },
+            { "command": "clone_file", "caption": "Cloner", "mnemonic": "e" },
+            { "command": "save", "caption": "Enregistrer", "mnemonic": "S" },
             {
-                "caption": "Save with Encoding",
+                "caption": "Enregistrer avec encodage",
                 "children":
                 [
                     { "caption": "UTF-8", "command": "save", "args": {"encoding": "utf-8" } },
@@ -123,248 +123,248 @@
                     { "caption": "Hexadecimal", "command": "save", "args": {"encoding": "Hexadecimal" } }
                 ]
             },
-            { "command": "prompt_save_as", "caption": "Save As…", "mnemonic": "A" },
-            { "command": "save_all", "caption": "Save All", "mnemonic": "l" },
+            { "command": "prompt_save_as", "caption": "Enregistrer sous…", "mnemonic": "A" },
+            { "command": "save_all", "caption": "Tout enregistrer", "mnemonic": "l" },
             { "caption": "-", "id": "window" },
-            { "command": "new_window", "caption": "New Window", "mnemonic": "W" },
-            { "command": "close_window", "caption": "Close Window" },
+            { "command": "new_window", "caption": "Nouvelle fenêtre", "mnemonic": "W" },
+            { "command": "close_window", "caption": "Fermer la fenêtre" },
             { "caption": "-", "id": "close" },
-            { "command": "close", "caption": "Close File", "mnemonic": "C" },
-            { "command": "revert", "caption": "Revert File", "mnemonic": "v" },
-            { "command": "close_all", "caption": "Close All Files" },
+            { "command": "close", "caption": "Fermer le fichier", "mnemonic": "C" },
+            { "command": "revert", "caption": "Rétablir le fichier", "mnemonic": "v" },
+            { "command": "close_all", "caption": "Fermer tous les fichiers" },
             { "caption": "-", "id": "exit" },
-            { "command": "exit", "caption": "Exit", "mnemonic": "x", "platform": "Windows" },
-            { "command": "exit", "caption": "Quit", "mnemonic": "Q", "platform": "Linux" },
+            { "command": "exit", "caption": "Quitter", "mnemonic": "x", "platform": "Windows" },
+            { "command": "exit", "caption": "Quitter", "mnemonic": "Q", "platform": "Linux" },
         ]
     },
     {
-        "caption": "Edit",
+        "caption": "Édition",
         "mnemonic": "E",
         "id": "edit",
         "children":
         [
-            { "command": "undo", "mnemonic": "U" },
-            { "command": "redo_or_repeat", "mnemonic": "R" },
+            { "command": "undo",  "caption": "Annuler", "mnemonic": "U" },
+            { "command": "redo_or_repeat", "caption": "Rétablir", "mnemonic": "R" },
             {
-                "caption": "Undo Selection",
+                "caption": "Annuler la sélection",
                 "children":
                 [
-                    { "command": "soft_undo" },
-                    { "command": "soft_redo" }
+                    { "command": "soft_undo", "caption": "Annulation douce" },
+                    { "command": "soft_redo", "caption": "Récupération douce" }
                 ]
             },
             { "caption": "-", "id": "clipboard" },
-            { "command": "copy", "mnemonic": "C" },
-            { "command": "cut", "mnemonic": "t" },
-            { "command": "paste", "mnemonic": "P" },
-            { "command": "paste_and_indent", "mnemonic": "I" },
-            { "command": "paste_from_history", "caption": "Paste from History" },
+            { "command": "copy", "mnemonic": "C", "caption": "Copier" },
+            { "command": "cut", "mnemonic": "t", "caption": "Couper" },
+            { "command": "paste", "mnemonic": "P", "caption": "Coller" },
+            { "command": "paste_and_indent", "mnemonic": "I", "caption": "Copier et indenter" },
+            { "command": "paste_from_history", "caption": "Copier depuis l’historique" },
             { "caption": "-" },
             {
-                "caption": "Line", "mnemonic": "L",
+                "caption": "Ligne", "mnemonic": "L",
                 "id": "line",
                 "children":
                 [
-                    { "command": "indent" },
-                    { "command": "unindent" },
-                    { "command": "reindent", "args": {"single_line": true} },
-                    { "command": "swap_line_up" },
-                    { "command": "swap_line_down" },
-                    { "command": "duplicate_line" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Delete Line" },
-                    { "command": "join_lines" }
+                    { "command": "indent", "caption": "Indenter" },
+                    { "command": "unindent", "caption": "Supprimer une indentation" },
+                    { "command": "reindent", "caption": "Réindenter", "args": {"single_line": true} },
+                    { "command": "swap_line_up", "caption": "Permuter avec la ligne supérieure" },
+                    { "command": "swap_line_down", "caption": "Permuter avec la ligne inférieure" },
+                    { "command": "duplicate_line", "caption": "Dupliquer la ligne" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Supprimer la ligne" },
+                    { "command": "join_lines", "caption": "Joindre les lignes" }
                 ]
             },
             {
-                "caption": "Comment", "mnemonic": "m",
+                "caption": "Commentaire", "mnemonic": "m",
                 "id": "comment",
                 "children":
                 [
-                    { "command": "toggle_comment", "args": {"block": false}, "caption": "Toggle Comment" },
-                    { "command": "toggle_comment", "args": {"block": true}, "caption": "Toggle Block Comment" }
+                    { "command": "toggle_comment", "args": {"block": false}, "caption": "Ouvrir/Fermer un commentaire" },
+                    { "command": "toggle_comment", "args": {"block": true}, "caption": "Ouvrir/Fermer un bloc de commentaires" }
                 ]
             },
             {
-                "caption": "Text", "mnemonic": "T",
+                "caption": "Texte", "mnemonic": "T",
                 "id": "text",
                 "children":
                 [
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Insert Line Before" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Insert Line After" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "Insérer une ligne avant" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "Insérer une ligne après" },
                     { "caption": "-" },
-                    { "command": "delete_word", "args": { "forward": true }, "caption": "Delete Word Forward" },
-                    { "command": "delete_word", "args": { "forward": false }, "caption": "Delete Word Backward" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Delete Line" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Delete to End" },
-                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Delete to Beginning" },
+                    { "command": "delete_word", "args": { "forward": true }, "caption": "Supprimer le mot après" },
+                    { "command": "delete_word", "args": { "forward": false }, "caption": "Supprimer le mot avant" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"}, "caption": "Supprimer la ligne" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"}, "caption": "Supprimer jusqu’en bas" },
+                    { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"}, "caption": "Supprimer jusqu’en haut" },
                     { "caption": "-" },
-                    { "command": "transpose" }
+                    { "command": "transpose", "caption": "Transposer" }
                 ]
             },
             {
-                "caption": "Tag",
+                "caption": "Étiquette",
                 "id": "tag",
                 "children":
                 [
-                    { "command": "close_tag" },
-                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Expand Selection to Tag" },
-                    { "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/long-tag.sublime-snippet" }, "caption": "Wrap Selection With Tag" }
+                    { "command": "close_tag", "caption": "Fermer l’étiquette" },
+                    { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Étendre la sélection jusqu’à l’étiquette" },
+                    { "command": "insert_snippet", "args": { "name": "Packages/XML/Snippets/long-tag.sublime-snippet" }, "caption": "Étendre la sélection avec l’étiquette" }
                 ]
             },
             {
-                "caption": "Mark",
+                "caption": "Repère",
                 "id": "mark",
                 "children":
                 [
-                    { "command": "set_mark" },
-                    { "command": "select_to_mark", "caption": "Select to Mark" },
-                    { "command": "delete_to_mark", "caption": "Delete to Mark" },
-                    { "command": "swap_with_mark", "caption": "Swap with Mark" },
-                    { "command": "clear_bookmarks", "args": {"name": "mark"}, "caption": "Clear Mark" },
+                    { "command": "set_mark", "caption": "Créer un repère" },
+                    { "command": "select_to_mark", "caption": "Sélectionner jusqu’au repère" },
+                    { "command": "delete_to_mark", "caption": "Supprimer jusqu’au repère" },
+                    { "command": "swap_with_mark", "caption": "Permuter avec le repère" },
+                    { "command": "clear_bookmarks", "args": {"name": "mark"}, "caption": "Effacer le repère" },
                     { "caption": "-" },
-                    { "command": "yank" }
+                    { "command": "yank", "caption": ""}
                 ]
             },
             {
-                "caption": "Code Folding",
+                "caption": "Repli de code",
                 "id": "fold",
                 "children":
                 [
-                    { "command": "fold" },
-                    { "command": "unfold" },
-                    { "command": "unfold_all", "caption": "Unfold All" },
+                    { "command": "fold", "caption": "Plier" },
+                    { "command": "unfold", "caption": "Délier"  },
+                    { "command": "unfold_all", "caption": "Tout déplier" },
                     { "caption": "-" },
-                    { "caption": "Fold All", "command": "fold_by_level", "args": {"level": 1} },
-                    { "caption": "Fold Level 2", "command": "fold_by_level", "args": {"level": 2} },
-                    { "caption": "Fold Level 3", "command": "fold_by_level", "args": {"level": 3} },
-                    { "caption": "Fold Level 4", "command": "fold_by_level", "args": {"level": 4} },
-                    { "caption": "Fold Level 5", "command": "fold_by_level", "args": {"level": 5} },
-                    { "caption": "Fold Level 6", "command": "fold_by_level", "args": {"level": 6} },
-                    { "caption": "Fold Level 7", "command": "fold_by_level", "args": {"level": 7} },
-                    { "caption": "Fold Level 8", "command": "fold_by_level", "args": {"level": 8} },
-                    { "caption": "Fold Level 9", "command": "fold_by_level", "args": {"level": 9} },
+                    { "caption": "Tout plier", "command": "fold_by_level", "args": {"level": 1} },
+                    { "caption": "Plier niveau 2", "command": "fold_by_level", "args": {"level": 2} },
+                    { "caption": "Plier niveau 3", "command": "fold_by_level", "args": {"level": 3} },
+                    { "caption": "Plier niveau 4", "command": "fold_by_level", "args": {"level": 4} },
+                    { "caption": "Plier niveau 5", "command": "fold_by_level", "args": {"level": 5} },
+                    { "caption": "Plier niveau 6", "command": "fold_by_level", "args": {"level": 6} },
+                    { "caption": "Plier niveau 7", "command": "fold_by_level", "args": {"level": 7} },
+                    { "caption": "Plier niveau 8", "command": "fold_by_level", "args": {"level": 8} },
+                    { "caption": "Plier niveau 9", "command": "fold_by_level", "args": {"level": 9} },
                     { "caption": "-" },
-                    { "command": "fold_tag_attributes", "caption": "Fold Tag Attributes" }
+                    { "command": "fold_tag_attributes", "caption": "Plier les attributs étiquette" }
                 ]
             },
             {
-                "caption": "Convert Case", "mnemonic": "a",
+                "caption": "Modifier la casse", "mnemonic": "a",
                 "id": "convert_case",
                 "children":
                 [
-                    { "command": "title_case", "caption": "Title Case" },
-                    { "command": "upper_case", "caption": "Upper Case" },
-                    { "command": "lower_case", "caption": "Lower Case" },
-                    { "command": "swap_case", "caption": "Swap Case" }
+                    { "command": "title_case", "caption": "1ère lettre Majuscule" },
+                    { "command": "upper_case", "caption": "MAJUSCULE" },
+                    { "command": "lower_case", "caption": "minuscule" },
+                    { "command": "swap_case", "caption": "Intervertir la casse" }
                 ]
             },
             {
-                "caption": "Wrap",
+                "caption": "Limite",
                 "id": "wrap",
                 "children":
                 [
-                    { "command": "wrap_lines", "caption": "Wrap Paragraph at Ruler" },
-                    { "command": "wrap_lines", "args": {"width": 70}, "caption": "Wrap paragraph at 70 characters" },
-                    { "command": "wrap_lines", "args": {"width": 72}, "caption": "Wrap paragraph at 72 characters" },
-                    { "command": "wrap_lines", "args": {"width": 78}, "caption": "Wrap paragraph at 78 characters" },
-                    { "command": "wrap_lines", "args": {"width": 80}, "caption": "Wrap paragraph at 80 characters" },
-                    { "command": "wrap_lines", "args": {"width": 100}, "caption": "Wrap paragraph at 100 characters" },
-                    { "command": "wrap_lines", "args": {"width": 120}, "caption": "Wrap paragraph at 120 characters" }
+                    { "command": "wrap_lines", "caption": "Limiter le paragraphe à la règle" },
+                    { "command": "wrap_lines", "args": {"width": 70}, "caption": "Limiter le paragraphe à 70 caractères" },
+                    { "command": "wrap_lines", "args": {"width": 72}, "caption": "Limiter le paragraphe à 72 caractères" },
+                    { "command": "wrap_lines", "args": {"width": 78}, "caption": "Limiter le paragraphe à 78 caractères" },
+                    { "command": "wrap_lines", "args": {"width": 80}, "caption": "Limiter le paragraphe à 80 caractères" },
+                    { "command": "wrap_lines", "args": {"width": 100}, "caption": "Limiter le paragraphe à 100 caractères" },
+                    { "command": "wrap_lines", "args": {"width": 120}, "caption": "Limiter le paragraphe à 120 caractères" }
                 ]
             },
-            { "command": "auto_complete", "caption": "Show Completions" },
+            { "command": "auto_complete", "caption": "Afficher l’auto-remplissage" },
             { "caption": "-", "id": "permute" },
 
-            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "Sort Lines", "mnemonic": "S" },
-            { "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "Sort Lines (Case Sensitive)" },
+            { "command": "sort_lines", "args": {"case_sensitive": false}, "caption": "Trier les lignes", "mnemonic": "S" },
+            { "command": "sort_lines", "args": {"case_sensitive": true}, "caption": "Trier les lignes (Sensible à la casse)" },
             {
-                "caption": "Permute Lines",
+                "caption": "Permuter les lignes",
                 "children":
                 [
-                    { "command": "permute_lines", "args": {"operation": "reverse"}, "caption": "Reverse" },
+                    { "command": "permute_lines", "args": {"operation": "reverse"}, "caption": "Inverser" },
                     { "command": "permute_lines", "args": {"operation": "unique"}, "caption": "Unique" },
-                    { "command": "permute_lines", "args": {"operation": "shuffle"}, "caption": "Shuffle" }
+                    { "command": "permute_lines", "args": {"operation": "shuffle"}, "caption": "Mélanger" }
                 ]
             },
             {
-                "caption": "Permute Selections",
+                "caption": "Permuter les sélections",
                 "children":
                 [
-                    { "command": "sort_selection", "args": {"case_sensitive": false}, "caption": "Sort" },
-                    { "command": "sort_selection", "args": {"case_sensitive": true}, "caption": "Sort (Case Sensitive)" },
-                    { "command": "permute_selection", "args": {"operation": "reverse"}, "caption": "Reverse" },
+                    { "command": "sort_selection", "args": {"case_sensitive": false}, "caption": "Trier" },
+                    { "command": "sort_selection", "args": {"case_sensitive": true}, "caption": "Trier (Sensible à la casse)" },
+                    { "command": "permute_selection", "args": {"operation": "reverse"}, "caption": "Inverser" },
                     { "command": "permute_selection", "args": {"operation": "unique"}, "caption": "Unique" },
-                    { "command": "permute_selection", "args": {"operation": "shuffle"}, "caption": "Shuffle" }
+                    { "command": "permute_selection", "args": {"operation": "shuffle"}, "caption": "Mélanger" }
                 ]
             },
             { "caption": "-", "id": "end" }
         ]
     },
     {
-        "caption": "Selection",
+        "caption": "Sélection",
         "mnemonic": "S",
         "id": "selection",
         "children":
         [
-            { "command": "split_selection_into_lines", "caption": "Split into Lines" },
-            { "command": "select_lines", "args": {"forward": false}, "caption": "Add Previous Line" },
-            { "command": "select_lines", "args": {"forward": true}, "caption": "Add Next Line" },
-            { "command": "single_selection" },
-            { "command": "invert_selection" },
+            { "command": "split_selection_into_lines", "caption": "Diviser en lignes" },
+            { "command": "select_lines", "args": {"forward": false}, "caption": "Ajouter la ligne précédente" },
+            { "command": "select_lines", "args": {"forward": true}, "caption": "Ajouter la ligne suivante" },
+            { "command": "single_selection", "caption": "Sélection unique" },
+            { "command": "invert_selection", "caption": "Inverser la sélection" },
             { "caption": "-" },
-            { "command": "select_all" },
-            { "command": "expand_selection", "args": {"to": "line"}, "caption": "Expand Selection to Line" },
-            { "command": "find_under_expand", "caption": "Expand Selection to Word" },
-            { "command": "expand_selection_to_paragraph", "caption": "Expand Selection to Paragraph" },
-            { "command": "expand_selection", "args": {"to": "scope"}, "caption": "Expand Selection to Scope" },
-            { "command": "expand_selection", "args": {"to": "brackets"}, "caption": "Expand Selection to Brackets" },
-            { "command": "expand_selection", "args": {"to": "indentation"}, "caption": "Expand Selection to Indentation" },
-            { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Expand Selection to Tag" }
+            { "command": "select_all", "caption": "Tout sélectionner" },
+            { "command": "expand_selection", "args": {"to": "line"}, "caption": "Étendre la sélection à la ligne" },
+            { "command": "find_under_expand", "caption": "Étendre la sélection du mot" },
+            { "command": "expand_selection_to_paragraph", "caption": "Étendre la sélection au paragraphe" },
+            { "command": "expand_selection", "args": {"to": "scope"}, "caption": "Étendre la sélection à la zone" },
+            { "command": "expand_selection", "args": {"to": "brackets"}, "caption": "Étendre la sélection jusqu’au crochet" },
+            { "command": "expand_selection", "args": {"to": "indentation"}, "caption": "Étendre la sélection jusqu’à l’indentation" },
+            { "command": "expand_selection", "args": {"to": "tag"}, "caption": "Étendre la sélection jusqu’à l’étiquette" }
         ]
     },
     {
-        "caption": "Find",
+        "caption": "Rechercher",
         "mnemonic": "i",
         "id": "find",
         "children":
         [
-            { "command": "show_panel", "args": {"panel": "find", "reverse": false}, "caption": "Find…" },
-            { "command": "find_next" },
-            { "command": "find_prev", "caption": "Find Previous" },
-            { "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false}, "caption": "Incremental Find" },
+            { "command": "show_panel", "args": {"panel": "find", "reverse": false}, "caption": "Rechercher…" },
+            { "command": "find_next", "caption": "Rechercher suivant" },
+            { "command": "find_prev", "caption": "Rechercher précédent" },
+            { "command": "show_panel", "args": {"panel": "incremental_find", "reverse": false}, "caption": "Recherche incrémentale" },
             { "caption": "-" },
-            { "command": "show_panel", "args": {"panel": "replace", "reverse": false}, "caption": "Replace…" },
-            { "command": "replace_next" },
+            { "command": "show_panel", "args": {"panel": "replace", "reverse": false}, "caption": "Remplacer…" },
+            { "command": "replace_next", "caption": "Remplacer suivant"},
             { "caption": "-" },
-            { "command": "find_under", "caption": "Quick Find" },
-            { "command": "find_all_under", "caption": "Quick Find All" },
-            { "command": "find_under_expand", "caption": "Quick Add Next" },
-            { "command": "find_under_expand_skip", "caption": "Quick Skip Next", "platform": "!OSX" },
+            { "command": "find_under", "caption": "Recherche rapide" },
+            { "command": "find_all_under", "caption": "Recherche rapide (Tout)" },
+            { "command": "find_under_expand", "caption": "Recherche rapide (Suivant)" },
+            { "command": "find_under_expand_skip", "caption": "Recherche rapide ignorer le suivant", "platform": "!OSX" },
             { "caption": "-" },
-            { "command": "slurp_find_string", "caption": "Use Selection for Find" },
-            { "command": "slurp_replace_string", "caption": "Use Selection for Replace" },
+            { "command": "slurp_find_string", "caption": "Utiliser la sélection pour rechercher" },
+            { "command": "slurp_replace_string", "caption": "Utiliser la sélection pour remplacer" },
             { "caption": "-" },
-            { "command": "show_panel", "args": {"panel": "find_in_files"}, "caption": "Find in Files…" },
+            { "command": "show_panel", "args": {"panel": "find_in_files"}, "caption": "Rechercher dans des dossiers…" },
             {
-                "caption": "Find Results",
+                "caption": "Resultats de la recherche",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "show_panel", "args": {"panel": "output.find_results"}, "caption": "Show Results Panel" },
-                    { "command": "next_result" },
-                    { "command": "prev_result", "caption": "Previous Result" }
+                    { "command": "show_panel", "args": {"panel": "output.find_results"}, "caption": "Afficher le panneau des résulltats" },
+                    { "command": "next_result", "caption": "Résultat suivant" },
+                    { "command": "prev_result", "caption": "Résultat précédent" }
                 ]
             }
         ]
     },
     {
-        "caption": "View",
+        "caption": "Affichage",
         "mnemonic": "V",
         "id": "view",
         "children":
         [
             {
-                "caption": "Side Bar",
+                "caption": "Colonne latérale",
                 "id": "side_bar",
                 "children":
                 [
@@ -373,23 +373,23 @@
                     { "command": "toggle_show_open_files" }
                 ]
             },
-            { "command": "toggle_minimap" },
-            { "command": "toggle_tabs" },
-            { "command": "toggle_status_bar" },
-            { "command": "toggle_menu" },
+            { "command": "toggle_minimap","caption": "Masquer la mini-carte" },
+            { "command": "toggle_tabs", "caption": "Masquer les onglets" },
+            { "command": "toggle_status_bar", "caption": "Masquer la barre d’état" },
+            { "command": "toggle_menu", "caption": "Masquer le menu" },
             { "command": "show_panel", "args": {"panel": "console", "toggle": true} },
             { "caption": "-", "id": "full_screen" },
             { "command": "toggle_full_screen" },
             { "command": "toggle_distraction_free" },
             { "caption": "-", "id": "groups" },
             {
-                "caption": "Layout",
+                "caption": "Disposition",
                 "mnemonic": "L",
                 "id": "layout",
                 "children":
                 [
                     {
-                        "caption": "Single",
+                        "caption": "Unique",
                         "command": "set_layout",
                         "args":
                         {
@@ -399,7 +399,7 @@
                         }
                     },
                     {
-                        "caption": "Columns: 2",
+                        "caption": "Colonnes : 2",
                         "command": "set_layout",
                         "args":
                         {
@@ -409,7 +409,7 @@
                         }
                     },
                     {
-                        "caption": "Columns: 3",
+                        "caption": "Colonnes : 3",
                         "command": "set_layout",
                         "args":
                         {
@@ -419,7 +419,7 @@
                         }
                     },
                     {
-                        "caption": "Columns: 4",
+                        "caption": "Colonnes : 4",
                         "command": "set_layout",
                         "args":
                         {
@@ -429,7 +429,7 @@
                         }
                     },
                     {
-                        "caption": "Rows: 2",
+                        "caption": "Rang : 2",
                         "command": "set_layout",
                         "args":
                         {
@@ -439,7 +439,7 @@
                         }
                     },
                     {
-                        "caption": "Rows: 3",
+                        "caption": "Rang : 3",
                         "command": "set_layout",
                         "args":
                         {
@@ -449,7 +449,7 @@
                         }
                     },
                     {
-                        "caption": "Grid: 4",
+                        "caption": "Grille : 4",
                         "command": "set_layout",
                         "args":
                         {
@@ -465,41 +465,41 @@
                 ]
             },
             {
-                "caption": "Groups",
+                "caption": "Groupes",
                 "children":
                 [
-                    { "command": "new_pane", "caption": "Move File to New Group" },
-                    { "command": "new_pane", "args": {"move": false}, "caption": "New Group" },
-                    { "command": "close_pane", "caption": "Close Group" },
+                    { "command": "new_pane", "caption": "Déplacer le fichier dans un nouveau groupe" },
+                    { "command": "new_pane", "args": {"move": false}, "caption": "Nouveau groupe" },
+                    { "command": "close_pane", "caption": "Fermer le groupe" },
 
                     { "caption": "-" },
 
                     {
-                        "caption": "Max Columns: 1",
+                        "caption": "Colonnes max : 1",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 1 }
                     },
                     {
-                        "caption": "Max Columns: 2",
+                        "caption": "Colonnes max : 2",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 2 }
                     },
                     {
-                        "caption": "Max Columns: 3",
+                        "caption": "Colonnes max : 3",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 3 }
                     },
                     {
-                        "caption": "Max Columns: 4",
+                        "caption": "Colonnes max : 4",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 4 }
                     },
                     {
-                        "caption": "Max Columns: 5",
+                        "caption": "Colonnes max : 5",
                         "command": "set_max_columns",
                         "checkbox": true,
                         "args": { "columns": 5 }
@@ -507,37 +507,37 @@
                 ]
             },
             {
-                "caption": "Focus Group",
+                "caption": "Focaliser le groupe",
                 "mnemonic": "F",
                 "children":
                 [
 
-                    { "command": "focus_neighboring_group", "caption": "Next" },
-                    { "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "Previous" },
+                    { "command": "focus_neighboring_group", "caption": "Suivant" },
+                    { "command": "focus_neighboring_group", "args": {"forward": false}, "caption": "Précedent" },
                     { "caption": "-" },
-                    { "command": "focus_group", "args": {"group": 0}, "caption": "Group 1" },
-                    { "command": "focus_group", "args": {"group": 1}, "caption": "Group 2" },
-                    { "command": "focus_group", "args": {"group": 2}, "caption": "Group 3" },
-                    { "command": "focus_group", "args": {"group": 3}, "caption": "Group 4" }
+                    { "command": "focus_group", "args": {"group": 0}, "caption": "Groupe 1" },
+                    { "command": "focus_group", "args": {"group": 1}, "caption": "Groupe 2" },
+                    { "command": "focus_group", "args": {"group": 2}, "caption": "Groupe 3" },
+                    { "command": "focus_group", "args": {"group": 3}, "caption": "Groupe 4" }
                 ]
             },
             {
-                "caption": "Move File to Group",
+                "caption": "Déplacer le fichier dans le groupe",
                 "mnemonic": "M",
                 "children":
                 [
-                    { "command": "move_to_neighboring_group", "caption": "Next" },
-                    { "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "Previous" },
+                    { "command": "move_to_neighboring_group", "caption": "Suivant" },
+                    { "command": "move_to_neighboring_group", "args": {"forward": false}, "caption": "Précedent" },
                     { "caption": "-" },
-                    { "command": "move_to_group", "args": {"group": 0}, "caption": "Group 1" },
-                    { "command": "move_to_group", "args": {"group": 1}, "caption": "Group 2" },
-                    { "command": "move_to_group", "args": {"group": 2}, "caption": "Group 3" },
-                    { "command": "move_to_group", "args": {"group": 3}, "caption": "Group 4" }
+                    { "command": "move_to_group", "args": {"group": 0}, "caption": "Groupe 1" },
+                    { "command": "move_to_group", "args": {"group": 1}, "caption": "Groupe 2" },
+                    { "command": "move_to_group", "args": {"group": 2}, "caption": "Groupe 3" },
+                    { "command": "move_to_group", "args": {"group": 3}, "caption": "Groupe 4" }
                 ]
             },
             { "caption": "-" },
             {
-                "caption": "Syntax",
+                "caption": "Syntaxe",
                 "mnemonic": "S",
                 "id": "syntax",
                 "children": [ { "command": "$file_types" } ]
@@ -548,25 +548,25 @@
                 "id": "indentation",
                 "children":
                 [
-                    { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "Indent Using Spaces", "checkbox": true },
+                    { "command": "toggle_setting", "args": {"setting": "translate_tabs_to_spaces"}, "caption": "Indenter en utilisant des espaces", "checkbox": true },
                     { "caption": "-" },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Tab Width: 1", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Tab Width: 2", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Tab Width: 3", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Tab Width: 4", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Tab Width: 5", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Tab Width: 6", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Tab Width: 7", "checkbox": true },
-                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Tab Width: 8", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 1}, "caption": "Largeur de tabulation : 1", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 2}, "caption": "Largeur de tabulation : 2", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 3}, "caption": "Largeur de tabulation : 3", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 4}, "caption": "Largeur de tabulation : 4", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 5}, "caption": "Largeur de tabulation : 5", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 6}, "caption": "Largeur de tabulation : 6", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 7}, "caption": "Largeur de tabulation : 7", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "tab_size", "value": 8}, "caption": "Largeur de tabulation : 8", "checkbox": true },
                     { "caption": "-" },
-                    { "command": "detect_indentation", "caption": "Guess Settings From Buffer" },
+                    { "command": "detect_indentation", "caption": "Déterminer l’indentation depuis le contenu" },
                     { "caption": "-" },
-                    { "command": "expand_tabs", "caption": "Convert Indentation to Spaces", "args": {"set_translate_tabs": true} },
-                    { "command": "unexpand_tabs", "caption": "Convert Indentation to Tabs", "args": {"set_translate_tabs": true} }
+                    { "command": "expand_tabs", "caption": "Convertir l’indentation en espaces", "args": {"set_translate_tabs": true} },
+                    { "command": "unexpand_tabs", "caption": "Convertir l’indentation en tabulations", "args": {"set_translate_tabs": true} }
                 ]
             },
             {
-                "caption": "Line Endings",
+                "caption": "Fins de ligne",
                 "mnemonic": "n",
                 "id": "line_endings",
                 "children":
@@ -577,12 +577,12 @@
                 ]
             },
             { "caption": "-", "id": "settings" },
-            { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "Word Wrap", "mnemonic": "W", "checkbox": true },
+            { "command": "toggle_setting", "args": {"setting": "word_wrap"}, "caption": "Retour chariot", "mnemonic": "W", "checkbox": true },
             {
-                "caption": "Word Wrap Column",
+                "caption": "Largeur retour chariot",
                 "children":
                 [
-                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Automatic", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "wrap_width", "value": 0}, "caption": "Automatique", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 70}, "caption": "70", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "wrap_width", "value": 72}, "caption": "72", "checkbox": true },
@@ -593,10 +593,10 @@
                 ]
             },
             {
-                "caption": "Ruler",
+                "caption": "Règle",
                 "children":
                 [
-                    { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "None", "checkbox": true },
+                    { "command": "set_setting", "args": {"setting": "rulers", "value": []}, "caption": "Aucune", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [70]}, "caption": "70", "checkbox": true },
                     { "command": "set_setting", "args": {"setting": "rulers", "value": [72]}, "caption": "72", "checkbox": true },
@@ -607,46 +607,46 @@
                 ]
             },
             { "caption": "-" },
-            { "command": "toggle_setting", "args": {"setting": "spell_check"}, "caption": "Spell Check", "checkbox": true },
-            { "command": "next_misspelling" },
-            { "command": "prev_misspelling" },
+            { "command": "toggle_setting", "args": {"setting": "spell_check"}, "caption": "Vérifier l’orthographe", "checkbox": true },
+            { "command": "next_misspelling", "caption": "Erreur suivante" },
+            { "command": "prev_misspelling", "caption": "Erreur précédente" },
             {
-                "caption": "Dictionary",
+                "caption": "Dictionnaires",
                 "children": [ { "command": "$dictionaries" } ]
             }
         ]
     },
     {
-        "caption": "Goto",
+        "caption": "Aller à",
         "mnemonic": "G",
         "id": "goto",
         "children":
         [
-            { "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "Goto Anything…", "mnemonic": "A" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "show_files": true}, "caption": "Aller à…", "mnemonic": "A" },
             { "caption": "-" },
-            { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Goto Symbol…" },
-            { "command": "goto_symbol_in_project", "caption": "Goto Symbol in Project…" },
-            { "command": "goto_definition", "caption": "Goto Definition…" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}, "caption": "Aller au symbole…" },
+            { "command": "goto_symbol_in_project", "caption": "Aller au symbole du projet…" },
+            { "command": "goto_definition", "caption": "Aller à la définition…" },
             { "command": "goto_reference", "caption": "Goto Reference…" },
-            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Goto Word…" },
-            { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Goto Line…" },
+            // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "Aller au mot…" },
+            { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "Aller à la ligne…" },
             { "caption": "-" },
-            { "command": "jump_back", "caption": "Jump Back" },
-            { "command": "jump_forward", "caption": "Jump Forward" },
+            { "command": "jump_back", "caption": "Précédent" },
+            { "command": "jump_forward", "caption": "Suivant" },
             { "caption": "-" },
             {
-                "caption": "Switch File",
+                "caption": "Changer de fichier",
                 "mnemonic": "t",
                 "id": "switch_file",
                 "children":
                 [
-                    { "command": "next_view", "caption": "Next File" },
-                    { "command": "prev_view", "caption": "Previous File" },
+                    { "command": "next_view", "caption": "Fichier suivant" },
+                    { "command": "prev_view", "caption": "Fichier précédent" },
                     { "caption": "-" },
-                    { "command": "next_view_in_stack", "caption": "Next File in Stack" },
-                    { "command": "prev_view_in_stack", "caption": "Previous File in Stack" },
+                    { "command": "next_view_in_stack", "caption": "Fichier suivant dans la pile" },
+                    { "command": "prev_view_in_stack", "caption": "Fichier précédent dans la pile" },
                     { "caption": "-" },
-                    { "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]}, "caption": "Switch Header/Implementation", "mnemonic": "H" },
+                    { "command": "switch_file", "args": {"extensions": ["cpp", "cxx", "cc", "c", "hpp", "hxx", "hh", "h", "ipp", "inl", "m", "mm"]}, "caption": "Changer l’header/implémentation", "mnemonic": "H" },
                     { "caption": "-" },
                     { "command": "select_by_index", "args": { "index": 0 } },
                     { "command": "select_by_index", "args": { "index": 1 } },
@@ -662,29 +662,29 @@
             },
             { "caption": "-" },
             {
-                "caption": "Scroll",
+                "caption": "Défilement",
                 "mnemonic": "S",
                 "id": "scroll",
                 "children":
                 [
-                    { "command": "show_at_center", "caption": "Scroll to Selection" },
-                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "Line Up" },
-                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "Line Down" }
+                    { "command": "show_at_center", "caption": "Défiler jusqu’à la sélection" },
+                    { "command": "scroll_lines", "args": {"amount": 1.0 }, "caption": "Monter" },
+                    { "command": "scroll_lines", "args": {"amount": -1.0 }, "caption": "Descendre" }
                 ]
             },
             {
-                "caption": "Bookmarks",
+                "caption": "Signets",
                 "mnemonic": "B",
                 "id": "bookmarks",
                 "children":
                 [
-                    { "command": "toggle_bookmark" },
-                    { "command": "next_bookmark" },
-                    { "command": "prev_bookmark" },
-                    { "command": "clear_bookmarks" },
-                    { "command": "select_all_bookmarks" },
+                    { "command": "toggle_bookmark", "caption": "Aficher/Masquer les signets" },
+                    { "command": "next_bookmark", "caption": "Signet suivant" },
+                    { "command": "prev_bookmark", "caption": "Signet précédent" },
+                    { "command": "clear_bookmarks", "caption": "Effacer les signets" },
+                    { "command": "select_all_bookmarks", "caption": "Sélectionner tous les signets" },
                     { "caption": "-" },
-                    { "command": "select_bookmark", "args": {"index": 0} },
+                    { "command": "select_bookmark", "args": {"index": 0}, "caption": "(Aucun signet)" },
                     { "command": "select_bookmark", "args": {"index": 1} },
                     { "command": "select_bookmark", "args": {"index": 2} },
                     { "command": "select_bookmark", "args": {"index": 3} },
@@ -703,24 +703,24 @@
                 ]
             },
             { "caption": "-" },
-            { "command": "move_to", "args": {"to": "brackets"}, "caption": "Jump to Matching Bracket" }
+            { "command": "move_to", "args": {"to": "brackets"}, "caption": "Aller à la parenthèse correspondante" }
         ]
     },
     {
-        "caption": "Tools",
+        "caption": "Outils",
         "mnemonic": "T",
         "id": "tools",
         "children":
         [
-            { "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "Command Palette…" },
+            { "command": "show_overlay", "args": {"overlay": "command_palette"}, "caption": "Palette de commandes…" },
             { "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Snippet: "}, "caption": "Snippets…" },
             { "caption": "-", "id": "build" },
             {
-                "caption": "Build System",
+                "caption": "Compilation système",
                 "mnemonic": "u",
                 "children":
                 [
-                    { "command": "set_build_system", "args": { "file": "" }, "caption": "Automatic", "checkbox": true },
+                    { "command": "set_build_system", "args": { "file": "" }, "caption": "Automatique", "checkbox": true },
                     { "caption": "-" },
                     { "command": "set_build_system", "args": {"index": 0}, "checkbox": true },
                     { "command": "set_build_system", "args": {"index": 1}, "checkbox": true },
@@ -737,39 +737,39 @@
                     { "caption": "-" },
                     { "command": "$build_systems" },
                     { "caption": "-" },
-                    { "command": "new_build_system", "caption": "New Build System…" }
+                    { "command": "new_build_system", "caption": "Nouvelle compilation système…" }
                 ]
             },
-            { "command": "build", "mnemonic": "B" },
-            { "command": "build", "args": {"select": true}, "caption": "Build With…" },
-            { "command": "cancel_build", "caption": "Cancel Build", "mnemonic": "C" },
+            { "command": "build", "caption": "Compiler", "mnemonic": "B" },
+            { "command": "build", "args": {"select": true}, "caption": "Compiler avec…" },
+            { "command": "cancel_build", "caption": "Annuler la compilation", "mnemonic": "C" },
             {
-                "caption": "Build Results",
+                "caption": "Resultats de la compilation",
                 "mnemonic": "R",
                 "children":
                 [
-                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Show Build Results", "mnemonic": "S" },
-                    { "command": "next_result", "mnemonic": "N" },
-                    { "command": "prev_result", "caption": "Previous Result", "mnemonic": "P" }
+                    { "command": "show_panel", "args": {"panel": "output.exec"}, "caption": "Afficher les résultats de la compilation", "mnemonic": "S" },
+                    { "command": "next_result", "caption": "Résultat suivant", "mnemonic": "N" },
+                    { "command": "prev_result", "caption": "Résultat précédent", "mnemonic": "P" }
                 ]
             },
-            { "command": "toggle_save_all_on_build", "caption": "Save All on Build", "mnemonic": "A", "checkbox": true },
+            { "command": "toggle_save_all_on_build", "caption": "Tout enregistrer lors de la compilation", "mnemonic": "A", "checkbox": true },
             { "caption": "-", "id": "macros" },
-            { "command": "toggle_record_macro", "mnemonic": "M" },
-            { "command": "run_macro", "caption": "Playback Macro", "mnemonic": "P" },
-            { "command": "save_macro", "caption": "Save Macro…", "mnemonic": "v" },
+            { "command": "toggle_record_macro", "caption": "Enregistrer une macro", "mnemonic": "M" },
+            { "command": "run_macro", "caption": "Exécuter la macro", "mnemonic": "P" },
+            { "command": "save_macro", "caption": "Sauvegarder la macro…", "mnemonic": "v" },
             {
                 "caption": "Macros",
                 "children": [ { "command": "$macros" } ]
             },
             { "caption": "-" },
             {
-                "caption": "Developer",
+                "caption": "Développer",
                 "children":
                 [
-                    { "command": "new_plugin", "caption": "New Plugin…" },
-                    { "command": "new_snippet", "caption": "New Snippet…" },
-                    { "command": "new_syntax", "caption": "New Syntax…" },
+                    { "command": "new_plugin", "caption": "Nouveau plugin…" },
+                    { "command": "new_snippet", "caption": "Nouveau snippet…" },
+                    { "command": "new_syntax", "caption": "Nouvelle syntaxe…" },
                     { "command": "convert_syntax" },
                     { "caption": "-" },
                     { "command": "profile_plugins" },
@@ -777,21 +777,21 @@
                     { "command": "show_scope_name" },
                 ]
             },
-            { "command": "install_package_control", "caption": "Install Package Control…" },
+            { "command": "install_package_control", "caption": "Installer le Package Control…" },
             { "caption": "-", "id": "end" }
         ]
     },
     {
-        "caption": "Project",
+        "caption": "Projet",
         "id": "project",
         "mnemonic": "P",
         "children":
         [
-            { "command": "prompt_open_project_or_workspace", "caption": "Open Project…" },
-            { "command": "prompt_switch_project_or_workspace", "caption": "Switch Project…" },
-            { "command": "prompt_select_workspace", "caption": "Quick Switch Project…", "mnemonic": "S" },
+            { "command": "prompt_open_project_or_workspace", "caption": "Ouvrir un projet…" },
+            { "command": "prompt_switch_project_or_workspace", "caption": "Changer de projet…" },
+            { "command": "prompt_select_workspace", "caption": "Changer rapidement de projet…", "mnemonic": "S" },
             {
-                "caption": "Open Recent",
+                "caption": "Ouvrir récent",
                 "children":
                 [
                     { "command": "open_recent_project_or_workspace", "args": {"index": 0 } },
@@ -803,29 +803,29 @@
                     { "command": "open_recent_project_or_workspace", "args": {"index": 6 } },
                     { "command": "open_recent_project_or_workspace", "args": {"index": 7 } },
                     { "caption": "-" },
-                    { "command": "clear_recent_projects_and_workspaces", "caption": "Clear Items" }
+                    { "command": "clear_recent_projects_and_workspaces", "caption": "Effacer les éléments" }
                 ]
             },
             { "caption": "-" },
-            { "command": "save_project_and_workspace_as", "caption": "Save Project As…", "mnemonic": "A" },
-            { "command": "close_workspace", "caption": "Close Project", "mnemonic": "C" },
-            { "command": "open_file", "args": {"file": "${project}"}, "caption": "Edit Project" },
+            { "command": "save_project_and_workspace_as", "caption": "Enregistrer le projet sous…", "mnemonic": "A" },
+            { "command": "close_workspace", "caption": "Fermer le projet", "mnemonic": "C" },
+            { "command": "open_file", "args": {"file": "${project}"}, "caption": "Modifier le projet" },
             { "caption": "-" },
-            { "command": "new_window_for_project", "caption": "New Workspace for Project" },
-            { "command": "save_workspace_as", "caption": "Save Workspace As…", "mnemonic": "A" },
+            { "command": "new_window_for_project", "caption": "Nouvel espace de travail pour le projet" },
+            { "command": "save_workspace_as", "caption": "Enregistrer l’espace de travail sous…", "mnemonic": "A" },
             { "caption": "-" },
-            { "command": "prompt_add_folder", "caption": "Add Folder to Project…", "mnemonic": "d" },
-            { "command": "close_folder_list", "caption": "Remove all Folders from Project", "mnemonic": "m" },
-            { "command": "refresh_folder_list", "caption": "Refresh Folders", "mnemonic": "e" },
+            { "command": "prompt_add_folder", "caption": "Ajouter un dossier au projet…", "mnemonic": "d" },
+            { "command": "close_folder_list", "caption": "Supprimer tous les dossiers du projet", "mnemonic": "m" },
+            { "command": "refresh_folder_list", "caption": "Rafraichir les dossiers", "mnemonic": "e" },
         ]
     },
     {
-        "caption": "Preferences",
+        "caption": "Préférences",
         "mnemonic": "n",
         "id": "preferences",
         "children":
         [
-            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Browse Packages…", "mnemonic": "B" },
+            { "command": "open_dir", "args": {"dir": "$packages"}, "caption": "Parcourir les paquets…", "mnemonic": "B" },
             { "caption": "-" },
             {
                 "command": "edit_settings", "args":
@@ -833,16 +833,16 @@
                     "base_file": "${packages}/Default/Preferences.sublime-settings",
                     "default": "// Settings in here override those in \"Default/Preferences.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
                 },
-                "caption": "Settings"
+                "caption": "Préférences"
             },
-            { "command": "edit_syntax_settings", "caption": "Settings – Syntax Specific" },
+            { "command": "edit_syntax_settings", "caption": "Préférences - Syntaxe spécifique" },
             {
                 "command": "edit_settings", "args":
                 {
                     "base_file": "${packages}/Default/Distraction Free.sublime-settings",
                     "default": "{\n\t$0\n}\n"
                 },
-                "caption": "Settings – Distraction Free"
+                "caption": "Préférences - Sans distraction"
             },
             { "caption": "-" },
             {
@@ -851,31 +851,31 @@
                     "base_file": "${packages}/Default/Default ($platform).sublime-keymap",
                     "default": "[\n\t$0\n]\n"
                 },
-                "caption": "Key Bindings"
+                "caption": "Raccourcis clavier"
             },
             { "caption": "-" },
             {
-                "caption": "Color Scheme…",
+                "caption": "Jeu de couleurs…",
                 "command": "select_color_scheme"
             },
             {
-                "caption": "Theme…",
+                "caption": "Thème…",
                 "command": "select_theme"
             },
             {
-                "caption": "Font",
+                "caption": "Police",
                 "children":
                 [
-                    { "command": "increase_font_size", "caption": "Larger" },
-                    { "command": "decrease_font_size", "caption": "Smaller" },
+                    { "command": "increase_font_size", "caption": "Augmenter" },
+                    { "command": "decrease_font_size", "caption": "Réduire" },
                     { "caption": "-" },
-                    { "command": "reset_font_size", "caption": "Reset" }
+                    { "command": "reset_font_size", "caption": "Réinitialiser" }
                 ]
             },
         ]
     },
     {
-        "caption": "Help",
+        "caption": "Aide",
         "mnemonic": "H",
         "id": "help",
         "children":
@@ -883,16 +883,16 @@
             { "command": "open_url", "args": {"url": "http://www.sublimetext.com/docs/3/"}, "caption": "Documentation" },
             { "command": "open_url", "args": {"url": "http://twitter.com/sublimehq"}, "caption": "Twitter" },
             { "caption": "-" },
-            { "command": "show_progress_window", "caption": "Indexing Status…" },
+            { "command": "show_progress_window", "caption": "Statut de l’indexation…" },
             { "caption": "-" },
-            { "command": "purchase_license"},
+            { "command": "purchase_license", "caption": "Acheter une licence"},
             { "command": "upgrade_license"},
-            { "command": "show_license_window", "caption": "Enter License" },
-            { "command": "remove_license"},
+            { "command": "show_license_window", "caption": "Saisir une licence" },
+            { "command": "remove_license", "caption": "Retirer la licence"},
             { "caption": "-" },
-            { "command": "update_check", "caption": "Check for Updates…", "platform": "!Linux" },
-            { "command": "show_changelog", "caption": "Changelog…" },
-            { "command": "show_about_window", "caption": "About Sublime Text", "mnemonic": "A" }
+            { "command": "update_check", "caption": "Vérifier les mises à jour…", "platform": "!Linux" },
+            { "command": "show_changelog", "caption": "Journal des modifications…" },
+            { "command": "show_about_window", "caption": "À propos de Sublime Text", "mnemonic": "A" }
         ]
     }
 ]

@@ -189,8 +189,8 @@
                 "id": "text",
                 "children":
                 [
-                    { "command": "revert_modification" },
-                    { "command": "toggle_inline_diff" },
+                    { "command": "revert_modification", "caption": "还原修改" },
+                    { "command": "toggle_inline_diff", "caption": "显示/隐藏内嵌差异块" },
                     { "caption": "-" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"}, "caption": "在此前插入行" },
                     { "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"}, "caption": "在此后插入行" },
@@ -634,8 +634,8 @@
             // { "command": "show_overlay", "args": {"overlay": "goto", "text": "#"}, "caption": "跳到单词…" },
             { "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}, "caption": "跳到行…" },
             { "caption": "-" },
-            { "command": "next_modification", "caption": "Next Modification" },
-            { "command": "prev_modification", "caption": "Previous Modification" },
+            { "command": "next_modification", "caption": "下一处修改" },
+            { "command": "prev_modification", "caption": "上一处修改" },
             { "caption": "-" },
             { "command": "jump_back", "caption": "往回跳" },
             { "command": "jump_forward", "caption": "往前跳" },
