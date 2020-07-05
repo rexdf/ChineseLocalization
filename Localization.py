@@ -211,6 +211,10 @@ def set_language(lang, force=False):
                                              ("Context.sublime-menu.txt", CONTEXT)):
                 PATCH_RES = "Packages/{}/patch/{}/{}/{}".format(
                     PACKAGE_NAME, patch_version, lang, patch_file_name)
+
+                if patch_version < 3200 and patch_file_name == "Context.sublime-menu.txt":
+                    continue
+
                 content = sublime.load_binary_resource(PATCH_RES)
                 with open(org_file_name, 'wb') as f:
                     f.write(content)
