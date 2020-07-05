@@ -203,7 +203,7 @@ def set_language(lang, force=False):
             patch_version = 3131
         elif sbt_version < 3170:  # 3156
             patch_version = 3156
-        elif sbt_version < 3212:  # 3200~3211
+        elif sbt_version < 3211:  # 3200
             patch_version = 3200
         if patch_version:
             for patch_file_name, org_file_name in (("Main.sublime-menu.txt", MAIN_MENU),
@@ -211,8 +211,6 @@ def set_language(lang, force=False):
                                              ("Context.sublime-menu.txt", CONTEXT)):
                 PATCH_RES = "Packages/{}/patch/{}/{}/{}".format(
                     PACKAGE_NAME, patch_version, lang, patch_file_name)
-                if not os.path.isfile(PATCH_RES):
-                    continue
                 content = sublime.load_binary_resource(PATCH_RES)
                 with open(org_file_name, 'wb') as f:
                     f.write(content)
