@@ -1,0 +1,16 @@
+[
+    { "command": "open_context_url" },
+    { "command": "context_goto_definition", "caption": "Gå till definition" },
+    { "caption": "-", "id": "clipboard" },
+    { "command": "copy", "caption": "Kopiera" },
+    { "command": "cut", "caption": "Klipp ut" },
+    { "command": "paste", "caption": "Klistra in" },
+    { "caption": "-", "id": "selection" },
+    { "command": "select_all", "caption": "Välj alla" },
+    { "caption": "-", "id": "file" },
+    { "command": "open_in_browser", "caption": "Öppna i webbläsare" },
+    { "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "Öppna innehållande mapp…" },
+    { "command": "copy_path", "caption": "Kopiera filsökväg" },
+    { "command": "reveal_in_side_bar", "caption": "Visa i sidofältet" },
+    { "caption": "-", "id": "end" }
+]
