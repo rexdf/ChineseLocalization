@@ -1,0 +1,11 @@
+[
+	{ "command": "close_selected", "args": { "group": -1 }, "caption": "关闭" },
+	{ "command": "close_others_by_index", "args": { "group": -1, "index": -1 }, "caption": "关闭其他" },
+	{ "command": "close_unmodified", "args": { "group": -1, "index": -1 }, "caption": "关闭未修改" },
+	{ "command": "close_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "关闭以下……文件" },
+	{ "command": "close_unmodified_to_right_by_index", "args": { "group": -1, "index": -1 }, "caption": "关闭以下……未修改文件" },
+	{ "command": "close_deleted_files", "args": { "group": -1 }, "caption": "关闭已删文件" },
+	{ "caption": "-" },
+	{ "command": "new_file", "caption": "新建文件" },
+	{ "command": "prompt_open_file", "caption": "打开文件" }
+]
