@@ -1,7 +1,8 @@
 [
 	{ "caption": "新建文件", "command": "new_file_at", "args": {"dirs": []} },
 	{ "caption": "重命名…", "command": "rename_path", "args": {"paths": []} },
-	{ "caption": "删除文件", "command": "delete_file", "args": {"files": []} },
+	{ "caption": "删除文件", "command": "delete_file", "args": {"files": [],"prompt": false} },
+	{ "caption": "打开文件夹…", "command": "open_folder", "args": {"dirs": [] } },
 	{ "caption": "打开所在文件夹…", "command": "open_containing_folder", "args": {"files": []} },
 	{ "caption": "显示链接源", "command": "reveal_link_source", "args": {"dirs": []} },
 	{ "caption": "-", "id": "repo_commands" },

@@ -3,6 +3,7 @@
     { "command": "context_goto_definition", "caption": "转到定义" },
     { "caption": "-", "id": "diff" },
     { "command": "toggle_inline_diff", "caption": "显示/隐藏内嵌差异块" },
+    { "command": "revert_hunk", "caption": "Revert Diff Hunk" },
     { "caption": "-", "id": "clipboard" },
     { "command": "copy", "caption": "复制" },
     { "command": "cut", "caption": "剪切" },
